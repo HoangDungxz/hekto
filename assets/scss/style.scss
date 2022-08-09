@@ -1,31 +1,27 @@
 /* 
 1.0 Common
     1.1 Variables
-        1.1.1 ...
     1.2 Mixins
-        1.2.1 ...
     1.3 Typography
-        1.3.1 ...
+    1.4 Reset CSS
+    1.5 Style Guilde
 2.0 Base
-    2.1 Reset CSS
-    2.2 Style Guilde
-    2.3 Header
+    2.1 Header
         2.1.1 Top Menu
         2.1.2 Header Menu
-    2.4 Footer
+    2.2 Footer
         2.2.1 Footer Top
         2.2.2 Footer Bottom
 3.0 Content
     3.1 Home Page Content
-        3.1.1 ...
 */
 
 @import './common/_variables.scss';
 @import './common/_mixins.scss';
 @import './common/typography.scss';
+@import './common/reset.scss';
+@import './common/style_guilde.scss';
 
-@import './base/reset.scss';
-@import './base/style_guilde.scss';
 @import './base/_header.scss';
 @import './base/_footer.scss';
 
