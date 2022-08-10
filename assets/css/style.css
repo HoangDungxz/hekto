@@ -462,3 +462,7 @@ template {
 [hidden] {
   display: none;
 }
+
+.row {
+  display: flex;
+}
