@@ -12,3 +12,19 @@ $color-blue: #2f1ac4;
 $color-off-blue: #151875;
 $color-sky-blue: #f3f9ff;
 $color-pantone-purple: #e0d3f5;
+
+//
+// Fonts
+// _______________________________
+
+$font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$font-family-name__poppins: 'Poppins';
+$font-family__poppins: $font-family-name__poppins, $font-family-sans-serif;
+
+$font-family-name__josefin-sans: 'JosefinSans';
+$font-family__josefin-sans: $font-family-name__josefin-sans,
+	$font-family-sans-serif;
+
+$font-family-name__lato: 'Lato';
+$font-family__lato: $font-family-name__lato, $font-family-sans-serif;
