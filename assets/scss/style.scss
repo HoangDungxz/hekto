@@ -28,3 +28,7 @@
 @import './base/_footer.scss';
 
 @import './content/_home_page_content.scss';
+
+body {
+	font-family: $font-family__poppins;
+}

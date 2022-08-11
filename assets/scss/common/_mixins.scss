@@ -1,0 +1,23 @@
+//
+// Fonts
+// _______________________________
+
+@mixin font-face(
+	$family-name,
+	$font-name,
+	$font-weight: normal,
+	$font-style: normal,
+	$font-display: auto
+) {
+	@font-face {
+		font-family: $family-name;
+		src: url($baseDir + 'fonts/' + $family-name + '/ttf/' + $font-name + '.ttf')
+				format('truetype'),
+			url($baseDir + 'fonts/' + $family-name + '/woff/' + $font-name + '.woff')
+				format('woff'),
+			url($baseDir + 'fonts/' + $family-name + '/woff2/' + $font-name + '.woff2')
+				format('woff2');
+		font-weight: $font-weight;
+		font-style: $font-style;
+	}
+}
