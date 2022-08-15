@@ -565,6 +565,71 @@ template {
   display: none;
 }
 
+body {
+  font-family: "JosefinSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .row {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.styleguide {
+  width: 1400px;
+  max-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: auto;
+}
+.styleguide-color {
+  width: 983px;
+  max-width: 70%;
+  margin-right: 30px;
+}
+.styleguide-color-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 827px;
+}
+.styleguide-color-col {
+  width: 250px;
+}
+.styleguide-color-col:first-child {
+  width: 256px;
+}
+.styleguide-color-col:last-child {
+  width: 256px;
+}
+.styleguide-font {
+  width: 406px;
+  max-width: 30%;
+}
+
+.container {
+  width: 1000px;
+  max-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: auto;
+}
+.container .row {
+  display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  flex-wrap: wrap;
+}
+.container .row .col {
+  flex: 0 0 calc(
+					((100% + 50px) / 4) - 50px
+				);
+  width: calc(
+				((100% + 50px) / 4) - 50px
+			);
+  margin-right: 50px;
+  margin-bottom: 30px;
+  height: 100px;
+  background-color: #2f1ac4;
+}
+.container .row .col:nth-child(4n) {
+  margin-right: 0;
 }

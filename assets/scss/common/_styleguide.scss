@@ -1,3 +1,37 @@
+body {
+	font-family: $font-family__josefin-sans;
+}
 .row {
 	display: flex;
+	flex-wrap: wrap;
+}
+.styleguide {
+	width: 1400px;
+	max-width: 100%;
+	padding: 0 15px;
+	box-sizing: border-box;
+	margin: auto;
+	&-color {
+		width: 983px;
+		max-width: 70%;
+		margin-right: 30px;
+		&-content {
+			display: flex;
+			flex-wrap: wrap;
+			width: 827px;
+		}
+		&-col {
+			width: 250px;
+			&:first-child {
+				width: 256px;
+			}
+			&:last-child {
+				width: 256px;
+			}
+		}
+	}
+	&-font {
+		width: 406px;
+		max-width: 30%;
+	}
 }
