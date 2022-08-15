@@ -568,7 +568,3 @@ template {
 .row {
   display: flex;
 }
-
-body {
-  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}

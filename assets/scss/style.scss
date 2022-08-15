@@ -22,13 +22,9 @@
 @import './common/_typography.scss';
 @import './common/_reset.scss';
 @import './common/_normalize.scss';
-@import './common/_style_guide.scss';
+@import './common/_styleguide.scss';
 
 @import './base/_header.scss';
 @import './base/_footer.scss';
 
 @import './content/_home_page_content.scss';
-
-body {
-	font-family: $font-family__poppins;
-}
