@@ -678,9 +678,6 @@ body {
   color: #212525;
   margin: 49px 82px 47px 82px;
 }
-.styleguide-title:last {
-  text-align: right;
-}
 .styleguide-color {
   width: 983px;
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -746,6 +743,9 @@ body {
 .styleguide-font {
   width: 391px;
 }
+.styleguide-font-title {
+  text-align: right;
+}
 .styleguide-font-content {
   width: 341px;
 }
@@ -769,6 +769,26 @@ body {
 .styleguide-font-display {
   font-family: "JosefinSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 36px;
+  width: 84px;
+  height: 87px;
+  display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.styleguide-font-name {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(33, 37, 37, 0.4);
+  line-height: 1.43;
+  margin-top: 1px;
+}
+.styleguide-font-type {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.89;
+  margin-top: 2px;
 }
 
 .container {

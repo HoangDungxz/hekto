@@ -76,9 +76,6 @@ body {
 		line-height: 1.25;
 		color: #212525;
 		margin: 49px 82px 47px 82px;
-		&:last {
-			text-align: right;
-		}
 	}
 	&-color {
 		width: calc(
@@ -146,6 +143,9 @@ body {
 	}
 	&-font {
 		width: 391px;
+		&-title {
+			text-align: right;
+		}
 		&-content {
 			width: 341px;
 		}
@@ -170,6 +170,23 @@ body {
 		&-display {
 			font-family: $font-family__josefin-sans;
 			font-size: 36px;
+			width: 84px;
+			height: 87px;
+			@include flexbox;
+			align-items: center;
+		}
+		&-name {
+			font-weight: 500;
+			font-size: 14px;
+			color: rgba(33, 37, 37, 0.4);
+			line-height: 1.43;
+			margin-top: 1px;
+		}
+		&-type {
+			font-weight: 500;
+			font-size: 22px;
+			line-height: 1.89;
+			margin-top: 2px;
 		}
 	}
 }
