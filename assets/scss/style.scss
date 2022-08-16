@@ -35,5 +35,5 @@
 	padding: 0 15px;
 	box-sizing: border-box;
 	margin: auto;
-	@include grid-layout(4, 50px, 30px);
+	@include grid-layout(4, 150px, 30px);
 }

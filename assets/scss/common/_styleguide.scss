@@ -1,37 +1,175 @@
 body {
 	font-family: $font-family__josefin-sans;
 }
-.row {
-	display: flex;
-	flex-wrap: wrap;
+.color-pink {
+	color: $color-pink;
 }
+.color-off-navy-blue {
+	color: $color-off-navy-blue;
+}
+.color-navy-blue {
+	color: $color-navy-blue;
+}
+.color-purple {
+	color: $color-purple;
+}
+.color-off-purple {
+	color: $color-off-purple;
+}
+.color-red {
+	color: $color-red;
+}
+.color-blue {
+	color: $color-blue;
+}
+.color-off-blue {
+	color: $color-off-blue;
+}
+.color-sky-blue {
+	color: $color-sky-blue;
+}
+.color-pantone-purple {
+	$color-pantone-purple: #e0d3f5;
+}
+
+.bg-pink {
+	background-color: $color-pink;
+}
+.bg-off-navy-blue {
+	background-color: $color-off-navy-blue;
+}
+.bg-navy-blue {
+	background-color: $color-navy-blue;
+}
+.bg-purple {
+	background-color: $color-purple;
+}
+.bg-off-purple {
+	background-color: $color-off-purple;
+}
+.bg-red {
+	background-color: $color-red;
+}
+.bg-blue {
+	background-color: $color-blue;
+}
+.bg-off-blue {
+	background-color: $color-off-blue;
+}
+.bg-sky-blue {
+	background-image: $color-sky-blue;
+}
+.bg-pantone-purple {
+	background-color: $color-pantone-purple;
+}
+
 .styleguide {
-	width: 1400px;
-	max-width: 100%;
-	padding: 0 15px;
-	box-sizing: border-box;
-	margin: auto;
+	width: 1400px + 30; // độ rộng của Trang styleguide + 30px của padding
+	max-width: 100%; // nếu màn hình thu hẹp hơn 1400px thì lấy width = độ rộng màn hình
+	padding: 0 15px; // lấy lề 15px
+	box-sizing: border-box; // chống tràn của padding
+	margin: auto; // căn giữa
+	&-title {
+		font-family: $font-family__poppins;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 1.25;
+		color: #212525;
+		margin: 49px 82px 47px 82px;
+		&:last {
+			text-align: right;
+		}
+	}
 	&-color {
-		width: 983px;
-		max-width: 70%;
-		margin-right: 30px;
+		width: calc(
+			983px
+		); // độ rông của phần color chuyển sang %, 4px của border 2 bên
+		font-family: $font-family__poppins;
+		margin-right: 26px;
 		&-content {
-			display: flex;
-			flex-wrap: wrap;
-			width: 827px;
+			@include flexbox; // dàn ngang cho phần color
+			flex-wrap: wrap; // tự xuống dòng
+			justify-content: flex-end; // căn sang phải
+		}
+		&-item {
+			padding: 22px;
+			box-sizing: border-box;
+			box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+			border-radius: 15px;
+			border: 2px solid #eaebed;
+			& + .styleguide-color-item {
+				margin-top: 20px - 4px; // styleguide-color-item nào có 2 cái thì cách nhau, 4px của border trên dưới
+			}
+		}
+		&-display {
+			height: 50px;
+			border-radius: 32px;
+			margin-bottom: 17px;
+		}
+		&-code {
+			font-size: 14px;
+			line-height: 1.43;
+			color: rgba(33, 37, 37, 0.4);
+			margin-bottom: 4px;
+		}
+		&-name {
+			font-weight: 500;
+			font-size: 22px;
+			line-height: 1.09;
 		}
 		&-col {
 			width: 250px;
-			&:first-child {
-				width: 256px;
+			margin-right: 30px;
+			margin-bottom: 51px;
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+			&:first-child,
+			&:last-child {
+				width: 267px;
+				.styleguide-color-item {
+					padding: 30px 31px 13px 30px;
+					box-sizing: border-box;
+					.styleguide-color-display {
+						border-radius: 25px;
+						height: 206px;
+						margin-bottom: 34px;
+					}
+				}
 			}
 			&:last-child {
-				width: 256px;
+				.styleguide-color-item {
+					padding: 30px 30px 13px 31px;
+				}
 			}
 		}
 	}
 	&-font {
-		width: 406px;
-		max-width: 30%;
+		width: 391px;
+		&-content {
+			width: 341px;
+		}
+		&-top,
+		&-bottom {
+			padding: 0 0 16px 23px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			background: #ffffff;
+			border-radius: 25px;
+		}
+		&-top {
+			height: 150px;
+			box-shadow: -9px 18px 40px rgba(0, 0, 0, 0.1);
+		}
+		&-bottom {
+			min-height: 515px;
+			border: 2px solid #eaebed;
+			margin-top: 26px;
+		}
+		&-display {
+			font-family: $font-family__josefin-sans;
+			font-size: 36px;
+		}
 	}
 }

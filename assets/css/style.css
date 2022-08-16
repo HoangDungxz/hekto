@@ -16,6 +16,24 @@
 3.0 Content
     3.1 Home Page Content
 */
+.row {
+  display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  flex-wrap: wrap;
+}
+.row .col {
+  flex: 0 0 calc(((100% + 30px) / 4) - 30px);
+  width: calc(((100% + 30px) / 4) - 30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  height: 100px;
+  background-color: #2f1ac4;
+}
+.row .col:nth-child(4n) {
+  margin-right: 0;
+}
+
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins/ttf/Poppins-Regular.ttf") format("truetype"), url("../fonts/Poppins/woff/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins/woff2/Poppins-Regular.woff2") format("woff2");
@@ -569,40 +587,188 @@ body {
   font-family: "JosefinSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
+.color-pink {
+  color: #fb2e86;
+}
+
+.color-off-navy-blue {
+  color: #3f509e;
+}
+
+.color-navy-blue {
+  color: #151875;
+}
+
+.color-purple {
+  color: #7e33e0;
+}
+
+.color-off-purple {
+  color: #9f63b5;
+}
+
+.color-red {
+  color: #fb2448;
+}
+
+.color-blue {
+  color: #2f1ac4;
+}
+
+.color-off-blue {
+  color: #151875;
+}
+
+.color-sky-blue {
+  color: linear-gradient(121.53deg, #f3f9ff 0%, #f1f0ff 100%);
+}
+
+.bg-pink {
+  background-color: #fb2e86;
+}
+
+.bg-off-navy-blue {
+  background-color: #3f509e;
+}
+
+.bg-navy-blue {
+  background-color: #151875;
+}
+
+.bg-purple {
+  background-color: #7e33e0;
+}
+
+.bg-off-purple {
+  background-color: #9f63b5;
+}
+
+.bg-red {
+  background-color: #fb2448;
+}
+
+.bg-blue {
+  background-color: #2f1ac4;
+}
+
+.bg-off-blue {
+  background-color: #151875;
+}
+
+.bg-sky-blue {
+  background-image: linear-gradient(121.53deg, #f3f9ff 0%, #f1f0ff 100%);
+}
+
+.bg-pantone-purple {
+  background-color: #e0d3f5;
 }
 
 .styleguide {
-  width: 1400px;
+  width: 1430px;
   max-width: 100%;
   padding: 0 15px;
   box-sizing: border-box;
   margin: auto;
 }
+.styleguide-title {
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #212525;
+  margin: 49px 82px 47px 82px;
+}
+.styleguide-title:last {
+  text-align: right;
+}
 .styleguide-color {
   width: 983px;
-  max-width: 70%;
-  margin-right: 30px;
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-right: 26px;
 }
 .styleguide-color-content {
   display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
   flex-wrap: wrap;
-  width: 827px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.styleguide-color-item {
+  padding: 22px;
+  box-sizing: border-box;
+  box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+  border-radius: 15px;
+  border: 2px solid #eaebed;
+}
+.styleguide-color-item + .styleguide-color-item {
+  margin-top: 16px;
+}
+.styleguide-color-display {
+  height: 50px;
+  border-radius: 32px;
+  margin-bottom: 17px;
+}
+.styleguide-color-code {
+  font-size: 14px;
+  line-height: 1.43;
+  color: rgba(33, 37, 37, 0.4);
+  margin-bottom: 4px;
+}
+.styleguide-color-name {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.09;
 }
 .styleguide-color-col {
   width: 250px;
+  margin-right: 30px;
+  margin-bottom: 51px;
 }
-.styleguide-color-col:first-child {
-  width: 256px;
+.styleguide-color-col:nth-child(3n) {
+  margin-right: 0;
 }
-.styleguide-color-col:last-child {
-  width: 256px;
+.styleguide-color-col:first-child, .styleguide-color-col:last-child {
+  width: 267px;
+}
+.styleguide-color-col:first-child .styleguide-color-item, .styleguide-color-col:last-child .styleguide-color-item {
+  padding: 30px 31px 13px 30px;
+  box-sizing: border-box;
+}
+.styleguide-color-col:first-child .styleguide-color-item .styleguide-color-display, .styleguide-color-col:last-child .styleguide-color-item .styleguide-color-display {
+  border-radius: 25px;
+  height: 206px;
+  margin-bottom: 34px;
+}
+.styleguide-color-col:last-child .styleguide-color-item {
+  padding: 30px 30px 13px 31px;
 }
 .styleguide-font {
-  width: 406px;
-  max-width: 30%;
+  width: 391px;
+}
+.styleguide-font-content {
+  width: 341px;
+}
+.styleguide-font-top, .styleguide-font-bottom {
+  padding: 0 0 16px 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #ffffff;
+  border-radius: 25px;
+}
+.styleguide-font-top {
+  height: 150px;
+  box-shadow: -9px 18px 40px rgba(0, 0, 0, 0.1);
+}
+.styleguide-font-bottom {
+  min-height: 515px;
+  border: 2px solid #eaebed;
+  margin-top: 26px;
+}
+.styleguide-font-display {
+  font-family: "JosefinSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 36px;
 }
 
 .container {
@@ -611,25 +777,19 @@ body {
   padding: 0 15px;
   box-sizing: border-box;
   margin: auto;
-}
-.container .row {
   display: flex;
   -webkit-display: flex;
   -moz-display: flex;
   flex-wrap: wrap;
 }
-.container .row .col {
-  flex: 0 0 calc(
-					((100% + 50px) / 4) - 50px
-				);
-  width: calc(
-				((100% + 50px) / 4) - 50px
-			);
-  margin-right: 50px;
+.container .col {
+  flex: 0 0 calc(((100% + 150px) / 4) - 150px);
+  width: calc(((100% + 150px) / 4) - 150px);
+  margin-right: 150px;
   margin-bottom: 30px;
   height: 100px;
   background-color: #2f1ac4;
 }
-.container .row .col:nth-child(4n) {
+.container .col:nth-child(4n) {
   margin-right: 0;
 }

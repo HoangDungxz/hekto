@@ -54,24 +54,25 @@
 // Grid layout
 // _______________________________
 
-@mixin grid-layout($_column-number: 4, $_column-gap: 30px, $_row-gap: 30px) {
-	.row {
-		@include flexbox();
-		.col {
-			flex: 0 0
-				calc(
-					((100% + #{$_column-gap}) / #{$_column-number}) - #{$_column-gap}
-				);
-			width: calc(
-				((100% + #{$_column-gap}) / #{$_column-number}) - #{$_column-gap}
-			);
-			margin-right: $_column-gap;
-			margin-bottom: $_row-gap;
-			height: 100px;
-			background-color: $color-blue;
-			&:nth-child(#{$_column-number}n) {
-				margin-right: 0;
-			}
+@mixin col($column-number: 1, $column-gap: 0) {
+	flex: 0 0
+		calc(((100% + #{$column-gap}) / #{$column-number}) - #{$column-gap});
+	width: calc(((100% + #{$column-gap}) / #{$column-number}) - #{$column-gap});
+}
+
+@mixin grid-layout($column-number: 4, $column-gap: 30px, $row-gap: 30px) {
+	@include flexbox();
+	.col {
+		@include col($column-number, $column-gap);
+		margin-right: $column-gap;
+		margin-bottom: $row-gap;
+		height: 100px;
+		background-color: $color-blue;
+		&:nth-child(#{$column-number}n) {
+			margin-right: 0;
 		}
 	}
+}
+.row {
+	@include grid-layout;
 }
