@@ -211,14 +211,85 @@ body {
 	}
 }
 
+.styleguide-component-title {
+	margin-bottom: 20px;
+}
 //
 // Page sort by
 // _______________________________
 
-.styleguide-component-title {
-	margin-bottom: 20px;
-}
 .sortby {
 	min-height: 44px;
-	background-color: red;
+	font-family: $font-family__lato;
+	font-weight: 400;
+	@include flexbox;
+	&-left {
+		&-title {
+			font-family: $font-family__josefin-sans;
+			font-size: 22px;
+			line-height: 1.181;
+			color: $color-navy-blue;
+			font-weight: 700;
+		}
+	}
+	&-right {
+		@include flexbox;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+		&-title {
+			font-size: 16px;
+			line-height: 1.1875;
+			color: $color-off-navy-blue;
+		}
+	}
+	&-perpage {
+		margin-right: 89.92px;
+	}
+	&-result-count {
+		font-size: 12px;
+		line-height: 1.166;
+	}
+	&-sortby {
+		@include flexbox;
+		align-items: center;
+		&-select {
+			max-height: 19px;
+			min-height: 19px;
+			// overflow: hidden;
+			position: relative;
+
+			ul {
+				max-height: 19px;
+				overflow: hidden;
+				transition: max-height 0.5s ease;
+			}
+			a {
+				padding: 0 13.67px;
+				padding-top: 3px;
+				background-color: #ffffff;
+				display: block;
+				white-space: nowrap;
+				text-decoration: none;
+				font-size: 12px;
+				line-height: 18px;
+				color: $color-sub-text;
+			}
+
+			&:hover {
+				ul {
+					max-height: 500px;
+					overflow: hidden;
+					height: fit-content;
+				}
+			}
+		}
+		iconify-icon {
+			font-size: 14px;
+			color: $color-sub-text;
+		}
+	}
+	&-view {
+		display: none;
+	}
 }
