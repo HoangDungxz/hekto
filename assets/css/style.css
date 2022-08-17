@@ -587,6 +587,14 @@ body {
   font-family: "JosefinSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.container {
+  width: 1200px;
+  max-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
 .color-pink {
   color: #fb2e86;
 }
@@ -791,25 +799,11 @@ body {
   margin-top: 2px;
 }
 
-.container {
-  width: 1000px;
-  max-width: 100%;
-  padding: 0 15px;
-  box-sizing: border-box;
-  margin: auto;
-  display: flex;
-  -webkit-display: flex;
-  -moz-display: flex;
-  flex-wrap: wrap;
+.styleguide-component-title {
+  margin-bottom: 20px;
 }
-.container .col {
-  flex: 0 0 calc(((100% + 150px) / 4) - 150px);
-  width: calc(((100% + 150px) / 4) - 150px);
-  margin-right: 150px;
-  margin-bottom: 30px;
-  height: 100px;
-  background-color: #2f1ac4;
-}
-.container .col:nth-child(4n) {
-  margin-right: 0;
+
+.sortby {
+  min-height: 44px;
+  background-color: red;
 }

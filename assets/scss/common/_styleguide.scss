@@ -1,6 +1,18 @@
 body {
 	font-family: $font-family__josefin-sans;
 }
+
+.container {
+	width: 1200px;
+	max-width: 100%;
+	padding: 0 15px;
+	box-sizing: border-box;
+	margin: auto;
+}
+
+//
+// Color
+// _______________________________
 .color-pink {
 	color: $color-pink;
 }
@@ -32,6 +44,10 @@ body {
 	$color-pantone-purple: #e0d3f5;
 }
 
+//
+// Background Color
+// _______________________________
+
 .bg-pink {
 	background-color: $color-pink;
 }
@@ -62,6 +78,10 @@ body {
 .bg-pantone-purple {
 	background-color: $color-pantone-purple;
 }
+
+//
+// Dispplay Color and Font
+// _______________________________
 
 .styleguide {
 	width: 1400px + 30; // độ rộng của Trang styleguide + 30px của padding
@@ -189,4 +209,16 @@ body {
 			margin-top: 2px;
 		}
 	}
+}
+
+//
+// Page sort by
+// _______________________________
+
+.styleguide-component-title {
+	margin-bottom: 20px;
+}
+.sortby {
+	min-height: 44px;
+	background-color: red;
 }
