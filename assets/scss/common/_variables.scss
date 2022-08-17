@@ -1,0 +1,38 @@
+//
+// Base dir
+// _______________________________
+
+$baseDir: '../';
+
+//
+// Colors
+// _______________________________
+
+$color-pink: #fb2e86;
+$color-off-navy-blue: #3f509e;
+$color-navy-blue: #151875;
+$color-purple: #7e33e0;
+$color-off-purple: #9f63b5;
+$color-red: #fb2448;
+$color-blue: #2f1ac4;
+$color-off-blue: #151875;
+$color-sky-blue: linear-gradient(121.53deg, #f3f9ff 0%, #f1f0ff 100%);
+$color-pantone-purple: #e0d3f5;
+
+$color-sub-text: #8a8fb9;
+
+//
+// Fonts
+// _______________________________
+
+$font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$font-family-name__poppins: 'Poppins';
+$font-family__poppins: $font-family-name__poppins, $font-family-sans-serif;
+
+$font-family-name__josefin-sans: 'JosefinSans';
+$font-family__josefin-sans: $font-family-name__josefin-sans,
+	$font-family-sans-serif;
+
+$font-family-name__lato: 'Lato';
+$font-family__lato: $font-family-name__lato, $font-family-sans-serif;

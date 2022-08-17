@@ -1,0 +1,78 @@
+//
+// Fonts
+// _______________________________
+
+@mixin font-face(
+	$family-name,
+	$font-name,
+	$font-weight: normal,
+	$font-style: normal,
+	$font-display: auto
+) {
+	@font-face {
+		font-family: $family-name;
+		src: url('#{$baseDir}fonts/#{$family-name}/ttf/#{$font-name}.ttf')
+				format('truetype'),
+			url('#{$baseDir}fonts/#{$family-name}/woff/#{$font-name}.woff')
+				format('woff'),
+			url('#{$baseDir}fonts/#{$family-name}/woff2/#{$font-name}.woff2')
+				format('woff2');
+		font-weight: $font-weight;
+		font-style: $font-style;
+	}
+}
+
+//
+// Prefix
+// _______________________________
+
+@mixin css-prefix($property, $value, $prefixes: (webkit, moz)) {
+	#{$property}: $value;
+	@each $prefix in $prefixes {
+		-#{$prefix}-#{$property}: $value;
+	}
+}
+// display flex
+@mixin flexbox {
+	@include css-prefix(display, flex);
+	flex-wrap: wrap;
+}
+// transform translate
+@mixin translate($x: 0, $y: 0) {
+	@include css-prefix(transform, translate($x, $y));
+}
+// transform scale
+@mixin scale($x: 0, $y: 0) {
+	@include css-prefix(transform, translate($x, $y));
+}
+// transform
+@mixin transform($value) {
+	@include css-prefix(transform, $value);
+}
+
+//
+// Grid layout
+// _______________________________
+
+@mixin col($column-number: 1, $column-gap: 0) {
+	flex: 0 0
+		calc(((100% + #{$column-gap}) / #{$column-number}) - #{$column-gap});
+	width: calc(((100% + #{$column-gap}) / #{$column-number}) - #{$column-gap});
+}
+
+@mixin grid-layout($column-number: 4, $column-gap: 30px, $row-gap: 30px) {
+	@include flexbox();
+	.col {
+		@include col($column-number, $column-gap);
+		margin-right: $column-gap;
+		margin-bottom: $row-gap;
+		height: 100px;
+		background-color: $color-blue;
+		&:nth-child(#{$column-number}n) {
+			margin-right: 0;
+		}
+	}
+}
+.row {
+	@include grid-layout;
+}
