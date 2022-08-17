@@ -16,6 +16,7 @@
 3.0 Content
     3.1 Home Page Content
 */
+<<<<<<< HEAD
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins/ttf/Poppins-Regular.ttf") format("truetype"), url("../fonts/Poppins/woff/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins/woff2/Poppins-Regular.woff2") format("woff2");
@@ -118,6 +119,26 @@
   font-weight: 400;
   font-style: normal;
 }
+=======
+.row {
+  display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  flex-wrap: wrap;
+}
+.row .col {
+  flex: 0 0 calc(((100% + 30px) / 4) - 30px);
+  width: calc(((100% + 30px) / 4) - 30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  height: 100px;
+  background-color: #2f1ac4;
+}
+.row .col:nth-child(4n) {
+  margin-right: 0;
+}
+
+>>>>>>> 7af1ccdac6f3e57f768ccdc24733da1bc7bf3081
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -565,6 +586,108 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/ttf/Poppins-Regular.ttf") format("truetype"), url("../fonts/Poppins/woff/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins/woff2/Poppins-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/ttf/Poppins-Medium.ttf") format("truetype"), url("../fonts/Poppins/woff/Poppins-Medium.woff") format("woff"), url("../fonts/Poppins/woff2/Poppins-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-Thin.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-Thin.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-ThinItalic.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-ThinItalic.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-ThinItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-ExtraLight.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-ExtraLight.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-ExtraLightItalic.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-ExtraLightItalic.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-Light.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-Light.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-LightItalic.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-LightItalic.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-Regular.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-Regular.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-Italic.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-Italic.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-Medium.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-Medium.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-MediumItalic.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-MediumItalic.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-SemiBold.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-SemiBold.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-SemiBoldItalic.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-SemiBoldItalic.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-Bold.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-Bold.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans/ttf/JosefinSans-BoldItalic.ttf") format("truetype"), url("../fonts/JosefinSans/woff/JosefinSans-BoldItalic.woff") format("woff"), url("../fonts/JosefinSans/woff2/JosefinSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/ttf/Lato-Regular.ttf") format("truetype"), url("../fonts/Lato/woff/Lato-Regular.woff") format("woff"), url("../fonts/Lato/woff2/Lato-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 body {
   font-family: "JosefinSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -787,6 +910,7 @@ body {
 
 .sortby {
   min-height: 44px;
+<<<<<<< HEAD
   background-color: red;
 }
 
@@ -842,4 +966,82 @@ body {
   background: transparent;
   border: none;
   color: #f1f1f1;
+=======
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  flex-wrap: wrap;
+}
+.sortby-left-title {
+  font-family: "JosefinSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.181;
+  color: #151875;
+  font-weight: 700;
+}
+.sortby-right {
+  display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.sortby-right-title {
+  font-size: 16px;
+  line-height: 1.1875;
+  color: #3f509e;
+}
+.sortby-perpage {
+  margin-right: 89.92px;
+}
+.sortby-result-count {
+  font-size: 12px;
+  line-height: 1.166;
+}
+.sortby-sortby {
+  display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.sortby-sortby-select {
+  max-height: 19px;
+  min-height: 19px;
+  position: relative;
+}
+.sortby-sortby-select ul {
+  max-height: 19px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.sortby-sortby-select a {
+  padding: 0 13.67px;
+  padding-top: 3px;
+  background-color: #ffffff;
+  display: block;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 18px;
+  color: #8a8fb9;
+}
+.sortby-sortby-select:hover ul {
+  max-height: 500px;
+  overflow: hidden;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.sortby-sortby iconify-icon {
+  font-size: 14px;
+  color: #8a8fb9;
+}
+.sortby-view {
+  display: none;
+>>>>>>> 7af1ccdac6f3e57f768ccdc24733da1bc7bf3081
 }
