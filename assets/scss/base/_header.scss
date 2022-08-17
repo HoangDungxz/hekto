@@ -1,0 +1,87 @@
+// test
+
+// test
+.header {
+    &-top {
+        background: $color-purple;
+        &-content {
+            .row {
+                width: 100%; 
+            }
+        }
+        &-left {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            a {
+                font-family: 'JosefinSans';
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 19px;
+                color: #F1F1F1;
+            }
+            i {
+                color: #FFFFFF;
+                position: relative;
+                top: 4px;
+            }
+        }
+        &-right {
+            width: 100%;
+            .header-icon {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .item {
+                width: calc(100%/3);
+                font-family: 'JosefinSans';
+                font-size: 16px;
+                line-height: 19px;
+                color: #F1F1F1;
+                text-align: center;
+            }
+
+            .laguage-item, .money-item{
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            button {
+                background: transparent;
+                border: none;
+                color: #f1f1f1;
+            }
+        }
+    }
+}
+
+
+
+//1024
+// .header {
+//     &-top {
+//         &-content {
+//             .row {
+//                 width: 100%;
+//                 display: flex; 
+//             }
+//         }
+//         &-left {
+//             width: 50%;
+//         }
+//         &-right {
+//             width: 50%;
+//             ul {
+//                 display: flex;
+//             }
+//         }
+//     }
+// }
+//1024

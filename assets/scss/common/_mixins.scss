@@ -66,13 +66,8 @@
 		@include col($column-number, $column-gap);
 		margin-right: $column-gap;
 		margin-bottom: $row-gap;
-		height: 100px;
-		background-color: $color-blue;
 		&:nth-child(#{$column-number}n) {
 			margin-right: 0;
 		}
 	}
-}
-.row {
-	@include grid-layout;
 }
