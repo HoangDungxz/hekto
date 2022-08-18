@@ -5,62 +5,162 @@
     &-top {
         background: $color-purple;
         &-content {
+            padding: 14px 15px;
             .row {
-                width: 100%; 
+                width: 100%;
+                display: flex;
             }
         }
+    }
+
+    &-content {
         &-left {
-            width: 100%;
+            width: 50%;
             display: flex;
-            justify-content: space-between;
             a {
                 font-family: 'JosefinSans';
                 text-decoration: none;
                 font-size: 16px;
                 line-height: 19px;
                 color: #F1F1F1;
-            }
-            i {
-                color: #FFFFFF;
-                position: relative;
-                top: 4px;
+                padding-right: 50px;
             }
         }
-        &-right {
-            width: 100%;
-            .header-icon {
-                display: flex;
-                width: 100%;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
 
+        &-icon {
+            color: #FFFFFF;
+            position: relative;
+            top: 4px;
+            padding-right: 11.33px;
+        }
+
+        &-right {
+            width: 50%;
+            display: flex;
+            justify-content: end;
             .item {
-                width: calc(100%/3);
                 font-family: 'JosefinSans';
                 font-size: 16px;
                 line-height: 19px;
                 color: #F1F1F1;
                 text-align: center;
+                padding-left: 20px;
+                position: relative;
+                cursor: pointer;
             }
+            iconify-icon {
+                position: relative;
+                top: 2px;
+            }
+            
+            //test
 
-            .laguage-item, .money-item{
-                display: none;
-                position: absolute;
-                background-color: #f1f1f1;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-            }
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #2980B9;
+        }
+        
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #ddd}
+        
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {display:block;}
 
-            button {
-                background: transparent;
-                border: none;
-                color: #f1f1f1;
-            }
+        //test
         }
     }
-}
+    &-right {
+
+        // &-wishlist {
+        //     display: flex;
+        //     width: 100%;
+        //     flex-wrap: wrap;
+        //     justify-content: center;
+        // }
+        &-language {
+            // display: flex;
+            // .laguage-item {
+            //     display: none;
+            //     position: absolute;
+            //     background-color: #f1f1f1;
+            //     min-width: 160px;
+            //     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            //     z-index: 1;
+            // }
+        }
+
+        // &-laguage,
+        // &-money {
+        //     &:after {
+        //         content: url('https://api.iconify.design/akar-icons/chevron-down.svg?color=white&width=16px&height=16px');
+        //         position: relative;
+        //         pointer-events: none;
+        //         left: -6px;
+        //         top: 3px;
+        //     }
+        // }
+
+        // &-money {
+        //     &:after {
+        //         left: -30px;
+        //     }
+        // }
+
+        // &-laguage select,
+        // &-money select{
+        //         border: none;
+        //         font-family: 'JosefinSans';
+        //         -webkit-appearance: none;
+        //         -moz-appearance: none;
+        //         appearance: none;
+        //         font-size: 16px;
+        //         line-height: 19px;
+        //         color: #F1F1F1;
+        //         text-align: center;
+        //         outline: none;
+        //         background: transparent;
+        //         width: 70px;
+        //         text-align: start;
+        //     }
+        // }
+
+
+        
+    }
 
 
 
@@ -85,3 +185,4 @@
 //     }
 // }
 //1024
+}
