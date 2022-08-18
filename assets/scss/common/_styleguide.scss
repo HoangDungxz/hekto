@@ -256,7 +256,6 @@ body {
 		&-select {
 			max-height: 19px;
 			min-height: 19px;
-			// overflow: hidden;
 			position: relative;
 
 			ul {
@@ -277,6 +276,12 @@ body {
 			}
 
 			&:hover {
+			}
+		}
+		&-right {
+			@include flexbox;
+			align-items: flex-end;
+			&:hover {
 				ul {
 					max-height: 500px;
 					overflow: hidden;
@@ -290,6 +295,16 @@ body {
 		}
 	}
 	&-view {
-		display: none;
+		@include flexbox;
+		margin-left: 35px;
+		&-title {
+			margin-right: 4px;
+		}
+		&-choise {
+			@include flexbox;
+			& a:first-child {
+				margin-right: 5px;
+			}
+		}
 	}
 }
