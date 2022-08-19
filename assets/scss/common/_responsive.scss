@@ -18,28 +18,9 @@
 *
 */
 
-$res_375 : "only screen and (min-width: 375px) and (max-width: 511px)";
-$res_512 : "only screen and (min-width: 512px) and (max-width: 767px)";
-$res_768 : "only screen and (min-width: 768px) and (max-width: 1023px)";
-$res_1024 : "only screen and (min-width: 1024px)";
- 
-@mixin responsive_375() {
-    @media #{$res_375} {
-        @content;
-    }
-}
-@mixin responsive_512() {
-    @media #{$res_512} {
-        @content;
-    }
-}
-@mixin responsive_768() {
-    @media #{$res_768} {
-        @content;
-    }
-}
-@mixin responsive_1024() {
-    @media #{$res_1024} {
-        @content;
-    }
+//
+// Style guide
+// _______________________________
+
+@include responsive_375() {
 }

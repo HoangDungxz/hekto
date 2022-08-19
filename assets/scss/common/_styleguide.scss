@@ -1,3 +1,7 @@
+//
+// Basic
+// _______________________________
+
 body {
 	font-family: $font-family__josefin-sans;
 }
@@ -8,6 +12,9 @@ body {
 	padding: 0 15px;
 	box-sizing: border-box;
 	margin: auto;
+}
+a {
+	text-decoration: none;
 }
 
 //
@@ -212,7 +219,9 @@ body {
 }
 
 .styleguide-component-title {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	display: block;
 }
 //
 // Page sort by
@@ -274,9 +283,6 @@ body {
 				line-height: 18px;
 				color: $color-sub-text;
 			}
-
-			&:hover {
-			}
 		}
 		&-right {
 			@include flexbox;
@@ -284,7 +290,6 @@ body {
 			&:hover {
 				ul {
 					max-height: 500px;
-					overflow: hidden;
 					height: fit-content;
 				}
 			}
@@ -305,6 +310,42 @@ body {
 			& a:first-child {
 				margin-right: 5px;
 			}
+		}
+	}
+}
+
+//
+// Page header
+// _______________________________
+
+.page-header {
+	min-height: 286px;
+	background-color: $color-bg-shade;
+	&-content {
+		padding-top: 96px;
+	}
+}
+.page-title {
+	font-family: $font-family__josefin-sans;
+	font-size: 36px;
+	line-height: 1.1666;
+	color: $color-off-blue;
+	font-weight: 700;
+	margin-bottom: 9px;
+}
+.breadcrumb {
+	ul {
+		@include flexbox;
+	}
+	li {
+		margin-right: 4px;
+		&:last-child a,
+		&:last-child::before {
+			color: $color-pink;
+		}
+		&:not(:first-child):before {
+			content: '.';
+			margin-right: 5px;
 		}
 	}
 }
