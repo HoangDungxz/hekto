@@ -13,6 +13,7 @@
     <div class="wapper" >
         <!-- header  -->
         <header class="header">
+            <!-- header top  -->
             <div class="header-top">
                 <div class="container header-top-content">
                     <div class="row">
@@ -21,29 +22,27 @@
                             <a href="tel:+1234567890"><iconify-icon class="header-content-icon" icon="carbon:phone-voice"></iconify-icon>(12345)67890</a>
                         </div>
                         <div class="col header-content-right">
-                            <div class="item header-right-laguage dropdown">
-                                <!-- <select id="language">
-                                    <option value="en" selected>English</option>
-                                    <option value="vi">Vietnamese</option>
-                                    <option value="ko">Korean</option>
-                                    <option value="fr">French</option>
-                                  </select> -->
-                                  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                                    <div id="myDropdown" class="dropdown-content">
-                                        <a href="#" id="abc" onclick="myFunction2()" class="Link 1">Link 1</a>
-                                        <a href="#" onclick="myFunction2()" class="Link 2">Link 2</a>
-                                        <a href="#" onclick="myFunction2()" class="Link 3">Link 3</a>
-                                    </div>
-
-
+                            <div class="item header-right-laguage">
+                                <div class="laguage-item">
+                                    <span class="lang en">English</span>
+                                    <ul class="list-language">
+                                        <li class="lang en">English</li>
+                                        <li class="lang vi">Vietnamese</li>
+                                        <li class="lang ko">Korean</li>
+                                        <li class="lang fr">French</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="item header-right-money">
-                                <select id="money">
-                                    <option value="usd" selected>USD</option>
-                                    <option value="vnd">VND</option>
-                                    <option value="won">WON</option>
-                                    <option value="eur">EUR</option>
-                                  </select>
+                                <div class="money-item">
+                                    <span class="money usd">USD</span>
+                                    <ul class="list-money">
+                                        <li class="money usd">USD</li>
+                                        <li class="money vnd">VND</li>
+                                        <li class="money won">WON</li>
+                                        <li class="money eur">EUR</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="item user">
                                 Login <iconify-icon icon="carbon:user"></iconify-icon>
@@ -58,20 +57,42 @@
                     </div>
                 </div>
             </div>
+            <!-- end header top -->
+
+            <!-- header bottom -->
             <div class="header-bottom">
-                <div class="container header-content">
-                    <!-- laguage mobile -->
-                    <div class="item header-right-laguage">
-                        <select id="language">
-                            <option value="en" selected>English</option>
-                            <option value="vi">Vietnamese</option>
-                            <option value="ko">Korean</option>
-                            <option value="fr">French</option>
-                          </select>
+                <div class="container header-bottom-content">
+                    <div class="row">
+                        <div class="logo">
+                            <h1><a href="#">Hekto</a></h1>
+                        </div>
+                        <div class="navbar">
+                            <ul class="menu">
+                                <li class="item">Home
+                                    <ul class="sub-menu">
+                                        <li class="sub-item"><a href="#">Pages1</a></li>
+                                        <li class="sub-item"><a href="#">Pages2</a></li>
+                                        <li class="sub-item"><a href="#">Pages3</a></li>
+                                        <li class="sub-item"><a href="#">Pages4</a></li>
+                                    </ul>
+                                </li>
+                                <li class="item"><a href="#">Pages</a></li>
+                                <li class="item"><a href="#">Products</a></li>
+                                <li class="item"><a href="#">Blog</a></li>
+                                <li class="item"><a href="#">Shop</a></li>
+                                <li class="item"><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="search">
+                            <input type="text" class="searchTerm">
+                            <button type="submit" class="searchBtn">
+                                <iconify-icon icon="eva:search-fill" style="color: white;"></iconify-icon>
+                            </button>
+                        </div>
                     </div>
-                    <!-- end laguage mobile -->
                 </div>
             </div>
+            <!-- end header bottom -->
         </header>
         <!-- end header  -->
     </div>
