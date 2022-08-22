@@ -128,6 +128,9 @@
             .navbar {
                 width: calc(100%/12*6);
                 line-height: 42px;
+                .icon-menu {
+                    display: none;
+                }
                 .menu {
                     align-items: center;
                     display: flex;
@@ -204,7 +207,8 @@
 }
 
 
-@include responsive_768{
+// Laptop
+@include responsive_1024{
     .header-content-left {
         a {
             font-size: 13px;
@@ -224,6 +228,52 @@
             &:after {
                 right: -4px;
                 top: -1px;
+            }
+        }
+    }
+    .header-bottom-content {
+        .logo {
+            width: 20%;
+            order: 2;
+        }
+
+        .navbar {
+            width: 40%;
+            order: 1;
+            .icon-menu {
+                display: block;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .menu {
+                display: none;
+            }
+            .sub-menu {
+                box-shadow: none;
+                background-color: unset;
+            }
+        }
+
+        .search {
+            width: 40%;
+            order: 3;
+        }
+    }
+
+    .header-bottom-content {
+        .navbar {
+            .item-home {
+                &:after {
+                    left: 52px;
+                    top: 3px;
+                }
+            }
+            .sub-menu {
+                position: unset;
+                .sub-item {
+                    padding: 0;
+                }
             }
         }
     }
