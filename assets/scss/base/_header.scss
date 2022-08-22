@@ -1,87 +1,281 @@
-// test
-
-// test
 .header {
+    /**
+    * Header Top
+    */
     &-top {
         background: $color-purple;
         &-content {
+            padding: 14px 15px;
             .row {
-                width: 100%; 
+                width: 100%;
+                display: flex;
             }
         }
+    }
+
+    &-content {
         &-left {
-            width: 100%;
+            width: 50%;
             display: flex;
-            justify-content: space-between;
             a {
                 font-family: 'JosefinSans';
                 text-decoration: none;
                 font-size: 16px;
                 line-height: 19px;
                 color: #F1F1F1;
-            }
-            i {
-                color: #FFFFFF;
-                position: relative;
-                top: 4px;
+                padding-right: 50px;
             }
         }
-        &-right {
-            width: 100%;
-            .header-icon {
-                display: flex;
-                width: 100%;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
 
+        &-icon {
+            color: #FFFFFF;
+            position: relative;
+            top: 4px;
+            padding-right: 11.33px;
+        }
+
+        &-right {
+            width: 50%;
+            display: flex;
+            justify-content: end;
             .item {
-                width: calc(100%/3);
                 font-family: 'JosefinSans';
                 font-size: 16px;
                 line-height: 19px;
                 color: #F1F1F1;
                 text-align: center;
+                padding-left: 20px;
+                position: relative;
+                cursor: pointer;
+            }
+            iconify-icon {
+                position: relative;
+                top: 2px;
+            }
+        }
+    }
+
+    &-right {
+        &-laguage,
+        &-money {
+            top: 3px;
+            .laguage-item, .money-item {
+                position: relative;
+                &:after {
+                    content: url('https://api.iconify.design/akar-icons/chevron-down.svg?color=white&width=16px&height=16px');
+                    position: absolute;
+                    right: -4px;
+                }
+                &:hover {
+                    &:after {
+                        content: url('https://api.iconify.design/akar-icons/chevron-up.svg?color=white&width=16px&height=16px');
+                    }
+                    .list-language, .list-money {
+                        display: block;
+                    }
+                }
             }
 
-            .laguage-item, .money-item{
-                display: none;
+            .list-language, .list-money {
                 position: absolute;
                 background-color: #f1f1f1;
-                min-width: 160px;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                 z-index: 1;
+                color: #333;
+                top: 25px;
+                left: -5px;
+                display: none;
             }
 
-            button {
-                background: transparent;
-                border: none;
-                color: #f1f1f1;
+            .lang, .money {
+                padding: 15px 15px;
+                &:hover {
+                    color: #fff;
+                    background: $color-purple;
+                }
+            }
+        }
+    }
+    /**
+    *  End Header Top
+    */
+
+    /**
+    * Header Bottom
+    */
+    &-bottom {
+        &-content {
+            .row {
+                display: flex;
+                padding: 20px 0;
+            }
+            .logo {
+                width: calc(100%/12*2);
+                h1 {
+                    margin: 0;
+                }
+
+                h1 a {
+                    font-family: 'JosefinSans';
+                    font-size: 34px;
+                    line-height: 40px;
+                    text-decoration: none;
+                    color: #0D0E43;
+                    font-weight: 700;
+                }
+            }
+            
+            .navbar {
+                width: calc(100%/12*6);
+                line-height: 42px;
+                .icon-menu {
+                    display: none;
+                }
+                .menu {
+                    align-items: center;
+                    display: flex;
+                    .item {
+                        padding-right: 25px;
+                        position: relative;
+                        a {
+                            color: #0D0E43;
+                            text-decoration: none;
+                        }
+                    }
+                    .item-home {
+                        padding-right: 35px;
+                        color: #fb2e86;
+                        &:after {
+                            content: url('https://api.iconify.design/akar-icons/chevron-down.svg?color=%23fb2e86&width=16px&height=16px');
+                            position: absolute;
+                            right: 15px;
+                            top: 3px;
+                        }
+                        &:hover {
+                            .sub-menu {
+                                display: block;
+                            }
+                            &:after {
+                                content: url('https://api.iconify.design/akar-icons/chevron-up.svg?color=%23fb2e86&width=16px&height=16px');
+                            }
+                        }
+                    }
+                }
+                .sub-menu {
+                    display: none;
+                    position: absolute;
+                    background-color: #f1f1f1;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    .sub-item {
+                        padding: 0 15px;
+                        &:hover {
+                            background: $color-purple;
+                            a {
+                                color: #fb2e86;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .search {
+                width: calc(100%/12*4);
+                position: relative;
+                display: flex;
+                align-items: center;
+                .searchTerm {
+                    height: 34px;
+                    width: 100%;
+                    top: 0;
+                    outline: none;
+                    border: 2px solid #e7e6ef;
+                }
+                .searchBtn {
+                    position: absolute;
+                    width: 50px;
+                    height: 38px;
+                    right: 0px;
+                    background: #FB2E86;
+                    border: none;
+                }
+            }
+        }
+    }
+    /**
+    *  End Header Bottom
+    */
+}
+
+
+// Laptop
+@include responsive_1024{
+    .header-content-left {
+        a {
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+
+    .header-content-right {
+        .item {
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+
+    .header-right-laguage, .header-right-money{
+        .laguage-item, .money-item {
+            &:after {
+                right: -4px;
+                top: -1px;
+            }
+        }
+    }
+    .header-bottom-content {
+        .logo {
+            width: 20%;
+            order: 2;
+        }
+
+        
+        .navbar {
+            width: 40%;
+            order: 1;
+            .icon-menu {
+                display: block;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .menu {
+                display: none;
+            }
+            .sub-menu {
+                box-shadow: none;
+                background-color: unset;
+            }
+        }
+
+        .search {
+            width: 40%;
+            order: 3;
+        }
+    }
+
+    .header-bottom-content {
+        .navbar {
+            .item-home {
+                &:after {
+                    left: 52px;
+                    top: 3px;
+                }
+            }
+            .sub-menu {
+                position: unset;
+                .sub-item {
+                    padding: 0;
+                }
             }
         }
     }
 }
-
-
-
-//1024
-// .header {
-//     &-top {
-//         &-content {
-//             .row {
-//                 width: 100%;
-//                 display: flex; 
-//             }
-//         }
-//         &-left {
-//             width: 50%;
-//         }
-//         &-right {
-//             width: 50%;
-//             ul {
-//                 display: flex;
-//             }
-//         }
-//     }
-// }
-//1024
