@@ -21,3 +21,54 @@
 //
 // Style guide
 // _______________________________
+
+// page sort by
+@include responsive_1024 {
+	.page-sortby {
+		display: block;
+		.right {
+			justify-content: flex-start;
+			margin-top: 20px;
+		}
+	}
+}
+
+@include responsive_768 {
+	.page-sortby {
+		.search {
+			margin-left: 0;
+			width: 100%;
+			margin-top: 20px;
+			input {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@include responsive_512 {
+	.page-sortby {
+		.right {
+			display: block;
+			&-title {
+				min-width: 100px;
+			}
+			.perpage input {
+				width: 100%;
+				margin: 0;
+			}
+			.sortby-right {
+				flex: 1;
+				.sortby-select {
+					width: 100%;
+				}
+			}
+			& > div {
+				width: fit-content;
+				min-width: 300px;
+				margin: 0;
+				margin-top: 20px;
+			}
+		}
+	}
+}

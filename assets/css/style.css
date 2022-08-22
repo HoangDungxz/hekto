@@ -843,7 +843,6 @@ input:focus {
 .page-sortby .perpage {
   display: flex;
   align-items: center;
-  margin-left: -10px;
 }
 .page-sortby .perpage input {
   height: 25px;
@@ -872,6 +871,7 @@ input:focus {
   min-height: 26px;
   position: relative;
   border: 1px solid #e7e6ef;
+  z-index: 10;
   transform: translate(0, 2px);
   -webkit-transform: translate(0, 2px);
   -moz-transform: translate(0, 2px);
@@ -1008,6 +1008,51 @@ input:focus {
 *   }
 *
 */
+@media only screen and (max-width: 1024px) {
+  .page-sortby {
+    display: block;
+  }
+  .page-sortby .right {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .page-sortby .search {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .page-sortby .search input {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 512px) {
+  .page-sortby .right {
+    display: block;
+  }
+  .page-sortby .right-title {
+    min-width: 100px;
+  }
+  .page-sortby .right .perpage input {
+    width: 100%;
+    margin: 0;
+  }
+  .page-sortby .right .sortby-right {
+    flex: 1;
+  }
+  .page-sortby .right .sortby-right .sortby-select {
+    width: 100%;
+  }
+  .page-sortby .right > div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    min-width: 300px;
+    margin: 0;
+    margin-top: 20px;
+  }
+}
 .header {
   /**
      * Header Top
@@ -1211,7 +1256,7 @@ input:focus {
   border: none;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .header-content-left a {
     font-size: 13px;
     line-height: 15px;
@@ -1263,6 +1308,33 @@ input:focus {
     padding: 0;
   }
 }
+.footer-content {
+  display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  flex-wrap: wrap;
+}
+.footer-content > div {
+  height: 100px;
+  background-color: #e0d3f5;
+  margin-right: 30px;
+}
+.footer-content > div:last-child {
+  margin-right: 0;
+}
+.footer-content .info {
+  flex-basis: 440px;
+}
+.footer-content .categories {
+  flex-basis: 235px;
+}
+.footer-content .customer-care {
+  flex-basis: 210px;
+}
+.footer-content .pages {
+  flex-basis: 195px;
+}
+
 /*
 * Use: 
 *    @include responsive_375{
@@ -1282,3 +1354,48 @@ input:focus {
 *   }
 *
 */
+@media only screen and (max-width: 1024px) {
+  .page-sortby {
+    display: block;
+  }
+  .page-sortby .right {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .page-sortby .search {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .page-sortby .search input {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 512px) {
+  .page-sortby .right {
+    display: block;
+  }
+  .page-sortby .right-title {
+    min-width: 100px;
+  }
+  .page-sortby .right .perpage input {
+    width: 100%;
+    margin: 0;
+  }
+  .page-sortby .right .sortby-right {
+    flex: 1;
+  }
+  .page-sortby .right .sortby-right .sortby-select {
+    width: 100%;
+  }
+  .page-sortby .right > div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    min-width: 300px;
+    margin: 0;
+    margin-top: 20px;
+  }
+}
