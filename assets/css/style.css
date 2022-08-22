@@ -1008,6 +1008,261 @@ input:focus {
 *   }
 *
 */
+.header {
+  /**
+     * Header Top
+     */
+  /**
+     *  End Header Top
+     */
+  /**
+     * Header Bottom
+     */
+  /**
+     *  End Header Bottom
+     */
+}
+.header-top {
+  background: #7e33e0;
+}
+.header-top-content {
+  padding: 14px 15px;
+}
+.header-top-content .row {
+  width: 100%;
+  display: flex;
+}
+.header-content-left {
+  width: 50%;
+  display: flex;
+}
+.header-content-left a {
+  font-family: "JosefinSans";
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
+  color: #f1f1f1;
+  padding-right: 50px;
+}
+.header-content-icon {
+  color: #ffffff;
+  position: relative;
+  top: 4px;
+  padding-right: 11.33px;
+}
+.header-content-right {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+.header-content-right .item {
+  font-family: "JosefinSans";
+  font-size: 16px;
+  line-height: 19px;
+  color: #f1f1f1;
+  text-align: center;
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.header-content-right iconify-icon {
+  position: relative;
+  top: 2px;
+}
+.header-right-laguage, .header-right-money {
+  top: 3px;
+}
+.header-right-laguage .laguage-item,
+.header-right-laguage .money-item, .header-right-money .laguage-item,
+.header-right-money .money-item {
+  position: relative;
+}
+.header-right-laguage .laguage-item:after,
+.header-right-laguage .money-item:after, .header-right-money .laguage-item:after,
+.header-right-money .money-item:after {
+  content: url("https://api.iconify.design/akar-icons/chevron-down.svg?color=white&width=16px&height=16px");
+  position: absolute;
+  right: -4px;
+}
+.header-right-laguage .laguage-item:hover:after,
+.header-right-laguage .money-item:hover:after, .header-right-money .laguage-item:hover:after,
+.header-right-money .money-item:hover:after {
+  content: url("https://api.iconify.design/akar-icons/chevron-up.svg?color=white&width=16px&height=16px");
+}
+.header-right-laguage .laguage-item:hover .list-language,
+.header-right-laguage .laguage-item:hover .list-money,
+.header-right-laguage .money-item:hover .list-language,
+.header-right-laguage .money-item:hover .list-money, .header-right-money .laguage-item:hover .list-language,
+.header-right-money .laguage-item:hover .list-money,
+.header-right-money .money-item:hover .list-language,
+.header-right-money .money-item:hover .list-money {
+  display: block;
+}
+.header-right-laguage .list-language,
+.header-right-laguage .list-money, .header-right-money .list-language,
+.header-right-money .list-money {
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: #333;
+  top: 25px;
+  left: -5px;
+  display: none;
+}
+.header-right-laguage .lang,
+.header-right-laguage .money, .header-right-money .lang,
+.header-right-money .money {
+  padding: 15px 15px;
+}
+.header-right-laguage .lang:hover,
+.header-right-laguage .money:hover, .header-right-money .lang:hover,
+.header-right-money .money:hover {
+  color: #fff;
+  background: #7e33e0;
+}
+.header-bottom-content .row {
+  display: flex;
+  padding: 20px 0;
+}
+.header-bottom-content .logo {
+  width: 16.6666666667%;
+}
+.header-bottom-content .logo h1 {
+  margin: 0;
+}
+.header-bottom-content .logo h1 a {
+  font-family: "JosefinSans";
+  font-size: 34px;
+  line-height: 40px;
+  text-decoration: none;
+  color: #0d0e43;
+  font-weight: 700;
+}
+.header-bottom-content .navbar {
+  width: 50%;
+  line-height: 42px;
+}
+.header-bottom-content .navbar .icon-menu {
+  display: none;
+}
+.header-bottom-content .navbar .menu {
+  align-items: center;
+  display: flex;
+}
+.header-bottom-content .navbar .menu .item {
+  padding-right: 25px;
+  position: relative;
+}
+.header-bottom-content .navbar .menu .item a {
+  color: #0d0e43;
+  text-decoration: none;
+}
+.header-bottom-content .navbar .menu .item-home {
+  padding-right: 35px;
+  color: #fb2e86;
+}
+.header-bottom-content .navbar .menu .item-home:after {
+  content: url("https://api.iconify.design/akar-icons/chevron-down.svg?color=%23fb2e86&width=16px&height=16px");
+  position: absolute;
+  right: 15px;
+  top: 3px;
+}
+.header-bottom-content .navbar .menu .item-home:hover .sub-menu {
+  display: block;
+}
+.header-bottom-content .navbar .menu .item-home:hover:after {
+  content: url("https://api.iconify.design/akar-icons/chevron-up.svg?color=%23fb2e86&width=16px&height=16px");
+}
+.header-bottom-content .navbar .sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.header-bottom-content .navbar .sub-menu .sub-item {
+  padding: 0 15px;
+}
+.header-bottom-content .navbar .sub-menu .sub-item:hover {
+  background: #7e33e0;
+}
+.header-bottom-content .navbar .sub-menu .sub-item:hover a {
+  color: #fb2e86;
+}
+.header-bottom-content .search {
+  width: 33.3333333333%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.header-bottom-content .search .searchTerm {
+  height: 34px;
+  width: 100%;
+  top: 0;
+  outline: none;
+  border: 2px solid #e7e6ef;
+}
+.header-bottom-content .search .searchBtn {
+  position: absolute;
+  width: 50px;
+  height: 38px;
+  right: 0px;
+  background: #fb2e86;
+  border: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header-content-left a {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .header-content-right .item {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .header-right-laguage .laguage-item:after,
+.header-right-laguage .money-item:after,
+.header-right-money .laguage-item:after,
+.header-right-money .money-item:after {
+    right: -4px;
+    top: -1px;
+  }
+  .header-bottom-content .logo {
+    width: 20%;
+    order: 2;
+  }
+  .header-bottom-content .navbar {
+    width: 40%;
+    order: 1;
+  }
+  .header-bottom-content .navbar .icon-menu {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .header-bottom-content .navbar .menu {
+    display: none;
+  }
+  .header-bottom-content .navbar .sub-menu {
+    box-shadow: none;
+    background-color: unset;
+  }
+  .header-bottom-content .search {
+    width: 40%;
+    order: 3;
+  }
+  .header-bottom-content .navbar .item-home:after {
+    left: 52px;
+    top: 3px;
+  }
+  .header-bottom-content .navbar .sub-menu {
+    position: unset;
+  }
+  .header-bottom-content .navbar .sub-menu .sub-item {
+    padding: 0;
+  }
+}
 /*
 * Use: 
 *    @include responsive_375{
