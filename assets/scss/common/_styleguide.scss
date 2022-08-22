@@ -17,6 +17,11 @@ a {
 	text-decoration: none;
 }
 
+textarea:focus,
+input:focus {
+	outline: none;
+}
+
 //
 // Color
 // _______________________________
@@ -104,6 +109,9 @@ a {
 		color: #212525;
 		margin: 49px 82px 47px 82px;
 	}
+	&-row {
+		@include flexbox;
+	}
 	&-color {
 		width: calc(
 			983px
@@ -116,12 +124,12 @@ a {
 			justify-content: flex-end; // căn sang phải
 		}
 		&-item {
-			padding: 22px;
+			padding: 22px; // độ cách lề của item
 			box-sizing: border-box;
 			box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
 			border-radius: 15px;
 			border: 2px solid #eaebed;
-			& + .styleguide-color-item {
+			& + & {
 				margin-top: 20px - 4px; // styleguide-color-item nào có 2 cái thì cách nhau, 4px của border trên dưới
 			}
 		}
@@ -239,49 +247,70 @@ a {
 			line-height: 1.181;
 			color: $color-navy-blue;
 			font-weight: 700;
+			margin-bottom: 8px;
 		}
 	}
 	&-right {
 		@include flexbox;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center;
 		flex: 1;
 		&-title {
 			font-size: 16px;
 			line-height: 1.1875;
 			color: $color-off-navy-blue;
+			margin-right: 9px;
 		}
 	}
 	&-perpage {
-		margin-right: 89.92px;
+		display: flex;
+		align-items: center;
+		margin-left: -10px;
+		input {
+			height: 25px;
+			width: 55px;
+			border: 1px solid #e7e6ef;
+			padding: 0;
+			line-height: normal;
+			box-sizing: border-box;
+			margin-right: 27px;
+		}
 	}
 	&-result-count {
 		font-size: 12px;
 		line-height: 1.166;
+		color: $color-sub-text;
 	}
 	&-sortby {
 		@include flexbox;
 		align-items: center;
+		position: relative;
 		&-select {
-			max-height: 19px;
-			min-height: 19px;
+			max-height: 26px;
+			min-height: 26px;
 			position: relative;
-
+			border: 1px solid #e7e6ef;
+			@include translate(0, 2px);
 			ul {
-				max-height: 19px;
+				max-height: 26px;
 				overflow: hidden;
 				transition: max-height 0.5s ease;
 			}
+			li {
+				height: 26px;
+			}
 			a {
-				padding: 0 13.67px;
-				padding-top: 3px;
+				line-height: 26px;
+				width: 100%;
+				padding-left: 9px;
+				padding-right: 25px;
 				background-color: #ffffff;
 				display: block;
 				white-space: nowrap;
 				text-decoration: none;
 				font-size: 12px;
-				line-height: 18px;
 				color: $color-sub-text;
+				box-sizing: border-box;
 			}
 		}
 		&-right {
@@ -297,11 +326,16 @@ a {
 		iconify-icon {
 			font-size: 14px;
 			color: $color-sub-text;
+			position: absolute;
+			top: 55%;
+			right: 10px;
+			@include translate(0, -50%);
 		}
 	}
 	&-view {
 		@include flexbox;
-		margin-left: 35px;
+		margin-left: 24px;
+		align-items: flex-end;
 		&-title {
 			margin-right: 4px;
 		}
@@ -310,6 +344,18 @@ a {
 			& a:first-child {
 				margin-right: 5px;
 			}
+			a {
+				color: $color-navy-blue;
+			}
+		}
+	}
+	&-search {
+		margin-left: 27px;
+		input {
+			padding: 4.8px 0;
+			@include translate(0, 2px);
+			border: 1px solid #e7e6ef;
+			width: 160px;
 		}
 	}
 }
