@@ -112,44 +112,44 @@ input:focus {
 	&-row {
 		@include flexbox;
 	}
-	&-color {
+	.color {
 		width: calc(
 			983px
 		); // độ rông của phần color chuyển sang %, 4px của border 2 bên
 		font-family: $font-family__poppins;
 		margin-right: 26px;
-		&-content {
+		.content {
 			@include flexbox; // dàn ngang cho phần color
 			flex-wrap: wrap; // tự xuống dòng
 			justify-content: flex-end; // căn sang phải
 		}
-		&-item {
+		.item {
 			padding: 22px; // độ cách lề của item
 			box-sizing: border-box;
 			box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
 			border-radius: 15px;
 			border: 2px solid #eaebed;
-			& + & {
+			& + .item {
 				margin-top: 20px - 4px; // styleguide-color-item nào có 2 cái thì cách nhau, 4px của border trên dưới
 			}
 		}
-		&-display {
+		.display {
 			height: 50px;
 			border-radius: 32px;
 			margin-bottom: 17px;
 		}
-		&-code {
+		.code {
 			font-size: 14px;
 			line-height: 1.43;
 			color: rgba(33, 37, 37, 0.4);
 			margin-bottom: 4px;
 		}
-		&-name {
+		.name {
 			font-weight: 500;
 			font-size: 22px;
 			line-height: 1.09;
 		}
-		&-col {
+		.col {
 			width: 250px;
 			margin-right: 30px;
 			margin-bottom: 51px;
@@ -159,10 +159,10 @@ input:focus {
 			&:first-child,
 			&:last-child {
 				width: 267px;
-				.styleguide-color-item {
+				.item {
 					padding: 30px 31px 13px 30px;
 					box-sizing: border-box;
-					.styleguide-color-display {
+					.display {
 						border-radius: 25px;
 						height: 206px;
 						margin-bottom: 34px;
@@ -170,22 +170,22 @@ input:focus {
 				}
 			}
 			&:last-child {
-				.styleguide-color-item {
+				.item {
 					padding: 30px 30px 13px 31px;
 				}
 			}
 		}
 	}
-	&-font {
+	.font {
 		width: 391px;
-		&-title {
+		.title {
 			text-align: right;
 		}
-		&-content {
+		.content {
 			width: 341px;
 		}
-		&-top,
-		&-bottom {
+		.top,
+		.bottom {
 			padding: 0 0 16px 23px;
 			display: flex;
 			flex-direction: column;
@@ -193,16 +193,16 @@ input:focus {
 			background: #ffffff;
 			border-radius: 25px;
 		}
-		&-top {
+		.top {
 			height: 150px;
 			box-shadow: -9px 18px 40px rgba(0, 0, 0, 0.1);
 		}
-		&-bottom {
+		.bottom {
 			min-height: 515px;
 			border: 2px solid #eaebed;
 			margin-top: 26px;
 		}
-		&-display {
+		.display {
 			font-family: $font-family__josefin-sans;
 			font-size: 36px;
 			width: 84px;
@@ -210,14 +210,14 @@ input:focus {
 			@include flexbox;
 			align-items: center;
 		}
-		&-name {
+		.name {
 			font-weight: 500;
 			font-size: 14px;
 			color: rgba(33, 37, 37, 0.4);
 			line-height: 1.43;
 			margin-top: 1px;
 		}
-		&-type {
+		.type {
 			font-weight: 500;
 			font-size: 22px;
 			line-height: 1.89;
@@ -235,12 +235,12 @@ input:focus {
 // Page sort by
 // _______________________________
 
-.sortby {
+.page-sortby {
 	min-height: 44px;
 	font-family: $font-family__lato;
 	font-weight: 400;
 	@include flexbox;
-	&-left {
+	.left {
 		&-title {
 			font-family: $font-family__josefin-sans;
 			font-size: 22px;
@@ -250,7 +250,7 @@ input:focus {
 			margin-bottom: 8px;
 		}
 	}
-	&-right {
+	.right {
 		@include flexbox;
 		justify-content: flex-end;
 		align-items: center;
@@ -262,7 +262,7 @@ input:focus {
 			margin-right: 9px;
 		}
 	}
-	&-perpage {
+	.perpage {
 		display: flex;
 		align-items: center;
 		margin-left: -10px;
@@ -276,12 +276,12 @@ input:focus {
 			margin-right: 27px;
 		}
 	}
-	&-result-count {
+	.result-count {
 		font-size: 12px;
 		line-height: 1.166;
 		color: $color-sub-text;
 	}
-	&-sortby {
+	.sortby {
 		@include flexbox;
 		align-items: center;
 		position: relative;
@@ -332,7 +332,7 @@ input:focus {
 			@include translate(0, -50%);
 		}
 	}
-	&-view {
+	.view {
 		@include flexbox;
 		margin-left: 24px;
 		align-items: flex-end;
@@ -349,7 +349,7 @@ input:focus {
 			}
 		}
 	}
-	&-search {
+	.search {
 		margin-left: 27px;
 		input {
 			padding: 4.8px 0;
