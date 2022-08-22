@@ -104,7 +104,14 @@
     * Header Bottom
     */
     &-bottom {
+        .search-mobile {
+            display: none !important;
+        }
         &-content {
+            .header-contact {
+                display: none;
+            }
+
             .row {
                 display: flex;
                 padding: 20px 0;
@@ -128,8 +135,11 @@
             .navbar {
                 width: calc(100%/12*6);
                 line-height: 42px;
-                .icon-menu {
+                .icon-menu, .icon-menu-tablet {
                     display: none;
+                }
+                .menu-tablet {
+                    display: none !important;
                 }
                 .menu {
                     align-items: center;
@@ -166,6 +176,7 @@
                     position: absolute;
                     background-color: #f1f1f1;
                     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1000;
                     .sub-item {
                         padding: 0 15px;
                         &:hover {
@@ -207,7 +218,7 @@
 }
 
 
-// Laptop
+// tablet
 @include responsive_1024{
     .header-content-left {
         a {
@@ -231,28 +242,65 @@
             }
         }
     }
+
+    .header-bottom {
+        .search-mobile {
+            display: none !important;
+        }
+    }
+
     .header-bottom-content {
+        .header-contact {
+            display: none;
+        }
+
         .logo {
             width: 20%;
             order: 2;
         }
 
-        
         .navbar {
             width: 40%;
             order: 1;
-            .icon-menu {
-                display: block;
-                position: relative;
-                top: 50%;
-                transform: translateY(-50%);
-            }
             .menu {
                 display: none;
             }
-            .sub-menu {
-                box-shadow: none;
-                background-color: unset;
+            .menu-tablet {
+                display: flex !important;
+                .item-tablet {
+                    &:hover {
+                        .sub-tablet {
+                            display: block;
+                        }
+                    }
+                    position: relative;
+                    .sub-tablet {
+                        position: absolute;
+                        background-color: #f1f1f1;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        display: none;
+                        z-index: 1000;
+                        .menu-tab {
+                            padding-left: 15px;
+                            &:hover {
+                                background: $color-purple;
+                                a {
+                                    color: #fb2e86;
+                                }
+                            }
+                        }
+                    }
+                }
+                .item-home {
+                    &::after {
+                        left: 45px;
+                        top: 3px;
+                    }
+                }
+            }
+            .icon-menu-tablet {
+                display: block;
+                padding: 15px 15px 15px 0;
             }
         }
 
@@ -261,21 +309,59 @@
             order: 3;
         }
     }
+}
+// tablet
+
+// mobile
+@include responsive_768{
+    .header-content-left {
+        display: none;
+    }
+
+    .header-content-right {
+        width: 100%;
+        justify-content: space-around;
+        
+        .item {
+            padding-right: 10px;
+            padding-left: unset;
+        }
+    }
 
     .header-bottom-content {
-        .navbar {
-            .item-home {
-                &:after {
-                    left: 52px;
-                    top: 3px;
-                }
+        .search {
+            display: none;
+        }
+        .search-mobile {
+            display: block !important;
+            width: 100%;
+            .searchBtn {
+                position: absolute;
+                top: 1px;
+                right: -7px;
             }
-            .sub-menu {
-                position: unset;
-                .sub-item {
-                    padding: 0;
-                }
+        }
+        .logo {
+            width: 30%;
+            text-align: center;
+        }
+        .navbar {
+            width: 35%;
+        }
+        .header-contact {
+            width: 35%;
+            order: 2;
+            text-align: end;
+            font-size: 20px;
+            display: block;
+            a {
+                position: relative;
+                top: 5px;
             }
         }
     }
 }
+// mobile
+
+
+

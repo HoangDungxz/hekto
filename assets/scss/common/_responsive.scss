@@ -18,10 +18,10 @@
 *
 */
 
-$res_375 : "only screen and (min-width: 375px)";
-$res_512 : "only screen and (min-width: 512px)";
-$res_768 : "only screen and (min-width: 768px)";
-$res_1024 : "only screen and (min-width: 1024px)";
+$res_375 : "only screen and (max-width: 375px)";
+$res_512 : "only screen and (max-width: 511px)";
+$res_768 : "only screen and (max-width: 767px)";
+$res_1024 : "only screen and (max-width: 1023px)";
  
 @mixin responsive_375() {
     @media #{$res_375} {
