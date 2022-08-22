@@ -110,10 +110,98 @@
 
         <!-- begin Featured Products -->
 
+        <div class="featured-products">
+            <div class="container">
+                <div class="title">
+                    <p>Featured Products</p>
+                </div>
+                <div class="featured-products-list">
+                    <div class="item">
+                        <div class="top">
+                            <div class="image">
+                                <img src="./assets/images/featured_products/1.png" alt="Featured Products">
+                            </div>
+                            <div class="tool"></div>
+                            <div class="view-detail"></div>
+                        </div>
+                        <div class="bottom">
+                            <div class="name"></div>
+                            <div class="color"></div>
+                            <div class="code"></div>
+                            <div class="price"></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="top">
+                            <div class="image">
+                                <img src="./assets/images/featured_products/2.png" alt="Featured Products">
+                            </div>
+                            <div class="tool"></div>
+                            <div class="view-detail"></div>
+                        </div>
+                        <div class="bottom">
+                            <div class="name"></div>
+                            <div class="color"></div>
+                            <div class="code"></div>
+                            <div class="price"></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="top">
+                            <div class="image">
+                                <img src="./assets/images/featured_products/3.png" alt="Featured Products">
+                            </div>
+                            <div class="tool"></div>
+                            <div class="view-detail"></div>
+                        </div>
+                        <div class="bottom">
+                            <div class="name"></div>
+                            <div class="color"></div>
+                            <div class="code"></div>
+                            <div class="price"></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="top">
+                            <div class="image">
+                                <img src="./assets/images/featured_products/4.png" alt="Featured Products">
+                            </div>
+                            <div class="tool"></div>
+                            <div class="view-detail"></div>
+                        </div>
+                        <div class="bottom">
+                            <div class="name"></div>
+                            <div class="color"></div>
+                            <div class="code"></div>
+                            <div class="price"></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="top">
+                            <div class="image">
+                                <img src="./assets/images/featured_products/4.png" alt="Featured Products">
+                            </div>
+                            <div class="tool"></div>
+                            <div class="view-detail"></div>
+                        </div>
+                        <div class="bottom">
+                            <div class="name"></div>
+                            <div class="color"></div>
+                            <div class="code"></div>
+                            <div class="price"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- end Featured Products -->
 
         <!-- begin footer -->
-        <footer class="footer">
+        <!-- <footer class="footer">
             <div class="container">
                 <div class="footer-content">
                     <div class="info"></div>
@@ -125,7 +213,7 @@
             <div class="footer-bottom">
 
             </div>
-        </footer>
+        </footer> -->
         <!-- end footer footer -->
     </div>
 
@@ -136,6 +224,15 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
     <script src="./assets/js/style.js"></script>
 
+    <script>
+        $('.featured-products-list').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            // autoplay: true,
+            autoplaySpeed: 2000,
+            arows: false
+        });
+    </script>
 </body>
 
 </html>

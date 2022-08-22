@@ -1335,6 +1335,32 @@ input:focus {
   flex-basis: 195px;
 }
 
+.featured-products .featured-products-list {
+  /* the slides */
+  /* the parent */
+}
+.featured-products .featured-products-list .slick-slide {
+  margin-left: 30px;
+}
+.featured-products .featured-products-list .slick-list {
+  margin-left: -30px;
+}
+.featured-products .item .image {
+  position: relative;
+  padding-top: 87.4074074074%;
+  background-color: #f6f7fb;
+}
+.featured-products .item .image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  width: auto;
+  max-width: 90%;
+  min-width: 40%;
+}
 /*
 * Use: 
 *    @include responsive_375{

@@ -1,3 +1,38 @@
 //
-//
+// Featured Products
 // _______________________________
+
+.featured-products {
+	.featured-products-list {
+		/* the slides */
+		.slick-slide {
+			margin-left: 30px;
+		}
+
+		/* the parent */
+		.slick-list {
+			margin-left: -30px;
+		}
+	}
+	.item {
+		.image {
+			position: relative;
+			padding-top: calc(236 / 270 * 100%);
+			background-color: #f6f7fb;
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include translate(-50%, -50%);
+				width: auto;
+				max-width: 90%;
+				min-width: 40%;
+			}
+
+			&:before {
+				// content: '';
+				// padding-top: calc(270 / 236 * 100%);
+			}
+		}
+	}
+}
