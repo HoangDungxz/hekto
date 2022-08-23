@@ -1,0 +1,26 @@
+.footer {
+}
+.footer-content {
+	@include flexbox;
+	& > div {
+		height: 100px;
+		background-color: $color-pantone-purple;
+		margin-right: 30px;
+		// flex: 1;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.info {
+		flex-basis: 440px;
+	}
+	.categories {
+		flex-basis: 235px;
+	}
+	.customer-care {
+		flex-basis: 210px;
+	}
+	.pages {
+		flex-basis: 195px;
+	}
+}

@@ -20,6 +20,7 @@ $color-sky-blue: linear-gradient(121.53deg, #f3f9ff 0%, #f1f0ff 100%);
 $color-pantone-purple: #e0d3f5;
 
 $color-sub-text: #8a8fb9;
+$color-bg-shade: #f6f5ff;
 
 //
 // Fonts
@@ -36,3 +37,12 @@ $font-family__josefin-sans: $font-family-name__josefin-sans,
 
 $font-family-name__lato: 'Lato';
 $font-family__lato: $font-family-name__lato, $font-family-sans-serif;
+
+//
+// Resposive
+// _______________________________
+
+$res_375: 'only screen and (max-width: 375px)';
+$res_512: 'only screen and (max-width: 512px)';
+$res_768: 'only screen and (max-width: 768px)';
+$res_1024: 'only screen and (max-width: 1024px)';

@@ -18,6 +18,7 @@
 *
 */
 
+<<<<<<< HEAD
 $res_375 : "only screen and (max-width: 375px)";
 $res_512 : "only screen and (max-width: 511px)";
 $res_768 : "only screen and (max-width: 767px)";
@@ -27,19 +28,59 @@ $res_1024 : "only screen and (max-width: 1023px)";
     @media #{$res_375} {
         @content;
     }
+=======
+//
+// Style guide
+// _______________________________
+
+// page sort by
+@include responsive_1024 {
+	.page-sortby {
+		display: block;
+		.right {
+			justify-content: flex-start;
+			margin-top: 20px;
+		}
+	}
+>>>>>>> 1e8fe4c1675fca5e1a73affd81c01abff5106c83
 }
-@mixin responsive_512() {
-    @media #{$res_512} {
-        @content;
-    }
+
+@include responsive_768 {
+	.page-sortby {
+		.search {
+			margin-left: 0;
+			width: 100%;
+			margin-top: 20px;
+			input {
+				width: 100%;
+			}
+		}
+	}
 }
-@mixin responsive_768() {
-    @media #{$res_768} {
-        @content;
-    }
-}
-@mixin responsive_1024() {
-    @media #{$res_1024} {
-        @content;
-    }
+
+@include responsive_512 {
+	.page-sortby {
+		.right {
+			display: block;
+			&-title {
+				min-width: 100px;
+			}
+			.perpage input {
+				width: 100%;
+				margin: 0;
+			}
+			.sortby-right {
+				flex: 1;
+				.sortby-select {
+					width: 100%;
+				}
+			}
+			& > div {
+				width: fit-content;
+				min-width: 300px;
+				margin: 0;
+				margin-top: 20px;
+			}
+		}
+	}
 }

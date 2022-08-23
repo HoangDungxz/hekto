@@ -6,6 +6,11 @@
     1.4 Reset CSS
     1.5 Normalize CSS
     1.6 Style Guide
+        1.6.1 Basic
+        1.6.2 Color
+        1.6.3 Background Color
+        1.6.4 Dispplay Color and Font
+        1.6.5 Page sort by
 2.0 Base
     2.1 Header
         2.1.1 Top Menu
@@ -23,9 +28,11 @@
 @import './common/_normalize.scss';
 @import './common/_typography.scss';
 @import './common/_styleguide.scss';
-@import './common/responsive.scss';
+@import './common/_responsive.scss';
 
 @import './base/_header.scss';
 @import './base/_footer.scss';
 
 @import './content/_home_page_content.scss';
+
+@import './common/responsive.scss';
