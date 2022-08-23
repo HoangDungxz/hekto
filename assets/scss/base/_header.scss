@@ -1,225 +1,234 @@
-.header {
-    /**
-    * Header Top
-    */
-    &-top {
-        background: $color-purple;
-        &-content {
-            padding: 14px 15px;
-            .row {
-                width: 100%;
-                display: flex;
-            }
+/**
+* Header Top
+*/
+.header-top {
+    background: $color-purple;
+    &-content {
+        padding: 14px 15px;
+        .row {
+            width: 100%;
+            display: flex;
+        }
+    }
+}
+
+.header-content {
+    &-left {
+        width: 50%;
+        display: flex;
+        a {
+            font-family: "JosefinSans";
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 19px;
+            color: #f1f1f1;
+            padding-right: 50px;
         }
     }
 
-    &-content {
-        &-left {
-            width: 50%;
-            display: flex;
-            a {
-                font-family: 'JosefinSans';
-                text-decoration: none;
-                font-size: 16px;
-                line-height: 19px;
-                color: #F1F1F1;
-                padding-right: 50px;
-            }
-        }
-
-        &-icon {
-            color: #FFFFFF;
-            position: relative;
-            top: 4px;
-            padding-right: 11.33px;
-        }
-
-        &-right {
-            width: 50%;
-            display: flex;
-            justify-content: end;
-            .item {
-                font-family: 'JosefinSans';
-                font-size: 16px;
-                line-height: 19px;
-                color: #F1F1F1;
-                text-align: center;
-                padding-left: 20px;
-                position: relative;
-                cursor: pointer;
-            }
-            iconify-icon {
-                position: relative;
-                top: 2px;
-            }
-        }
+    &-icon {
+        color: #ffffff;
+        position: relative;
+        top: 4px;
+        padding-right: 11.33px;
     }
 
     &-right {
-        &-laguage,
-        &-money {
-            top: 3px;
-            .laguage-item, .money-item {
-                position: relative;
-                &:after {
-                    content: url('https://api.iconify.design/akar-icons/chevron-down.svg?color=white&width=16px&height=16px');
-                    position: absolute;
-                    right: -4px;
-                }
-                &:hover {
-                    &:after {
-                        content: url('https://api.iconify.design/akar-icons/chevron-up.svg?color=white&width=16px&height=16px');
-                    }
-                    .list-language, .list-money {
-                        display: block;
-                    }
-                }
-            }
-
-            .list-language, .list-money {
-                position: absolute;
-                background-color: #f1f1f1;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-                color: #333;
-                top: 25px;
-                left: -5px;
-                display: none;
-            }
-
-            .lang, .money {
-                padding: 15px 15px;
-                &:hover {
-                    color: #fff;
-                    background: $color-purple;
-                }
-            }
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        .item {
+            font-family: "JosefinSans";
+            font-size: 16px;
+            line-height: 19px;
+            color: #f1f1f1;
+            text-align: center;
+            padding-left: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+        iconify-icon {
+            position: relative;
+            top: 2px;
         }
     }
-    /**
-    *  End Header Top
-    */
-
-    /**
-    * Header Bottom
-    */
-    &-bottom {
-        .search-mobile {
-            display: none !important;
-        }
-        &-content {
-            .header-contact {
-                display: none;
-            }
-
-            .row {
-                display: flex;
-                padding: 20px 0;
-            }
-            .logo {
-                width: calc(100%/12*2);
-                h1 {
-                    margin: 0;
-                }
-
-                h1 a {
-                    font-family: 'JosefinSans';
-                    font-size: 34px;
-                    line-height: 40px;
-                    text-decoration: none;
-                    color: #0D0E43;
-                    font-weight: 700;
-                }
-            }
-            
-            .navbar {
-                width: calc(100%/12*6);
-                line-height: 42px;
-                .icon-menu, .icon-menu-tablet {
-                    display: none;
-                }
-                .menu-tablet {
-                    display: none !important;
-                }
-                .menu {
-                    align-items: center;
-                    display: flex;
-                    .item {
-                        padding-right: 25px;
-                        position: relative;
-                        a {
-                            color: #0D0E43;
-                            text-decoration: none;
-                        }
-                    }
-                    .item-home {
-                        padding-right: 35px;
-                        color: #fb2e86;
-                        &:after {
-                            content: url('https://api.iconify.design/akar-icons/chevron-down.svg?color=%23fb2e86&width=16px&height=16px');
-                            position: absolute;
-                            right: 15px;
-                            top: 3px;
-                        }
-                        &:hover {
-                            .sub-menu {
-                                display: block;
-                            }
-                            &:after {
-                                content: url('https://api.iconify.design/akar-icons/chevron-up.svg?color=%23fb2e86&width=16px&height=16px');
-                            }
-                        }
-                    }
-                }
-                .sub-menu {
-                    display: none;
-                    position: absolute;
-                    background-color: #f1f1f1;
-                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                    z-index: 1000;
-                    .sub-item {
-                        padding: 0 15px;
-                        &:hover {
-                            background: $color-purple;
-                            a {
-                                color: #fb2e86;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .search {
-                width: calc(100%/12*4);
-                position: relative;
-                display: flex;
-                align-items: center;
-                .searchTerm {
-                    height: 34px;
-                    width: 100%;
-                    top: 0;
-                    outline: none;
-                    border: 2px solid #e7e6ef;
-                }
-                .searchBtn {
-                    position: absolute;
-                    width: 50px;
-                    height: 38px;
-                    right: 0px;
-                    background: #FB2E86;
-                    border: none;
-                }
-            }
-        }
-    }
-    /**
-    *  End Header Bottom
-    */
 }
 
+.header-right {
+    &-laguage,
+    &-money {
+        top: 3px;
+
+        .list-language,
+        .list-money {
+            position: absolute;
+            background-color: #f1f1f1;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            color: #333;
+            top: 25px;
+            left: -5px;
+            display: none;
+        }
+
+        .lang,
+        .money {
+            padding: 15px 15px;
+            &:hover {
+                color: #fff;
+                background: $color-purple;
+            }
+        }
+    }
+}
+
+.laguage-item,
+.money-item {
+    position: relative;
+    &:after {
+        content: url("https://api.iconify.design/akar-icons/chevron-down.svg?color=white&width=16px&height=16px");
+        position: absolute;
+        right: -4px;
+    }
+    &:hover {
+        &:after {
+            content: url("https://api.iconify.design/akar-icons/chevron-up.svg?color=white&width=16px&height=16px");
+        }
+        .list-language,
+        .list-money {
+            display: block;
+        }
+    }
+}
+/**
+*  End Header Top
+*/
+
+
+/**
+* Header Bottom
+*/
+.header-bottom-content {
+    .header-contact {
+        display: none;
+    }
+
+    .row {
+        display: flex;
+        padding: 20px 0;
+    }
+    .logo {
+        width: calc(100% / 12 * 2);
+        h1 {
+            margin: 0;
+        }
+
+        h1 a {
+            font-family: "JosefinSans";
+            font-size: 34px;
+            line-height: 40px;
+            text-decoration: none;
+            color: #0d0e43;
+            font-weight: 700;
+        }
+    }
+
+    .navbar {
+        width: calc(100% / 12 * 6);
+        line-height: 42px;
+        .icon-menu,
+        .icon-menu-tablet {
+            display: none;
+        }
+        .menu {
+            align-items: center;
+            display: flex;
+            .item {
+                padding-right: 25px;
+                position: relative;
+            }
+            a {
+                color: #0d0e43;
+                text-decoration: none;
+                &:hover {
+                    color: #fb2e86;
+                }
+            }
+        }
+        .menu-tablet {
+            display: none;
+        }
+        .item-home {
+            padding-right: 35px;
+            color: #fb2e86;
+            &:after {
+                content: url("https://api.iconify.design/akar-icons/chevron-down.svg?color=%23fb2e86&width=16px&height=16px");
+                position: absolute;
+                right: 8px;
+                top: 3px;
+            }
+            &:hover {
+                .sub-menu {
+                    display: block;
+                }
+                &:after {
+                    content: url("https://api.iconify.design/akar-icons/chevron-up.svg?color=%23fb2e86&width=16px&height=16px");
+                }
+            }
+        }
+
+        .sub-menu {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .sub-item {
+            padding: 0 15px;
+            &:hover {
+                background: $color-purple;
+                a {
+                    color: #fb2e86;
+                }
+            }
+        }
+    }
+
+    .search {
+        width: calc(100% / 12 * 4);
+        position: relative;
+        display: flex;
+        align-items: center;
+        .search-input {
+            height: 34px;
+            width: 100%;
+            top: 0;
+            outline: none;
+            border: 2px solid #e7e6ef;
+        }
+        .search-sbm {
+            position: absolute;
+            width: 50px;
+            height: 38px;
+            right: 0px;
+            background: #fb2e86;
+            border: none;
+        }
+    }
+}
+
+.header-bottom {
+    .search-mobile {
+        display: none;
+    }
+}
+/**
+*  End Header Bottom
+*/
 
 // tablet
-@include responsive_1024{
+@include responsive_1024 {
     .header-content-left {
         a {
             font-size: 13px;
@@ -234,8 +243,10 @@
         }
     }
 
-    .header-right-laguage, .header-right-money{
-        .laguage-item, .money-item {
+    .header-right-laguage,
+    .header-right-money {
+        .laguage-item,
+        .money-item {
             &:after {
                 right: -4px;
                 top: -1px;
@@ -245,7 +256,7 @@
 
     .header-bottom {
         .search-mobile {
-            display: none !important;
+            display: none;
         }
     }
 
@@ -259,7 +270,6 @@
             order: 2;
         }
 
-        
         .navbar {
             width: 40%;
             order: 1;
@@ -267,36 +277,12 @@
                 display: none;
             }
             .menu-tablet {
-                display: flex !important;
-                .item-tablet {
-                    &:hover {
-                        .sub-tablet {
-                            display: block;
-                        }
-                    }
-                    position: relative;
-                    .sub-tablet {
-                        position: absolute;
-                        background-color: #f1f1f1;
-                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                        display: none;
-                        z-index: 1000;
-                        .menu-tab {
-                            padding-left: 15px;
-                            &:hover {
-                                background: $color-purple;
-                                a {
-                                    color: #fb2e86;
-                                }
-                            }
-                        }
-                    }
-                }
-                .item-home {
-                    &::after {
-                        left: 45px;
-                        top: 3px;
-                    }
+                display: flex;
+            }
+            .item-home {
+                &::after {
+                    left: 45px;
+                    top: 3px;
                 }
             }
             .icon-menu-tablet {
@@ -304,17 +290,45 @@
                 padding: 15px 15px 15px 0;
             }
         }
+        .item-tablet {
+            position: relative;
+            &:hover {
+                .sub-tablet {
+                    display: block;
+                }
+            }
+            
+        }
 
         .search {
             width: 40%;
             order: 3;
         }
     }
+
+    .header-bottom-content {
+        .sub-tablet {
+            position: absolute;
+            background-color: #f1f1f1;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1000;
+            .menu-tab {
+                padding-left: 15px;
+                &:hover {
+                    background: $color-purple;
+                    a {
+                        color: #fb2e86;
+                    }
+                }
+            }
+        }
+    }
 }
 // tablet
 
 // mobile
-@include responsive_768{
+@include responsive_768 {
     .header-content-left {
         display: none;
     }
@@ -322,7 +336,7 @@
     .header-content-right {
         width: 100%;
         justify-content: space-around;
-        
+
         .item {
             padding-right: 10px;
             padding-left: unset;
@@ -334,9 +348,9 @@
             display: none;
         }
         .search-mobile {
-            display: block !important;
+            display: block;
             width: 100%;
-            .searchBtn {
+            .search-sbm {
                 position: absolute;
                 top: 1px;
                 right: -7px;
@@ -363,6 +377,3 @@
     }
 }
 // mobile
-
-
-
