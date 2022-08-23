@@ -1335,6 +1335,14 @@ input:focus {
   flex-basis: 195px;
 }
 
+.featured-products .title {
+  font-size: 42px;
+  line-height: 1.6666;
+  font-weight: 700;
+  color: #151875;
+  text-align: center;
+  margin-bottom: 35px;
+}
 .featured-products .featured-products-list {
   /* the slides */
   /* the parent */
@@ -1345,22 +1353,79 @@ input:focus {
 .featured-products .featured-products-list .slick-list {
   margin-left: -30px;
 }
-.featured-products .item .image {
+.featured-products .item {
+  background: #ffffff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+}
+.featured-products .item .top {
+  position: relative;
+}
+.featured-products .image {
   position: relative;
   padding-top: 87.4074074074%;
   background-color: #f6f7fb;
 }
-.featured-products .item .image img {
+.featured-products .image img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
-  width: auto;
-  max-width: 90%;
-  min-width: 40%;
+  width: 100%;
 }
+.featured-products .tool {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+}
+.featured-products .tool ul {
+  display: flex;
+  align-items: center;
+}
+.featured-products .tool li {
+  margin-right: 16px;
+}
+.featured-products .tool li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.featured-products .tool li:first-child a {
+  color: #2f1ac4;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: #eeeffb;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.05);
+}
+.featured-products .tool li:not(:first-child) a svg {
+  display: none;
+}
+.featured-products .view-detail {
+  padding: 8px 13px 9px 13px;
+  background-color: #08d15f;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  bottom: 9px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+}
+.featured-products .view-detail span {
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  color: #fff;
+}
+
 /*
 * Use: 
 *    @include responsive_375{

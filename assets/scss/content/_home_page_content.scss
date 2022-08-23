@@ -3,6 +3,15 @@
 // _______________________________
 
 .featured-products {
+	.title {
+		font-size: 42px;
+		line-height: 1.6666;
+		font-weight: 700;
+		color: $color-off-blue;
+		text-align: center;
+		margin-bottom: 35px;
+	}
+
 	.featured-products-list {
 		/* the slides */
 		.slick-slide {
@@ -15,24 +24,69 @@
 		}
 	}
 	.item {
-		.image {
+		background: #ffffff;
+		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+		.top {
 			position: relative;
-			padding-top: calc(236 / 270 * 100%);
-			background-color: #f6f7fb;
-			img {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				@include translate(-50%, -50%);
-				width: auto;
-				max-width: 90%;
-				min-width: 40%;
+		}
+	}
+	.image {
+		position: relative;
+		padding-top: calc(236 / 270 * 100%);
+		background-color: #f6f7fb;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include translate(-50%, -50%);
+			width: 100%;
+		}
+	}
+	.tool {
+		position: absolute;
+		top: 11px;
+		left: 11px;
+		ul {
+			display: flex;
+			align-items: center;
+		}
+		li {
+			margin-right: 16px;
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
-
-			&:before {
-				// content: '';
-				// padding-top: calc(270 / 236 * 100%);
+			&:first-child a {
+				color: #2f1ac4;
+				border-radius: 50%;
+				width: 30px;
+				height: 30px;
+				background: #eeeffb;
+				box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.05);
 			}
+			&:not(:first-child) a svg {
+				display: none;
+			}
+		}
+	}
+	.view-detail {
+		padding: 8px 13px 9px 13px;
+		background-color: #08d15f;
+		border-radius: 2px;
+		box-sizing: border-box;
+		display: block;
+		width: fit-content;
+		position: absolute;
+		bottom: 9px;
+		left: 50%;
+		@include translate(-50%, 0);
+		span {
+			display: block;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 1;
+			color: #fff;
 		}
 	}
 }
