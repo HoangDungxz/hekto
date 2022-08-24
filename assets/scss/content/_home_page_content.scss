@@ -1,26 +1,32 @@
 //
+// Home page componet title
+// _______________________________
+.home-component-title {
+	font-size: 42px;
+	line-height: 1.6666;
+	font-weight: 700;
+	color: $color-off-blue;
+	text-align: center;
+}
+
+//
 // Featured Products
 // _______________________________
 
 .featured-products {
 	.title {
-		font-size: 42px;
-		line-height: 1.6666;
-		font-weight: 700;
-		color: $color-off-blue;
-		text-align: center;
 		margin-bottom: 35px;
 	}
 
 	.featured-products-list {
 		/* the slides */
 		.slick-slide {
-			margin-left: 30px;
+			padding: 15px;
 		}
 
 		/* the parent */
 		.slick-list {
-			margin-left: -30px;
+			margin: 0 -15px;
 		}
 	}
 	.item {
@@ -28,6 +34,28 @@
 		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
 		.top {
 			position: relative;
+		}
+		.bottom {
+			text-align: center;
+		}
+		&:hover {
+			.tool,
+			.view-detail {
+				display: block;
+			}
+			.bottom {
+				background-color: #2f1ac4;
+				.name a,
+				.code,
+				.price {
+					color: #fff;
+				}
+			}
+			.color span {
+				&:last-child {
+					background-color: #ffeac1;
+				}
+			}
 		}
 	}
 	.image {
@@ -43,6 +71,7 @@
 		}
 	}
 	.tool {
+		display: none;
 		position: absolute;
 		top: 11px;
 		left: 11px;
@@ -65,8 +94,8 @@
 				background: #eeeffb;
 				box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.05);
 			}
-			&:not(:first-child) a svg {
-				display: none;
+			&:not(:first-child) a {
+				color: #1389ff;
 			}
 		}
 	}
@@ -75,18 +104,224 @@
 		background-color: #08d15f;
 		border-radius: 2px;
 		box-sizing: border-box;
-		display: block;
+		display: none;
 		width: fit-content;
 		position: absolute;
-		bottom: 9px;
+		bottom: 11px;
 		left: 50%;
-		@include translate(-50%, 0);
+		@include translate(calc(-50% + 7px), 0);
 		span {
 			display: block;
 			font-weight: 500;
 			font-size: 12px;
 			line-height: 1;
 			color: #fff;
+		}
+	}
+	.name {
+		padding-top: 15px;
+		a {
+			font-family: $font-family__lato;
+			color: $color-pink;
+			font-size: 18px;
+			line-height: 1.22222;
+			font-weight: 700;
+		}
+	}
+	.color {
+		display: flex;
+		padding-top: 12px;
+		justify-content: center;
+		span {
+			margin: 0 5px;
+			width: 14px;
+			height: 4px;
+			border-radius: 10px;
+			display: block;
+			&:first-child {
+				background-color: #05e6b7;
+			}
+			&:nth-child(2) {
+				background-color: #f701a8;
+			}
+			&:last-child {
+				background-color: #00009d;
+			}
+		}
+	}
+	.code {
+		font-size: 14px;
+		line-height: 1.285;
+		color: #151875;
+		padding-top: 12px;
+	}
+	.price {
+		font-family: $font-family__lato;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.2142;
+		color: #151875;
+		padding: 12px 0 17px 0;
+	}
+	.slick-dots {
+		bottom: -47px;
+		li {
+			width: fit-content; // loại bỏ code có sẵn của slick
+			height: fit-content; //
+			padding: 0; //
+			margin: 0; //
+			padding: 0 3px; // cách nhau giữa dots
+			button {
+				padding: 0; // loại bỏ code có sẵn của slick
+				margin: 0; // loại bỏ code có sẵn của slick
+				width: 16px;
+				height: 4px;
+				background-color: #febad7;
+				border-radius: 10px;
+				&::before {
+					content: none; // loại bỏ code có sẵn của slick
+				}
+			}
+			&.slick-active {
+				button {
+					background-color: #fb2e86; // khi active dot dài hơn và đổi màu
+					width: 24px;
+				}
+			}
+		}
+	}
+}
+
+//
+// Leatest Products
+// _______________________________
+
+.leatest-products {
+	margin-top: 71px;
+	.tabs-title {
+		display: flex;
+		justify-content: center;
+		margin: 19px 0 58px 0;
+		li {
+			margin-right: 60px;
+			&.ui-tabs-active a {
+				color: $color-pink;
+				text-decoration: underline;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		a {
+			font-family: $font-family__lato;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 1.22222;
+			color: $color-off-blue;
+		}
+	}
+	.product-list {
+		@include grid-layout(3, 30px, 30px);
+	}
+	.top {
+		position: relative;
+	}
+	.bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 15.59px;
+		color: #151875;
+
+		.name {
+			position: relative;
+			a {
+				font-size: 16px;
+				line-height: 1.875;
+				color: #151875;
+			}
+			&:before {
+				content: '';
+				display: block;
+				width: 153.73px;
+				border-bottom: 2px solid #eeeffb;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+		}
+		.price {
+			span {
+				font-size: 14px;
+				line-height: 16px;
+
+				&:last-child {
+					color: #fb2448;
+					margin-left: 8.57px;
+				}
+			}
+		}
+	}
+	.item {
+		&._sale {
+			position: relative;
+			.image {
+				background-color: #fff;
+			}
+			&:before {
+				display: block;
+				content: '';
+				background-image: url('../images/products/leatest_products/tag.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+				width: 84.87px;
+				height: 56.73px;
+				position: absolute;
+				top: 25px;
+				left: 18px;
+				z-index: 1;
+			}
+		}
+		&:hover {
+			.tool {
+				display: block;
+			}
+		}
+	}
+	.image {
+		background-color: #f7f7f7;
+		img {
+			width: 100%;
+		}
+	}
+	.tool {
+		display: none;
+		position: absolute;
+		bottom: 38px;
+		left: 15px;
+		ul {
+			align-items: center;
+		}
+		li {
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #2f1ac4;
+			}
+			&:first-child a {
+				border-radius: 50%;
+				width: 30px;
+				height: 30px;
+				background: #eeeffb;
+				box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.05);
+			}
+			&:nth-child(2) {
+				margin-top: 14px;
+			}
+			&:last-child {
+				margin-top: 17px;
+			}
 		}
 	}
 }
