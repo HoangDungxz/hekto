@@ -45,7 +45,7 @@ $res_1024 : "only screen and (max-width: 1023px)";
         .laguage-item,
         .money-item {
             &:after {
-                right: -4px;
+                left: 44px;
                 top: -1px;
             }
         }
@@ -131,11 +131,17 @@ $res_1024 : "only screen and (max-width: 1023px)";
 
     .header-content-right {
         width: 100%;
-        justify-content: space-around;
+        justify-content: space-between;
 
         .item {
             padding-right: 10px;
             padding-left: unset;
+        }
+    }
+
+    .header-right-laguage {
+        .lang {
+            padding: 15px 0;
         }
     }
 
@@ -158,6 +164,9 @@ $res_1024 : "only screen and (max-width: 1023px)";
         }
         .navbar {
             width: 35%;
+            .menu .item{
+                padding-right: 10px;
+            }
         }
         .header-contact {
             width: 35%;
