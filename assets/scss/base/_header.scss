@@ -4,7 +4,7 @@
 .header-top {
     background: $color-purple;
     &-content {
-        padding: 14px 15px;
+        padding: 12px 15px 18px;
         .row {
             width: 100%;
             display: flex;
@@ -37,6 +37,7 @@
         width: 50%;
         display: flex;
         justify-content: end;
+        font-weight: 600;
         .item {
             font-family: $font-family__josefin-sans;
             font-size: 16px;
@@ -50,6 +51,7 @@
         iconify-icon {
             position: relative;
             top: 2px;
+            font-weight: 600;
         }
     }
 }
@@ -206,6 +208,7 @@
             top: 0;
             outline: none;
             border: 2px solid #e7e6ef;
+            min-width: 288px;
         }
         .search-sbm {
             position: absolute;
