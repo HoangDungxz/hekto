@@ -24,14 +24,10 @@
             color: #8A8FB9;
         }
 
-        .categories, .customer-care, .pages {
+        .categories {
             padding-top: 40px;
         }
-        .list-categories, .list-customers, .list-pages {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-        }
+
         .logo-footer {
             padding-bottom: 25px;
             a {
@@ -42,6 +38,7 @@
                 font-weight: 700;
             }
         }
+        
         .search-input {
             padding: 10px 20px;
             border: none;
