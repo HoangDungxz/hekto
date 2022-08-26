@@ -81,6 +81,11 @@
 		@content;
 	}
 }
+@mixin responsive_min_512() {
+	@media #{$res_512_mobile} {
+		@content;
+	}
+}
 @mixin responsive_768() {
 	@media #{$res_768} {
 		@content;

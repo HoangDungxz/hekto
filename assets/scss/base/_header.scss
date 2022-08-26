@@ -14,8 +14,9 @@
 
 .header-content {
     &-left {
-        width: 50%;
-        display: flex;
+        // width: 50%;
+        // display: flex;
+        display: none;
         a {
             font-family: $font-family__josefin-sans;
             text-decoration: none;
@@ -34,19 +35,24 @@
     }
 
     &-right {
-        width: 50%;
+        width: 100%;
+        // width: 50%;
         display: flex;
-        justify-content: end;
+        // justify-content: end;
+        justify-content: space-between;
         font-weight: 600;
         .item {
             font-family: $font-family__josefin-sans;
-            font-size: 16px;
-            line-height: 19px;
+            // font-size: 16px;
+            // line-height: 19px;
             color: #f1f1f1;
             text-align: center;
-            padding-left: 20px;
+            // padding-left: 20px;
             position: relative;
             cursor: pointer;
+            padding-right: 10px;
+            font-size: 13px;
+			line-height: 15px;
         }
         iconify-icon {
             position: relative;
@@ -58,6 +64,9 @@
 
 .header-right {
     &-laguage,
+
+
+    
     &-money {
         top: 3px;
 
@@ -71,6 +80,10 @@
             top: 25px;
             left: -5px;
             display: none;
+            &:after {
+                right: -3px;
+                top: -1px;
+            }
         }
 
         .lang,
