@@ -18,10 +18,6 @@
 *
 */
 
-$res_375 : "only screen and (max-width: 375px)";
-$res_512 : "only screen and (max-width: 511px)";
-$res_768 : "only screen and (max-width: 767px)";
-$res_1024 : "only screen and (max-width: 1023px)";
 
 
 // header for tablet
@@ -30,6 +26,7 @@ $res_1024 : "only screen and (max-width: 1023px)";
         a {
             font-size: 13px;
             line-height: 15px;
+            padding-right: 48px;
         }
     }
 
@@ -45,7 +42,7 @@ $res_1024 : "only screen and (max-width: 1023px)";
         .laguage-item,
         .money-item {
             &:after {
-                left: 44px;
+                right: -17px;
                 top: -1px;
             }
         }
@@ -148,6 +145,9 @@ $res_1024 : "only screen and (max-width: 1023px)";
     .header-bottom-content {
         .search {
             display: none;
+            .search-input {
+                min-width: unset;
+            }
         }
         .search-mobile {
             display: block;
@@ -223,3 +223,88 @@ $res_1024 : "only screen and (max-width: 1023px)";
 		}
 	}
 }
+
+
+// footer for tablet
+@include responsive_min_768 {
+    .footer-top {
+        .bottom-content {
+            display: flex;
+        }
+        .title {
+            cursor: unset;
+        }
+        .logo-footer {
+            padding-bottom: 18px;
+        }
+        .contact {
+            padding-top: 60px;
+        }
+        #accordion {
+            display: none;
+        }
+        .categories, .customers, .pages {
+            width: calc(100% / 3);
+            padding-top: 40px;
+            .item {
+                padding-bottom: 21px;
+            }
+        }
+    }
+
+    .footer-bottom-content {
+        .copyright {
+            width: 50%;
+            order: 1;
+        }
+        .media {
+            width: 50%;
+            order: 2;
+            padding-bottom: unset;
+        }
+
+    }
+}
+// footer for tablet
+
+// footer for desktop
+@include responsive_min_1024 {
+    .footer-content {
+        display: flex;
+        .info {
+            width: 37%;
+            box-sizing: border-box;
+            padding-right: 36px;
+            text-align: start;
+        }
+        .bottom-content {
+            width: calc(100%/100*63);
+            .categories, .customers, .pages {
+                padding-top: unset;
+                text-align: left;
+                width: unset;
+            }
+            .categories {
+                padding: 0 45px 0 38px;
+            }
+            .customers {
+                padding: 0 45px;
+            }
+            .pages {
+                padding-left: 45px;
+            }
+        }
+    }
+    .footer-bottom-content {
+        .media {
+            width: 30%;
+        }
+        .copyright {
+            width: 70%;
+            position: relative;
+            left: 80px;
+            text-align: start;
+        }
+    }
+}
+// footer for desktop

@@ -3,17 +3,14 @@
     &-top {
         width: 100%;
         background-color: #EEEFFB;
-        padding: 80px 0 40px 0;
+        padding: 40px 0 80px 0;
         .title {
             color: #000000;
             font-family: $font-family__josefin-sans;
             font-size: 22px;
             line-height: 26px;
-            padding: 8px 0;
             cursor: pointer;
-            &:hover {
-                background-color: #ccc;
-            }
+            padding-bottom: 21px;
         }
         a, .address-website, .contact{
             font-family: $font-family__lato;
@@ -24,12 +21,19 @@
             color: #8A8FB9;
         }
 
+        .contact {
+            padding: 54px 0 10px 0;
+        }
+
         .categories {
             padding-top: 40px;
+            .item {
+                padding-bottom: 21px;
+            }
         }
 
         .logo-footer {
-            padding-bottom: 25px;
+            padding-bottom: 20px;
             a {
                 font-family: $font-family__josefin-sans;
                 font-size: 38px;
@@ -39,9 +43,17 @@
             }
         }
         
+        .search-footer {
+            position: relative;
+        }
+
         .search-input {
-            padding: 10px 20px;
+            padding: 14px 20px;
             border: none;
+            position: absolute;
+            left: 0;
+            right: -2px;
+            top: -3px;
             &::placeholder {
                 font-family: $font-family__lato;
                 font-style: normal;
@@ -49,6 +61,7 @@
                 font-size: 16px;
                 line-height: 19px;
                 color: #8A8FB9;
+                opacity: 0.45;
             }
         }
         .search-sbm {
@@ -61,12 +74,43 @@
             background: #FB2E86;
             border-radius: 3px;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 40px;
+            position: absolute;
+            right: 0;
+            top: 1px;
+        }
+        .bottom-content {
+            display: none;
         }
     }
 
     &-bottom {
         width: 100%;
         background-color: #E7E4F8;
+        &-content {
+            display: flex;
+            padding: 17px 15px;
+            flex-wrap: wrap;
+        }
+        .copyright {
+            width: 100%;
+            order: 2;
+            font-family: $font-family__lato;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            color: #9DA0AE;
+        }
+        .media {
+            padding-bottom: 17px;
+            width: 100%;
+            order: 1;
+            a {
+                padding-right: 11px;
+                font-size: 20px;
+            }
+        }
     }
 }
