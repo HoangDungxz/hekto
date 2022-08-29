@@ -2,8 +2,10 @@
 // Home page componet title
 // _______________________________
 .home-component-title {
-	font-size: 42px;
-	line-height: 1.6666;
+	// font-size: 42px;
+	// line-height: 1.6666;
+	font-size: 20px;
+	line-height: 20px;
 	font-weight: 700;
 	color: $color-off-blue;
 	text-align: center;
@@ -14,8 +16,8 @@
 // _______________________________
 
 .featured-products {
-	.title {
-		margin-bottom: 35px;
+	&-title {
+		margin-bottom: 26px;
 	}
 
 	.featured-products-list {
@@ -123,8 +125,8 @@
 		a {
 			font-family: $font-family__lato;
 			color: $color-pink;
-			font-size: 18px;
-			line-height: 1.22222;
+			font-size: 14px;
+			line-height: 1.2;
 			font-weight: 700;
 		}
 	}
@@ -133,7 +135,7 @@
 		padding-top: 12px;
 		justify-content: center;
 		span {
-			margin: 0 5px;
+			margin: 0 2px;
 			width: 14px;
 			height: 4px;
 			border-radius: 10px;
@@ -161,10 +163,10 @@
 		font-size: 14px;
 		line-height: 1.2142;
 		color: #151875;
-		padding: 12px 0 17px 0;
+		padding: 7px 0 17px 0;
 	}
 	.slick-dots {
-		bottom: -47px;
+		bottom: -34px;
 		li {
 			width: fit-content; // loại bỏ code có sẵn của slick
 			height: fit-content; //
@@ -201,9 +203,13 @@
 	.tabs-title {
 		display: flex;
 		justify-content: center;
-		margin: 19px 0 58px 0;
+		margin: 27px 0 39px 0;
+		flex-wrap: wrap;
+		justify-content: space-around;
 		li {
-			margin-right: 60px;
+			text-align: center;
+			width: 50%;
+			margin-top: 13px;
 			&.ui-tabs-active a {
 				color: $color-pink;
 				text-decoration: underline;
@@ -221,46 +227,10 @@
 		}
 	}
 	.product-list {
-		@include grid-layout(3, 30px, 30px);
+		@include grid-layout(2, 30px, 40px);
 	}
 	.top {
 		position: relative;
-	}
-	.bottom {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-top: 15.59px;
-		color: #151875;
-
-		.name {
-			position: relative;
-			a {
-				font-size: 16px;
-				line-height: 1.875;
-				color: #151875;
-			}
-			&:before {
-				content: '';
-				display: block;
-				width: 153.73px;
-				border-bottom: 2px solid #eeeffb;
-				position: absolute;
-				left: 0;
-				bottom: 0;
-			}
-		}
-		.price {
-			span {
-				font-size: 14px;
-				line-height: 16px;
-
-				&:last-child {
-					color: #fb2448;
-					margin-left: 8.57px;
-				}
-			}
-		}
 	}
 	.item {
 		&._sale {
@@ -274,11 +244,12 @@
 				background-image: url('../images/products/leatest_products/tag.png');
 				background-repeat: no-repeat;
 				background-size: contain;
-				width: 84.87px;
-				height: 56.73px;
+				width: 40px;
+				height: 26.73px;
+				font-size: 6.598326px;
 				position: absolute;
-				top: 25px;
-				left: 18px;
+				top: 8px;
+				left: 4px;
 				z-index: 1;
 			}
 		}
@@ -297,8 +268,8 @@
 	.tool {
 		display: none;
 		position: absolute;
-		bottom: 38px;
-		left: 15px;
+		top: 12px;
+		right: 11.5px;
 		ul {
 			align-items: center;
 		}
@@ -323,5 +294,85 @@
 				margin-top: 17px;
 			}
 		}
+	}
+	.name {
+		position: relative;
+		a {
+			font-size: 16px;
+			line-height: 1.875;
+			color: #151875;
+		}
+		&:before {
+			content: '';
+			display: block;
+			width: 153.73px;
+			border-bottom: 2px solid #eeeffb;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+	.price {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+
+		margin-top: 6px;
+
+		span {
+			font-size: 14px;
+			line-height: 16px;
+
+			&:last-child {
+				color: #fb2448;
+				font-size: 12px;
+				text-decoration: line-through;
+			}
+		}
+	}
+}
+
+//
+// What Shopex Offer!
+// _______________________________
+
+.what-shopex-offer {
+	&-list {
+		@include grid-layout(2, 30px, 30px);
+	}
+	.item {
+		p {
+			text-align: center;
+		}
+	}
+	.image {
+		margin: 0 auto;
+		// width: fit-content;
+		padding-top: 42.856377564%; // (15 + 65) / 187
+		position: relative;
+		margin-top: 15px;
+		img {
+			width: auto;
+			height: 65px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			@include translate(-50%, -50%);
+		}
+	}
+	.name {
+		margin-top: 9px;
+		font-family: $font-family__josefin-sans;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 1;
+	}
+	.des {
+		font-family: $font-family__lato;
+		font-weight: 700;
+		font-size: 13px;
+		line-height: 1.23076;
+		color: rgba(26, 11, 91, 0.3);
+		margin-top: 5.83px;
 	}
 }

@@ -96,11 +96,6 @@ input:focus {
 // _______________________________
 
 .styleguide {
-	width: 1400px + 30; // độ rộng của Trang styleguide + 30px của padding
-	max-width: 100%; // nếu màn hình thu hẹp hơn 1400px thì lấy width = độ rộng màn hình
-	padding: 0 15px; // lấy lề 15px
-	box-sizing: border-box; // chống tràn của padding
-	margin: auto; // căn giữa
 	&-title {
 		font-family: $font-family__poppins;
 		font-weight: 500;
@@ -236,30 +231,44 @@ input:focus {
 // _______________________________
 
 .page-sortby {
-	min-height: 44px;
 	font-family: $font-family__lato;
 	font-weight: 400;
-	@include flexbox;
 	.left {
 		&-title {
 			font-family: $font-family__josefin-sans;
-			font-size: 22px;
-			line-height: 1.181;
+			font-size: 16px;
+			line-height: 1;
 			color: $color-navy-blue;
 			font-weight: 700;
-			margin-bottom: 8px;
+			margin-bottom: 10px;
+		}
+		.result-count {
+			font-size: 12px;
+			line-height: 1.1666;
+			color: $color-sub-text;
 		}
 	}
 	.right {
 		@include flexbox;
-		justify-content: flex-end;
+		justify-content: space-between;
 		align-items: center;
-		flex: 1;
+		margin-top: 20px;
 		&-title {
 			font-size: 16px;
 			line-height: 1.1875;
 			color: $color-off-navy-blue;
-			margin-right: 9px;
+			margin-right: 8px;
+			@include translate(0, 2px);
+		}
+		& > div {
+			width: 100%;
+			@include flexbox;
+			justify-content: space-between;
+			align-items: center;
+
+			&:first-child {
+				margin-bottom: 20px;
+			}
 		}
 	}
 	.perpage {
@@ -267,31 +276,37 @@ input:focus {
 		align-items: center;
 
 		input {
-			height: 25px;
+			@include translate(0, 1px); // 1px của border
 			width: 55px;
+			height: 28px;
 			border: 1px solid #e7e6ef;
 			padding: 0;
 			line-height: normal;
 			box-sizing: border-box;
-			margin-right: 27px;
 		}
 	}
-	.result-count {
-		font-size: 12px;
-		line-height: 1.166;
-		color: $color-sub-text;
-	}
+
 	.sortby {
 		@include flexbox;
 		align-items: center;
-		position: relative;
+		justify-content: flex-end;
+		&-right {
+			@include flexbox;
+			align-items: flex-end;
+			position: relative;
+			&:hover {
+				ul {
+					max-height: 500px;
+					height: fit-content;
+				}
+			}
+		}
 		&-select {
 			max-height: 26px;
-			min-height: 26px;
 			position: relative;
 			border: 1px solid #e7e6ef;
-			z-index: 10;
-			@include translate(0, 2px);
+			z-index: 99;
+			@include translate(0, 1px); // 1px của border
 			ul {
 				max-height: 26px;
 				overflow: hidden;
@@ -301,12 +316,12 @@ input:focus {
 				height: 26px;
 			}
 			a {
-				line-height: 26px;
+				line-height: 18px;
 				width: 100%;
-				padding-left: 9px;
-				padding-right: 25px;
-				background-color: #ffffff;
+				padding: 4px 14px;
+				padding-right: 20px;
 				display: block;
+				background-color: #ffffff;
 				white-space: nowrap;
 				text-decoration: none;
 				font-size: 12px;
@@ -314,34 +329,30 @@ input:focus {
 				box-sizing: border-box;
 			}
 		}
-		&-right {
-			@include flexbox;
-			align-items: flex-end;
-			&:hover {
-				ul {
-					max-height: 500px;
-					height: fit-content;
-				}
-			}
-		}
+
 		iconify-icon {
 			font-size: 14px;
 			color: $color-sub-text;
 			position: absolute;
 			top: 55%;
-			right: 10px;
+			right: 6px;
 			@include translate(0, -50%);
+			z-index: 100; // lớn hơn zindex của sort-by select 1
 		}
 	}
 	.view {
 		@include flexbox;
-		margin-left: 24px;
-		align-items: flex-end;
+		// margin-left: 24px;
+		align-items: center;
+		min-height: 25px;
+
 		&-title {
-			margin-right: 4px;
+			// margin-right: 4px;
+			margin-right: 8px;
 		}
 		&-choise {
 			@include flexbox;
+			@include translate(-4px, 3px);
 			& a:first-child {
 				margin-right: 5px;
 			}
@@ -350,13 +361,15 @@ input:focus {
 			}
 		}
 	}
+
 	.search {
-		margin-left: 27px;
 		input {
-			padding: 4.8px 0;
-			@include translate(0, 2px);
 			border: 1px solid #e7e6ef;
-			width: 160px;
+			width: 243px;
+			height: 26px;
+			padding: 0;
+			@include translate(0, 1px); // 1px của border
+			box-sizing: border-box;
 		}
 	}
 }
@@ -366,16 +379,16 @@ input:focus {
 // _______________________________
 
 .page-header {
-	min-height: 286px;
+	min-height: 142px;
 	background-color: $color-bg-shade;
 	&-content {
-		padding-top: 96px;
+		padding-top: 40px;
 	}
 }
 .page-title {
 	font-family: $font-family__josefin-sans;
-	font-size: 36px;
-	line-height: 1.1666;
+	font-size: 22px;
+	line-height: 1;
 	color: $color-off-blue;
 	font-weight: 700;
 	margin-bottom: 9px;
@@ -385,7 +398,7 @@ input:focus {
 		@include flexbox;
 	}
 	li {
-		margin-right: 4px;
+		margin-right: 5px;
 		&:last-child a,
 		&:last-child::before {
 			color: $color-pink;
