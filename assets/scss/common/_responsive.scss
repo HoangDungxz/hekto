@@ -18,43 +18,42 @@
 *
 */
 
-
 /**
 * header for tablet
 */
 @include responsive_min_768() {
-    .header-content-left {
-        width: 50%;
-        display: flex;
-        a {
-            padding-right: 27px;
-        }
-        .header-content-icon {
-            padding-left: 0;
-        }
-    }
-
-	.header-content-right {
-        width: 50%;
+	.header-content-left {
+		width: 50%;
+		display: flex;
+		a {
+			padding-right: 27px;
+		}
+		.header-content-icon {
+			padding-left: 0;
+		}
 	}
 
-    .header-bottom-content {
-        .header-contact {
-            display: none;
-        }
+	.header-content-right {
+		width: 50%;
+	}
+
+	.header-bottom-content {
+		.header-contact {
+			display: none;
+		}
 
 		.search {
 			width: 40%;
 			order: 3;
-            display: flex;
+			display: flex;
 		}
 	}
 
-    .header-bottom {
-        .search-mobile {
-            display: none;
-        }
-    }
+	.header-bottom {
+		.search-mobile {
+			display: none;
+		}
+	}
 }
 /**
 * end header for tablet
@@ -64,45 +63,45 @@
 * header for desktop
 */
 @include responsive_min_1024() {
-    .header-content-left {
-        width: 60%;
-        a {
-            font-size: 16px;
-            line-height: 19px;
-        }
-    }  
-    
-    .header-content-right {
-        width: 40%;
-        .item {
-            font-size: 16px;
-            line-height: 19px;
-        }
-    }
+	.header-content-left {
+		width: 60%;
+		a {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
 
-    .header-bottom-content {
-        .logo {
-            width: calc(100% / 12 * 2);
-            order: 1;
-            text-align: left;
-        }
-        .navbar {
-            width: calc(100% / 12 * 6);
-            order: 2;
-            .menu {
-                display: flex;
-                .item {
-                    padding-right: 25px;
-                }
-            }
-            .menu-tablet {
-                display: none;
-            }
-        }
-        .search {
-            width: calc(100% / 12 * 4);
-        }
-    }
+	.header-content-right {
+		width: 40%;
+		.item {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+
+	.header-bottom-content {
+		.logo {
+			width: calc(100% / 12 * 2);
+			order: 1;
+			text-align: left;
+		}
+		.navbar {
+			width: calc(100% / 12 * 6);
+			order: 2;
+			.menu {
+				display: flex;
+				.item {
+					padding-right: 25px;
+				}
+			}
+			.menu-tablet {
+				display: none;
+			}
+		}
+		.search {
+			width: calc(100% / 12 * 4);
+		}
+	}
 }
 /**
 * end header for desktop
@@ -112,43 +111,44 @@
 * footer for tablet
 */
 @include responsive_min_768 {
-    .footer-top {
-        .bottom-content {
-            display: flex;
-        }
-        #accordion {
-            display: none;
-        }
-        .title {
-            cursor: unset;
-        }
-        .logo-footer {
-            padding-bottom: 18px;
-        }
-        .contact {
-            padding-top: 60px;
-        }
-        .categories, .customers, .pages {
-            width: calc(100% / 3);
-            padding-top: 40px;
-            .item {
-                padding-bottom: 21px;
-            }
-        }
-    }
- 
-    .footer-bottom-content {
-        .copyright {
-            width: 50%;
-            order: 1;
-        }
-        .media {
-            width: 50%;
-            order: 2;
-            padding-bottom: unset;
-        }
- 
-    }
+	.footer-top {
+		.bottom-content {
+			display: flex;
+		}
+		#accordion {
+			display: none;
+		}
+		.title {
+			cursor: unset;
+		}
+		.logo-footer {
+			padding-bottom: 18px;
+		}
+		.contact {
+			padding-top: 60px;
+		}
+		.categories,
+		.customers,
+		.pages {
+			width: calc(100% / 3);
+			padding-top: 40px;
+			.item {
+				padding-bottom: 21px;
+			}
+		}
+	}
+
+	.footer-bottom-content {
+		.copyright {
+			width: 50%;
+			order: 1;
+		}
+		.media {
+			width: 50%;
+			order: 2;
+			padding-bottom: unset;
+		}
+	}
 }
 
 /**
@@ -159,43 +159,45 @@
 * footer for desktop
 */
 @include responsive_min_1024 {
-    .footer-content {
-        display: flex;
-        .info {
-            width: 37%;
-            box-sizing: border-box;
-            padding-right: 36px;
-            text-align: start;
-        }
-        .bottom-content {
-            width: calc(100%/100*63);
-            .categories, .customers, .pages {
-                padding-top: unset;
-                text-align: left;
-                width: unset;
-            }
-            .categories {
-                padding: 0 45px 0 38px;
-            }
-            .customers {
-                padding: 0 45px;
-            }
-            .pages {
-                padding-left: 45px;
-            }
-        }
-    }
-    .footer-bottom-content {
-        .media {
-            width: 30%;
-        }
-        .copyright {
-            width: 70%;
-            position: relative;
-            left: 80px;
-            text-align: start;
-        }
-    }
+	.footer-content {
+		display: flex;
+		.info {
+			width: 37%;
+			box-sizing: border-box;
+			padding-right: 36px;
+			text-align: start;
+		}
+		.bottom-content {
+			width: calc(100% / 100 * 63);
+			.categories,
+			.customers,
+			.pages {
+				padding-top: unset;
+				text-align: left;
+				width: unset;
+			}
+			.categories {
+				padding: 0 45px 0 38px;
+			}
+			.customers {
+				padding: 0 45px;
+			}
+			.pages {
+				padding-left: 45px;
+			}
+		}
+	}
+	.footer-bottom-content {
+		.media {
+			width: 30%;
+		}
+		.copyright {
+			width: 70%;
+			position: relative;
+			left: 80px;
+			text-align: start;
+		}
+	}
 }
 /**
 * end footer for desktop
@@ -593,7 +595,6 @@
 }
 // header for mobile
 
-
 //
 // Home page componet title
 // _______________________________
@@ -920,24 +921,20 @@
 	}
 }
 
-
 // details for tablet
 @include responsive_min_768 {
-    
 }
 // details for tablet
 
 // details for desktop
 @include responsive_min_1024 {
-    .page-header-content {
-        text-align: unset;
-        .breadcrumb {
-            ul {
-                justify-content: unset;
-            }
-        }
-    }
-    
+	.page-header-content {
+		text-align: unset;
+		.breadcrumb {
+			ul {
+				justify-content: unset;
+			}
+		}
+	}
 }
 // details for desktop
-
