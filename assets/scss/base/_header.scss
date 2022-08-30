@@ -34,7 +34,8 @@
 
     &-right {
         display: flex;
-        justify-content: end;
+        // justify-content: end;
+        justify-content: space-between;
         font-weight: 600;
         width: 100%;
         justify-content: space-between;
@@ -58,6 +59,9 @@
 
 .header-right {
     &-laguage,
+
+
+    
     &-money {
         top: 3px;
         .list-language,
@@ -70,6 +74,10 @@
             top: 25px;
             left: -5px;
             display: none;
+            &:after {
+                right: -3px;
+                top: -1px;
+            }
         }
 
         .lang,

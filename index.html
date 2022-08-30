@@ -10,33 +10,71 @@
     <link rel="stylesheet" href="./assets/libs/slick/slick-theme.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 
 <body>
     <div class="wapper">
         <!-- header  -->
-        <header class="header"></header>
+        <header page="header"></header>
         <!-- end header  -->
 
+        <!-- begin Slider-->
+        <div page="promotion"></div>
+        <!-- end Slider-->
+
         <!-- begin leatest Products -->
-        <div class="leatest-products"></div>
+        <div page="featured-products"></div>
         <!-- end leatest Products -->
 
+        <!-- begin leatest Products -->
+        <div page="leatest-products"></div>
+        <!-- end leatest Products -->
+
+        <!-- begin What Shopex Offer!-->
+        <div page="what-shopex-offer"></div>
+        <!-- end What Shopex Offer!-->
+
+        <!-- begin Unique Features Of leatest & Trending Poducts -->
+        <div page="unique-features"></div>
+        <!-- end Unique Features Of leatest & Trending Poducts -->
+
+        <!-- begin Trending Products-->
+        <div page="trending-products"></div>
+        <!-- end Trending Products-->
+
         <!-- footer -->
-        <footer class="footer"></footer>
+        <footer page="footer"></footer>
         <!-- end footer -->
     </div>
 
 
     <!-- load component -->
-    <script> 
-        $(function(){
-          $(".header").load("./templates/header.html");
-          // $(".leatest-products").load("./templates/home/leatest-product.html");
-          $(".footer").load("./templates/footer.html");
+
+    <script>
+        $(function () {
+            // $("[page='header']").load("./templates/header.html");
+            // $("[page='home-slider']").load("./templates/home-slider.html");
+            // $("[page='featured-products']").load("./templates/home/featured-products.html");
+            // $("[page='leatest-products']").load("./templates/home/leatest-product.html");
+            // $("[page='what-shopex-offer']").load("./templates/home/what-shopex-offer.html");
+            // $("[page='unique-features']").load("./templates/home/unique-features.html");
+            // $("[page='footer']").load("./templates/footer.html");
+
+            page('header');
+            // page('promotion', '/home/');
+            // page('featured-products', '/home/');
+            // page('leatest-products', '/home/');
+            // page('what-shopex-offer', '/home/');
+            // page('trending-products', '/home/');
+            // page('unique-features', '/home/');
+            page('footer');
         });
-    </script> 
+
+        function page(name, pos = '') {
+            $("[page='" + name + "']").load("./templates/" + pos + name + ".html");
+        }
+    </script>
     <!-- load component -->
 
     <!-- Script -->
