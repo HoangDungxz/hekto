@@ -21,7 +21,8 @@
 /**
 * header for tablet
 */
-@include responsive_min_768() {
+
+@include responsive_768() {
 	.header-content-left {
 		width: 50%;
 		display: flex;
@@ -31,6 +32,10 @@
 		.header-content-icon {
 			padding-left: 0;
 		}
+	}
+
+	.header-content-right {
+		width: 50%;
 	}
 
 	.header-content-right {
@@ -62,15 +67,23 @@
 /**
 * header for desktop
 */
-@include responsive_min_1024() {
+
+@include responsive_1024() {
 	.header-content-left {
-		width: 60%;
+		width: 65%;
 		a {
 			font-size: 16px;
 			line-height: 19px;
 		}
 	}
 
+	.header-content-right {
+		width: 35%;
+		.item {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
 	.header-content-right {
 		width: 40%;
 		.item {
@@ -110,7 +123,7 @@
 /**
 * footer for tablet
 */
-@include responsive_min_768 {
+@include responsive_768 {
 	.footer-top {
 		.bottom-content {
 			display: flex;
@@ -150,7 +163,6 @@
 		}
 	}
 }
-
 /**
 *  end footer for tablet
 */
@@ -158,7 +170,8 @@
 /**
 * footer for desktop
 */
-@include responsive_min_1024 {
+
+@include responsive_1024 {
 	.footer-content {
 		display: flex;
 		.info {
@@ -204,7 +217,7 @@
 */
 
 // page-sortby
-@include responsive_min_768 {
+@include responsive_768 {
 	.page-sortby {
 		.left {
 			&-title {
@@ -240,7 +253,7 @@
 	}
 }
 
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.page-sortby {
 		display: flex;
 		justify-content: space-between;
@@ -258,7 +271,7 @@
 }
 
 // page-header
-@include responsive_min_768 {
+@include responsive_768 {
 	.page-header {
 		min-height: 180px;
 		&-content {
@@ -271,7 +284,7 @@
 	}
 }
 
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.page-header {
 		min-height: 286px;
 		&-content {
@@ -280,6 +293,7 @@
 	}
 }
 
+<<<<<<< HEAD
 //
 // Header
 // _______________________________
@@ -599,7 +613,7 @@
 // Home page componet title
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.home-component-title {
 		font-size: 32px;
 		line-height: 1;
@@ -609,7 +623,7 @@
 // 	Featured Products
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.featured-products {
 		&-title {
 			margin-bottom: 36px;
@@ -635,7 +649,7 @@
 	}
 }
 
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.featured-products {
 		.name {
 			padding-top: 18px;
@@ -664,7 +678,7 @@
 // 	Leatest Products
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.leatest-products {
 		.tabs-title {
 			margin: 38px 0 40px 0;
@@ -707,7 +721,7 @@
 	}
 }
 
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.leatest-products {
 		.tabs-title {
 			margin: 18px 0 58px 0;
@@ -755,7 +769,7 @@
 // 	What Shopex Offer!
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.what-shopex-offer {
 		&-title {
 			margin-bottom: 47px;
@@ -778,7 +792,7 @@
 	}
 }
 
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.what-shopex-offer {
 		&-title {
 			margin-bottom: 65px;
@@ -799,7 +813,7 @@
 // 	Unique Features
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.unique-features {
 		min-height: 969px;
 
@@ -822,7 +836,7 @@
 		}
 	}
 }
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.unique-features {
 		min-height: 570px;
 		.wapper {
@@ -861,7 +875,7 @@
 // 	Promotion
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.promotion {
 		&-list {
 			.slider > div {
@@ -885,7 +899,7 @@
 	}
 }
 
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.promotion {
 		&-list {
 			// .slider > div {
@@ -903,14 +917,14 @@
 // Trending Products
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.trending-products {
 		&-title {
 			margin-bottom: 50px;
 		}
 	}
 }
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.trending-products {
 		&-list {
 			.col:nth-child(2n) {
@@ -922,12 +936,14 @@
 }
 
 // details for tablet
-@include responsive_min_768 {
+
+@include responsive_768 {
 }
 // details for tablet
 
 // details for desktop
-@include responsive_min_1024 {
+
+@include responsive_1024 {
 	.page-header-content {
 		text-align: unset;
 		.breadcrumb {
