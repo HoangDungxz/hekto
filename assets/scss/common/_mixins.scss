@@ -81,31 +81,16 @@
 // _______________________________
 
 @mixin responsive_512() {
-	@media #{$res_512} {
-		@content;
-	}
-}
-@mixin responsive_min_512() {
 	@media #{$res_512_mobile} {
 		@content;
 	}
 }
 @mixin responsive_768() {
-	@media #{$res_768} {
-		@content;
-	}
-}
-@mixin responsive_min_768() {
 	@media #{$res_768_mobile} {
 		@content;
 	}
 }
 @mixin responsive_1024() {
-	@media #{$res_1024} {
-		@content;
-	}
-}
-@mixin responsive_min_1024() {
 	@media #{$res_1024_mobile} {
 		@content;
 	}

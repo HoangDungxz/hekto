@@ -22,7 +22,7 @@
 /**
 * header for tablet
 */
-@include responsive_min_768() {
+@include responsive_768() {
     .header-content-left {
         width: 50%;
         display: flex;
@@ -63,9 +63,9 @@
 /**
 * header for desktop
 */
-@include responsive_min_1024() {
+@include responsive_1024() {
     .header-content-left {
-        width: 60%;
+        width: 65%;
         a {
             font-size: 16px;
             line-height: 19px;
@@ -73,7 +73,7 @@
     }  
     
     .header-content-right {
-        width: 40%;
+        width: 35%;
         .item {
             font-size: 16px;
             line-height: 19px;
@@ -111,7 +111,7 @@
 /**
 * footer for tablet
 */
-@include responsive_min_768 {
+@include responsive_768 {
     .footer-top {
         .bottom-content {
             display: flex;
@@ -150,7 +150,6 @@
  
     }
 }
-
 /**
 *  end footer for tablet
 */
@@ -158,7 +157,7 @@
 /**
 * footer for desktop
 */
-@include responsive_min_1024 {
+@include responsive_1024 {
     .footer-content {
         display: flex;
         .info {
@@ -202,7 +201,7 @@
 */
 
 // page-sortby
-@include responsive_min_768 {
+@include responsive_768 {
 	.page-sortby {
 		.left {
 			&-title {
@@ -238,7 +237,7 @@
 	}
 }
 
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.page-sortby {
 		display: flex;
 		justify-content: space-between;
@@ -256,7 +255,7 @@
 }
 
 // page-header
-@include responsive_min_768 {
+@include responsive_768 {
 	.page-header {
 		min-height: 180px;
 		&-content {
@@ -269,7 +268,7 @@
 	}
 }
 
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.page-header {
 		min-height: 286px;
 		&-content {
@@ -278,327 +277,12 @@
 	}
 }
 
-//
-// Header
-// _______________________________
-
-// header for tablet
-@include responsive_1024 {
-	.header-content-left {
-		a {
-			font-size: 13px;
-			line-height: 15px;
-			padding-right: 48px;
-		}
-	}
-}
-
-//     .header-right-laguage,
-//     .header-right-money {
-//         .laguage-item,
-//         .money-item {
-//             &:after {
-//                 right: -17px;
-//                 top: -1px;
-//             }
-//         }
-//     }
-
-//     .header-bottom {
-//         .search-mobile {
-//             display: none;
-//         }
-//     }
-
-//     .header-bottom-content {
-//         .header-contact {
-//             display: none;
-//         }
-
-//         .logo {
-//             width: 20%;
-//             order: 2;
-//         }
-
-//         .navbar {
-//             width: 40%;
-//             order: 1;
-//             .menu {
-//                 display: none;
-//             }
-//             .menu-tablet {
-//                 display: flex;
-//             }
-//             .item-home {
-//                 &::after {
-//                     left: 45px;
-//                     top: 3px;
-//                 }
-//             }
-//             .icon-menu-tablet {
-//                 display: block;
-//                 padding: 15px 15px 15px 0;
-//             }
-//         }
-//         .item-tablet {
-//             position: relative;
-//             &:hover {
-//                 .sub-tablet {
-//                     display: block;
-//                 }
-//             }
-
-//         }
-
-// 		.search {
-// 			width: 40%;
-// 			order: 3;
-// 		}
-// 	}
-//     .header-bottom-content {
-//         .sub-tablet {
-//             position: absolute;
-//             background-color: #f1f1f1;
-//             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-//             display: none;
-//             z-index: 1000;
-//             .menu-tab {
-//                 padding-left: 15px;
-//                 &:hover {
-//                     background: $color-purple;
-//                     a {
-//                         color: #fb2e86;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-/**
-* End header for tablet
-*/
-
-/**
-* Header for mobile
-*/
-// @include responsive_768 {
-//     .header-content-left {
-//         display: none;
-//     }
-
-//     .header-content-right {
-//         width: 100%;
-//         justify-content: space-between;
-
-//         .item {
-//             padding-right: 10px;
-//             padding-left: unset;
-//         }
-//     }
-
-//     .header-right-laguage {
-//         .lang {
-//             padding: 15px 0;
-//         }
-//     }
-
-//     .header-bottom-content {
-//         .search {
-//             display: none;
-//             .search-input {
-//                 min-width: unset;
-//             }
-//         }
-//         .search-mobile {
-//             display: block;
-//             width: 100%;
-//             .search-sbm {
-//                 position: absolute;
-//                 top: 1px;
-//                 right: 0;
-//             }
-//         }
-//         .logo {
-//             width: 30%;
-//             text-align: center;
-//         }
-//         .navbar {
-//             width: 35%;
-//             .menu .item{
-//                 padding-right: 10px;
-//             }
-//         }
-//         .header-contact {
-//             width: 35%;
-//             order: 2;
-//             text-align: end;
-//             font-size: 20px;
-//             display: block;
-//             a {
-//                 position: relative;
-//                 top: 5px;
-//             }
-//         }
-//     }
-// }
-/**
-* End header for mobile
-*/
-
-@include responsive_768 {
-	.page-sortby {
-		.header-right-laguage,
-		.header-right-money {
-			.laguage-item,
-			.money-item {
-				&:after {
-					right: -17px;
-					top: -1px;
-				}
-			}
-		}
-
-		.header-bottom {
-			.search-mobile {
-				display: none;
-			}
-		}
-
-		.header-bottom-content {
-			.header-contact {
-				display: none;
-			}
-
-			.logo {
-				width: 20%;
-				order: 2;
-			}
-
-			.navbar {
-				width: 40%;
-				order: 1;
-				.menu {
-					display: none;
-				}
-				.menu-tablet {
-					display: flex;
-				}
-				.item-home {
-					&::after {
-						left: 45px;
-						top: 3px;
-					}
-				}
-				.icon-menu-tablet {
-					display: block;
-					padding: 15px 15px 15px 0;
-				}
-			}
-			.item-tablet {
-				position: relative;
-				&:hover {
-					.sub-tablet {
-						display: block;
-					}
-				}
-			}
-
-			.search {
-				width: 40%;
-				order: 3;
-			}
-		}
-		.header-bottom-content {
-			.sub-tablet {
-				position: absolute;
-				background-color: #f1f1f1;
-				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-				display: none;
-				z-index: 1000;
-				.menu-tab {
-					padding-left: 15px;
-					&:hover {
-						background: $color-purple;
-						a {
-							color: #fb2e86;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-// header for tablet
-
-// header for mobile
-@include responsive_768 {
-	.header-content-left {
-		display: none;
-	}
-
-	.header-content-right {
-		width: 100%;
-		justify-content: space-between;
-
-		.item {
-			padding-right: 10px;
-			padding-left: unset;
-		}
-	}
-
-	.header-right-laguage {
-		.lang {
-			padding: 15px 0;
-		}
-	}
-
-	.header-bottom-content {
-		.search {
-			display: none;
-			.search-input {
-				min-width: unset;
-			}
-		}
-		.search-mobile {
-			display: block;
-			width: 100%;
-			.search-sbm {
-				position: absolute;
-				top: 1px;
-				right: 0;
-			}
-		}
-		.logo {
-			width: 30%;
-			text-align: center;
-		}
-		.navbar {
-			width: 35%;
-			.menu .item {
-				padding-right: 10px;
-			}
-		}
-		.header-contact {
-			width: 35%;
-			order: 2;
-			text-align: end;
-			font-size: 20px;
-			display: block;
-			a {
-				position: relative;
-				top: 5px;
-			}
-		}
-	}
-}
-// header for mobile
-
 
 //
 // Home page componet title
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.home-component-title {
 		font-size: 32px;
 		line-height: 1;
@@ -608,7 +292,7 @@
 // 	Featured Products
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.featured-products {
 		&-title {
 			margin-bottom: 36px;
@@ -634,7 +318,7 @@
 	}
 }
 
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.featured-products {
 		.name {
 			padding-top: 18px;
@@ -663,7 +347,7 @@
 // 	Leatest Products
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.leatest-products {
 		.tabs-title {
 			margin: 38px 0 40px 0;
@@ -706,7 +390,7 @@
 	}
 }
 
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.leatest-products {
 		.tabs-title {
 			margin: 18px 0 58px 0;
@@ -754,7 +438,7 @@
 // 	What Shopex Offer!
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.what-shopex-offer {
 		&-title {
 			margin-bottom: 47px;
@@ -777,7 +461,7 @@
 	}
 }
 
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.what-shopex-offer {
 		&-title {
 			margin-bottom: 65px;
@@ -798,7 +482,7 @@
 // 	Unique Features
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.unique-features {
 		min-height: 969px;
 
@@ -821,7 +505,7 @@
 		}
 	}
 }
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.unique-features {
 		min-height: 570px;
 		.wapper {
@@ -860,7 +544,7 @@
 // 	Promotion
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.promotion {
 		&-list {
 			.slider > div {
@@ -884,7 +568,7 @@
 	}
 }
 
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.promotion {
 		&-list {
 			// .slider > div {
@@ -902,14 +586,14 @@
 // Trending Products
 // _______________________________
 
-@include responsive_min_768 {
+@include responsive_768 {
 	.trending-products {
 		&-title {
 			margin-bottom: 50px;
 		}
 	}
 }
-@include responsive_min_1024 {
+@include responsive_1024 {
 	.trending-products {
 		&-list {
 			.col:nth-child(2n) {
@@ -922,13 +606,13 @@
 
 
 // details for tablet
-@include responsive_min_768 {
+@include responsive_768 {
     
 }
 // details for tablet
 
 // details for desktop
-@include responsive_min_1024 {
+@include responsive_1024 {
     .page-header-content {
         text-align: unset;
         .breadcrumb {
