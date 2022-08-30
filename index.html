@@ -6,143 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HEKTO</title>
+    <link rel="stylesheet" href="./assets/libs/slick/slick.css">
+    <link rel="stylesheet" href="./assets/libs/slick/slick-theme.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 
 <body>
-    <div class="wapper" >
+    <div class="wapper">
         <!-- header  -->
-        <header class="header">
-            <!-- header top  -->
-            <div class="header-top">
-                <div class="container header-top-content">
-                    <div class="row">
-                        <div class="col header-content-left">
-                            <a href="mailto:mhhasanul@gmail.com"><iconify-icon class="header-content-icon" icon="ic:outline-email"></iconify-icon>mhhasanul@gmail.com</a>
-                            <a href="tel:+1234567890"><iconify-icon class="header-content-icon" icon="carbon:phone-voice"></iconify-icon>(12345)67890</a>
-                        </div>
-                        <div class="col header-content-right">
-                            <div class="item header-right-laguage">
-                                <div class="laguage-item">
-                                    <span class="lang en">English</span>
-                                    <ul class="list-language">
-                                        <li class="lang en">English</li>
-                                        <li class="lang vi">Vietnamese</li>
-                                        <li class="lang ko">Korean</li>
-                                        <li class="lang fr">French</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item header-right-money">
-                                <div class="money-item">
-                                    <span class="money usd">USD</span>
-                                    <ul class="list-money">
-                                        <li class="money usd">USD</li>
-                                        <li class="money vnd">VND</li>
-                                        <li class="money won">WON</li>
-                                        <li class="money eur">EUR</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item user">
-                                Login <iconify-icon icon="carbon:user"></iconify-icon>
-                            </div>
-                            <div class="item wishlist">
-                                Wishlist <iconify-icon icon="akar-icons:heart"></iconify-icon>
-                            </div>
-                            <div class="item cart">
-                                <iconify-icon icon="eva:shopping-cart-outline"></iconify-icon>                                     
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end header top -->
-
-            <!-- header bottom -->
-            <div class="header-bottom">
-                <div class="container header-bottom-content">
-                    <div class="row">
-                        <div class="logo">
-                            <h1><a href="#">Hekto</a></h1>
-                        </div>
-                        <div class="navbar">
-                            <!-- menu laptop -->
-                            <iconify-icon class="icon-menu" icon="gg:menu" style="color: #fb2e86;"></iconify-icon>
-                            <ul class="menu">
-                                <li class="item item-home">Home
-                                    <ul class="sub-menu">
-                                        <li class="sub-item"><a href="#">Pages1</a></li>
-                                        <li class="sub-item"><a href="#">Pages2</a></li>
-                                        <li class="sub-item"><a href="#">Pages3</a></li>
-                                        <li class="sub-item"><a href="#">Pages4</a></li>
-                                    </ul>
-                                </li>
-                                <li class="item menu-lap"><a href="#">Pages</a></li>
-                                <li class="item menu-lap"><a href="#">Products</a></li>
-                                <li class="item menu-lap"><a href="#">Blog</a></li>
-                                <li class="item menu-lap"><a href="#">Shop</a></li>
-                                <li class="item menu-lap"><a href="#">Contact</a></li>
-                            </ul>
-                            <!-- menu laptop -->
-
-                            <!-- menu tablet -->
-                            <ul class="menu menu-tablet">
-                                <li class="item item-tablet">
-                                    <iconify-icon class="icon-menu-tablet" icon="gg:menu" style="color: #fb2e86;"></iconify-icon>
-                                    <ul class="sub-tablet">
-                                        <li class="item menu-tab"><a href="#">Pages</a></li>
-                                        <li class="item menu-tab"><a href="#">Products</a></li>
-                                        <li class="item menu-tab"><a href="#">Blog</a></li>
-                                        <li class="item menu-tab"><a href="#">Shop</a></li>
-                                        <li class="item menu-tab"><a href="#">Contact</a></li>
-                                    </ul>
-                                </li>
-                                <li class="item item-home">Home
-                                    <ul class="sub-menu">
-                                        <li class="sub-item"><a href="#">Pages1</a></li>
-                                        <li class="sub-item"><a href="#">Pages2</a></li>
-                                        <li class="sub-item"><a href="#">Pages3</a></li>
-                                        <li class="sub-item"><a href="#">Pages4</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <!-- menu tablet -->
-                        </div>
-
-                        <!-- contact mobile -->
-                        <div class="col header-contact">
-                            <a href="mailto:mhhasanul@gmail.com"><iconify-icon class="header-content-icon" icon="ic:outline-email" style="color: #fb2e86;"></iconify-icon></a>
-                            <a href="tel:+1234567890"><iconify-icon class="header-content-icon" icon="carbon:phone-voice" style="color: #fb2e86;"></iconify-icon></a>
-                        </div>
-                        <!-- contact mobile -->
-
-                        <div class="search">
-                            <input type="text" class="search-input">
-                            <button type="submit" class="search-sbm">
-                                <iconify-icon icon="eva:search-fill" style="color: white;"></iconify-icon>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- search mobile  -->
-                    <div class="search search-mobile">
-                        <input type="text" class="search-input">
-                        <button type="submit" class="search-sbm">
-                            <iconify-icon icon="eva:search-fill" style="color: white;"></iconify-icon>
-                        </button>
-                    </div>
-                    <!-- end search mobile  -->
-                </div>
-            </div>
-            <!-- end header bottom -->
-        </header>
+        <header page="header"></header>
         <!-- end header  -->
+
+        <!-- begin Slider-->
+        <div page="promotion"></div>
+        <!-- end Slider-->
+
+        <!-- begin leatest Products -->
+        <div page="featured-products"></div>
+        <!-- end leatest Products -->
+
+        <!-- begin leatest Products -->
+        <div page="leatest-products"></div>
+        <!-- end leatest Products -->
+
+        <!-- begin What Shopex Offer!-->
+        <div page="what-shopex-offer"></div>
+        <!-- end What Shopex Offer!-->
+
+        <!-- begin Unique Features Of leatest & Trending Poducts -->
+        <div page="unique-features"></div>
+        <!-- end Unique Features Of leatest & Trending Poducts -->
+
+        <!-- begin Trending Products-->
+        <div page="trending-products"></div>
+        <!-- end Trending Products-->
+
+        <!-- footer -->
+        <footer page="footer" class="footer"></footer>
+        <!-- end footer -->
     </div>
 
 
+    <!-- load component -->
 
+    <script>
+        $(function () {
+            // $("[page='header']").load("./templates/header.html");
+            // $("[page='home-slider']").load("./templates/home-slider.html");
+            // $("[page='featured-products']").load("./templates/home/featured-products.html");
+            // $("[page='leatest-products']").load("./templates/home/leatest-product.html");
+            // $("[page='what-shopex-offer']").load("./templates/home/what-shopex-offer.html");
+            // $("[page='unique-features']").load("./templates/home/unique-features.html");
+            // $("[page='footer']").load("./templates/footer.html");
+
+            page('header');
+            // page('promotion', '/home/');
+            // page('featured-products', '/home/');
+            // page('leatest-products', '/home/');
+            // page('what-shopex-offer', '/home/');
+            // page('trending-products', '/home/');
+            // page('unique-features', '/home/');
+            page('footer');
+        });
+
+        function page(name, pos = '') {
+            $("[page='" + name + "']").load("./templates/" + pos + name + ".html");
+        }
+    </script>
+    <!-- load component -->
+
+    <!-- Script -->
+    <script src="./assets/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/libs/slick/slick.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
-    <script src="./assets/js/style.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </body>
 
 </html>

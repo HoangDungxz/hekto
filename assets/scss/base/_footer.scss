@@ -1,0 +1,114 @@
+.footer {
+    text-align: center;
+    &-top {
+        width: 100%;
+        background-color: #EEEFFB;
+        padding: 40px 0 80px 0;
+        .logo-footer {
+            padding-bottom: 20px;
+            a {
+                font-family: $font-family__josefin-sans;
+                font-size: 38px;
+                line-height: 45px;
+                color: #000000;
+                font-weight: 700;
+            }
+        }
+        .title {
+            color: #000000;
+            font-family: $font-family__josefin-sans;
+            font-size: 22px;
+            line-height: 26px;
+            cursor: pointer;
+            padding-bottom: 21px;
+        }
+        .search-footer {
+            position: relative;
+        }
+        .search-input {
+            padding: 14px 140px 14px 20px;
+            border: none;
+            position: absolute;
+            left: 0;
+            right: -2px;
+            top: -3px;
+            // style cho text trong ô input
+            &::placeholder {
+                font-family: $font-family__lato;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: $color-sub-text;
+                opacity: 0.45;
+            }
+        }
+        .search-sbm {
+            font-family: $font-family__lato;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: #EEEFFB;
+            background: $color-pink;
+            border-radius: 3px;
+            border: none;
+            padding: 10px 40px;
+            position: absolute;
+            right: 0;
+            top: 1px;
+        }
+        .contacts {
+            padding-top: 54px;
+        }
+        a,
+        .address-website,
+        .contact-info {
+            font-family: $font-family__lato;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $color-sub-text;
+            padding-bottom: 10px;
+        }
+        .categories {
+            padding-top: 40px;
+            .item {
+                padding-bottom: 21px;
+            }
+        }
+        .bottom-content {
+            display: none;
+        }
+    }
+    &-bottom {
+        width: 100%;
+        background-color: #E7E4F8;
+        &-content {
+            display: flex;
+            padding: 17px 15px;
+            flex-wrap: wrap;
+        }
+        .copyright {
+            width: 100%;
+            order: 2;
+            font-family: $font-family__lato;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            color: #9DA0AE;
+        }
+        .media {
+            padding-bottom: 17px;
+            width: 100%;
+            order: 1;
+            a {
+                padding-right: 11px;
+                font-size: 20px;
+            }
+        }
+    }
+}

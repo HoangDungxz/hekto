@@ -18,28 +18,610 @@
 *
 */
 
-$res_375 : "only screen and (max-width: 375px)";
-$res_512 : "only screen and (max-width: 511px)";
-$res_768 : "only screen and (max-width: 767px)";
-$res_1024 : "only screen and (max-width: 1023px)";
+
+/**
+* header for tablet
+*/
+@include responsive_768() {
+    .header-content-left {
+        width: 50%;
+        display: flex;
+        a {
+            padding-right: 27px;
+        }
+        .header-content-icon {
+            padding-left: 0;
+        }
+    }
+
+	.header-content-right {
+        width: 50%;
+	}
+
+    .header-bottom-content {
+        .header-contact {
+            display: none;
+        }
+
+		.search {
+			width: 40%;
+			order: 3;
+            display: flex;
+		}
+	}
+
+    .header-bottom {
+        .search-mobile {
+            display: none;
+        }
+    }
+}
+/**
+* end header for tablet
+*/
+
+/**
+* header for desktop
+*/
+@include responsive_1024() {
+    .header-content-left {
+        width: 65%;
+        a {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }  
+    
+    .header-content-right {
+        width: 35%;
+        .item {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    .header-bottom-content {
+        .logo {
+            width: calc(100% / 12 * 2);
+            order: 1;
+            text-align: left;
+        }
+        .navbar {
+            width: calc(100% / 12 * 6);
+            order: 2;
+            .menu {
+                display: flex;
+                .item {
+                    padding-right: 25px;
+                }
+            }
+            .menu-tablet {
+                display: none;
+            }
+        }
+        .search {
+            width: calc(100% / 12 * 4);
+        }
+    }
+}
+/**
+* end header for desktop
+*/
+
+/**
+* footer for tablet
+*/
+@include responsive_768 {
+    .footer-top {
+        .bottom-content {
+            display: flex;
+        }
+        #accordion {
+            display: none;
+        }
+        .title {
+            cursor: unset;
+        }
+        .logo-footer {
+            padding-bottom: 18px;
+        }
+        .contact {
+            padding-top: 60px;
+        }
+        .categories, .customers, .pages {
+            width: calc(100% / 3);
+            padding-top: 40px;
+            .item {
+                padding-bottom: 21px;
+            }
+        }
+    }
  
-@mixin responsive_375() {
-    @media #{$res_375} {
-        @content;
+    .footer-bottom-content {
+        .copyright {
+            width: 50%;
+            order: 1;
+        }
+        .media {
+            width: 50%;
+            order: 2;
+            padding-bottom: unset;
+        }
+ 
     }
 }
-@mixin responsive_512() {
-    @media #{$res_512} {
-        @content;
+/**
+*  end footer for tablet
+*/
+
+/**
+* footer for desktop
+*/
+@include responsive_1024 {
+    .footer-content {
+        display: flex;
+        .info {
+            width: 37%;
+            box-sizing: border-box;
+            padding-right: 36px;
+            text-align: start;
+        }
+        .bottom-content {
+            width: calc(100%/100*63);
+            .categories, .customers, .pages {
+                padding-top: unset;
+                text-align: left;
+                width: unset;
+            }
+            .categories {
+                padding: 0 45px 0 38px;
+            }
+            .customers {
+                padding: 0 45px;
+            }
+            .pages {
+                padding-left: 45px;
+            }
+        }
+    }
+    .footer-bottom-content {
+        .media {
+            width: 30%;
+        }
+        .copyright {
+            width: 70%;
+            position: relative;
+            left: 80px;
+            text-align: start;
+        }
     }
 }
-@mixin responsive_768() {
-    @media #{$res_768} {
-        @content;
-    }
+/**
+* end footer for desktop
+*/
+
+// page-sortby
+@include responsive_768 {
+	.page-sortby {
+		.left {
+			&-title {
+				font-size: 22px;
+				line-height: 1.181;
+				margin-bottom: 8px;
+			}
+		}
+		.right {
+			justify-content: flex-end;
+			margin-top: 18px;
+			& > div {
+				width: fit-content;
+				&:first-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.perpage,
+		.sortby {
+			margin-right: 27px;
+		}
+		.view {
+			margin-right: 23px;
+		}
+		.search {
+			width: 296px;
+			margin-right: 0;
+			input {
+				width: 100%;
+			}
+		}
+	}
 }
-@mixin responsive_1024() {
-    @media #{$res_1024} {
-        @content;
-    }
+
+@include responsive_1024 {
+	.page-sortby {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.right {
+			margin-top: 2px;
+		}
+		.search {
+			width: 162px;
+		}
+		.view-title {
+			margin-right: 12px;
+		}
+	}
 }
+
+// page-header
+@include responsive_768 {
+	.page-header {
+		min-height: 180px;
+		&-content {
+			padding-top: 50px;
+		}
+	}
+	.page-title {
+		font-size: 36px;
+		line-height: 1.1666;
+	}
+}
+
+@include responsive_1024 {
+	.page-header {
+		min-height: 286px;
+		&-content {
+			padding-top: 96px;
+		}
+	}
+}
+
+
+//
+// Home page componet title
+// _______________________________
+
+@include responsive_768 {
+	.home-component-title {
+		font-size: 32px;
+		line-height: 1;
+	}
+}
+//
+// 	Featured Products
+// _______________________________
+
+@include responsive_768 {
+	.featured-products {
+		&-title {
+			margin-bottom: 36px;
+		}
+		.view-detail {
+			@include translate(-50%, 0);
+		}
+		.name {
+			padding-top: 32px;
+			a {
+				font-size: 18px;
+			}
+		}
+		.color {
+			padding-top: 20px;
+			span {
+				margin: 0 0.5px;
+			}
+		}
+		.slick-dots {
+			bottom: -14px;
+		}
+	}
+}
+
+@include responsive_1024 {
+	.featured-products {
+		.name {
+			padding-top: 18px;
+		}
+		.color {
+			padding-top: 12px;
+			@include translate(2px, 0);
+			span {
+				margin: 0 2.5px;
+			}
+		}
+		.code {
+			@include translate(8px, 0);
+		}
+		.price {
+			padding: 9px 0 17px 0;
+			@include translate(4px, 0);
+		}
+		.slick-dots {
+			bottom: -42px;
+		}
+	}
+}
+
+//
+// 	Leatest Products
+// _______________________________
+
+@include responsive_768 {
+	.leatest-products {
+		.tabs-title {
+			margin: 38px 0 40px 0;
+			justify-content: center;
+			li {
+				margin-right: 60px;
+				width: fit-content;
+			}
+		}
+		.product-list .col {
+			&:nth-child(2n) {
+				margin-right: 30px;
+			}
+			@include col(3, 30px);
+		}
+		.item {
+			&._sale {
+				&:before {
+					width: 70px;
+					height: 46.79px;
+					top: 9px;
+					left: 11px;
+				}
+			}
+		}
+		.name:before {
+			width: 96.73px;
+			bottom: 4px;
+		}
+		.bottom {
+			margin-top: 1.59px;
+		}
+		.price {
+			justify-content: flex-start;
+			margin: 4px 0 7px 0;
+			& span:last-child {
+				margin-left: 8.57px;
+			}
+		}
+	}
+}
+
+@include responsive_1024 {
+	.leatest-products {
+		.tabs-title {
+			margin: 18px 0 58px 0;
+		}
+		.product-list {
+			.col:nth-child(2n) {
+				margin-right: 45px;
+			}
+			@include grid-layout(3, 45px, 40px);
+		}
+
+		.item {
+			&._sale {
+				&:before {
+					width: 84.87px;
+					height: 56.73px;
+					top: 24px;
+					left: 18px;
+				}
+			}
+		}
+		.tool {
+			bottom: 35px;
+			left: 17px;
+			top: unset;
+			height: fit-content;
+			width: fit-content;
+		}
+		.bottom {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			color: #151875;
+			flex-wrap: wrap;
+			margin: 6.59px 0 76px 0;
+		}
+		.price {
+			width: fit-content;
+			margin: 9px 16px 7px 0;
+		}
+	}
+}
+
+//
+// 	What Shopex Offer!
+// _______________________________
+
+@include responsive_768 {
+	.what-shopex-offer {
+		&-title {
+			margin-bottom: 47px;
+		}
+		.col {
+			margin-bottom: 62px;
+		}
+		.item {
+			padding-top: 61px;
+		}
+		.name {
+			margin-top: 24px;
+			font-size: 22px;
+		}
+		.des {
+			font-size: 16px;
+			line-height: 1.6;
+			padding: 19px 38px 37px 38px;
+		}
+	}
+}
+
+@include responsive_1024 {
+	.what-shopex-offer {
+		&-title {
+			margin-bottom: 65px;
+		}
+		&-list .col {
+			&:nth-child(2n) {
+				margin-right: 30px;
+			}
+			@include col(4, 30px);
+		}
+		.des {
+			padding: 19px 26px 45px 27px;
+		}
+	}
+}
+
+//
+// 	Unique Features
+// _______________________________
+
+@include responsive_768 {
+	.unique-features {
+		min-height: 969px;
+
+		.image {
+			padding: 16px 105px;
+			box-sizing: border-box;
+		}
+		.title {
+			margin-top: 21px;
+			text-align: left;
+			padding-right: 69px;
+		}
+		.list {
+			padding: 0 208px 0 31px;
+			margin-top: 15px;
+			margin-left: 2px;
+		}
+		.bottom {
+			margin-top: 50px;
+		}
+	}
+}
+@include responsive_1024 {
+	.unique-features {
+		min-height: 570px;
+		.wapper {
+			display: flex;
+			max-width: 1060px;
+			margin: 0 auto;
+		}
+		.content {
+			margin-top: 71px;
+			padding: 0;
+			@include translate(-10px, 0);
+		}
+		.title {
+			padding: 0;
+		}
+		.list {
+			padding: 0 0 0 24px;
+			li {
+				&:before {
+					left: -22px;
+				}
+			}
+		}
+		.image {
+			margin-top: 9px;
+			padding: 0;
+			min-width: 558px;
+		}
+		.bottom {
+			margin-left: 4px;
+		}
+	}
+}
+
+//
+// 	Promotion
+// _______________________________
+
+@include responsive_768 {
+	.promotion {
+		&-list {
+			.slider > div {
+				padding: 202px 0 236px 0;
+			}
+		}
+		.name {
+			font-size: 53px;
+			line-height: 1.32;
+
+			letter-spacing: 0.015em;
+
+			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+		.des {
+			padding: 0 89px;
+		}
+		.show-now {
+			margin: 23px 0 0 0;
+		}
+	}
+}
+
+@include responsive_1024 {
+	.promotion {
+		&-list {
+			// .slider > div {
+			// 	padding: calc((202 / 1920) * 100%) 15px
+			// 		calc((236 / 1920) * 100%) 15px;
+			// }
+			.slider > div {
+				padding: calc((202 / 1920) * 100%) 15px 015px;
+			}
+		}
+	}
+}
+
+//
+// Trending Products
+// _______________________________
+
+@include responsive_768 {
+	.trending-products {
+		&-title {
+			margin-bottom: 50px;
+		}
+	}
+}
+@include responsive_1024 {
+	.trending-products {
+		&-list {
+			.col:nth-child(2n) {
+				margin-right: 30px;
+			}
+			@include grid-layout(4, 30px, 40px);
+		}
+	}
+}
+
+
+// details for tablet
+@include responsive_768 {
+    
+}
+// details for tablet
+
+// details for desktop
+@include responsive_1024 {
+    .page-header-content {
+        text-align: unset;
+        .breadcrumb {
+            ul {
+                justify-content: unset;
+            }
+        }
+    }
+    
+}
+// details for desktop
+

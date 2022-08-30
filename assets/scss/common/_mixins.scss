@@ -58,6 +58,9 @@
 	flex: 0 0
 		calc(((100% + #{$column-gap}) / #{$column-number}) - #{$column-gap});
 	width: calc(((100% + #{$column-gap}) / #{$column-number}) - #{$column-gap});
+	&:nth-child(#{$column-number}n) {
+		margin-right: 0;
+	}
 }
 
 @mixin grid-layout($column-number: 4, $column-gap: 30px, $row-gap: 30px) {
@@ -66,8 +69,29 @@
 		@include col($column-number, $column-gap);
 		margin-right: $column-gap;
 		margin-bottom: $row-gap;
-		&:nth-child(#{$column-number}n) {
-			margin-right: 0;
-		}
+	}
+}
+
+//
+// Background image set
+// _______________________________
+
+//
+// Resposive
+// _______________________________
+
+@mixin responsive_512() {
+	@media #{$res_512_mobile} {
+		@content;
+	}
+}
+@mixin responsive_768() {
+	@media #{$res_768_mobile} {
+		@content;
+	}
+}
+@mixin responsive_1024() {
+	@media #{$res_1024_mobile} {
+		@content;
 	}
 }

@@ -1,0 +1,48 @@
+<div class="page-header">
+    <div class="container page-header-content">
+        <div class="page-title">
+            <p>Product Details</p>
+        </div>
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Product Details</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="detail-content">
+    <div class="prev">1</div>
+        <div class="next">2</div>
+    <div class="product-image">
+        <div class="image-item">
+            <a href="#"><img src="../../assets/images/products/details/Rectangle 1.png" alt=""></a>
+        </div>
+        <div class="image-item">
+            <a href="#"><img src="../../assets/images/products/details/Rectangle 2.png" alt=""></a>
+        </div>
+        <div class="image-item">
+            <a href="#"><img src="../../assets/images/products/details/Rectangle 3.png" alt=""></a>
+        </div>
+        <div class="image-item">
+            <a href="#"><img src="../../assets/images/products/details/Rectangle 4.png" alt=""></a>
+        </div>
+    </div>  
+</div>
+
+<script>
+    $('.product-image').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    arrows : true,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+    autoplay: true,
+    autoplaySpeed: 1500,
+    cssEase: 'linear'
+  });
+</script>
