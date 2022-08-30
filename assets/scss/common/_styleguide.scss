@@ -11,7 +11,7 @@ body {
 	max-width: 100%;
 	padding: 0 15px;
 	box-sizing: border-box;
-	margin: auto;
+	margin: 0 auto;
 }
 a {
 	text-decoration: none;
@@ -342,12 +342,10 @@ input:focus {
 	}
 	.view {
 		@include flexbox;
-		// margin-left: 24px;
 		align-items: center;
 		min-height: 25px;
 
 		&-title {
-			// margin-right: 4px;
 			margin-right: 8px;
 		}
 		&-choise {

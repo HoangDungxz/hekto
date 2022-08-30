@@ -337,20 +337,27 @@
 // _______________________________
 
 .what-shopex-offer {
+	&-title {
+		margin-bottom: 40px;
+	}
 	&-list {
-		@include grid-layout(2, 30px, 30px);
+		@include grid-layout(2, 30px, 36px);
 	}
 	.item {
+		display: block;
+		background: #fff;
+		padding: 15px 0 15.67px 0;
+		/* shadow */
+		box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
 		p {
 			text-align: center;
 		}
 	}
 	.image {
 		margin: 0 auto;
-		// width: fit-content;
-		padding-top: 42.856377564%; // (15 + 65) / 187
+		padding-top: 65px;
 		position: relative;
-		margin-top: 15px;
+
 		img {
 			width: auto;
 			height: 65px;
@@ -373,6 +380,371 @@
 		font-size: 13px;
 		line-height: 1.23076;
 		color: rgba(26, 11, 91, 0.3);
-		margin-top: 5.83px;
+		padding: 5.83px 15.75px 0.34px 15.17px;
+		box-sizing: border-box;
+	}
+}
+
+//
+// Unique Features Of leatest & Trending Poducts
+// _______________________________
+
+.unique-features {
+	min-height: 912px;
+	background: #f1f0ff;
+	margin-bottom: 77px;
+	.image {
+		padding-top: 23px;
+		img {
+			width: 100%;
+		}
+	}
+	.title {
+		font-family: $font-family__josefin-sans;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 35px;
+		line-height: 1.32;
+		/* or 46px */
+		margin-top: 4px;
+		text-align: center;
+		letter-spacing: 0.015em;
+
+		/* Text */
+
+		color: #151875;
+	}
+
+	.list {
+		margin-top: 40px;
+		padding: 0 0 0 31px;
+		li {
+			padding-top: 13px;
+			position: relative;
+			&:before {
+				content: '';
+				display: block;
+				width: 11px;
+				height: 11px;
+				border-radius: 50%;
+				background-color: red;
+				position: absolute;
+				top: 17px;
+				left: -31px;
+			}
+			&:nth-child(2):before {
+				background-color: #2b2bf5;
+			}
+			&:last-child:before {
+				background-color: #2bf5cc;
+			}
+		}
+		p {
+			font-family: $font-family-name__lato;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 1.32;
+			/* or 28px */
+
+			letter-spacing: 0.015em;
+
+			color: #acabc3;
+		}
+	}
+	.bottom {
+		margin-top: 37px;
+		padding-bottom: 65.36px;
+		@include flexbox;
+		align-items: center;
+		.left {
+			margin-right: 19px;
+		}
+	}
+
+	.add-to-cart {
+		border: none;
+		padding: 14px 34px 11px 24px;
+		background-color: #fb2e86;
+		border-radius: 2px;
+		color: #fff;
+		font-weight: 600;
+		font-family: $font-family__josefin-sans;
+		font-size: 17px;
+		line-height: 1.17647;
+		letter-spacing: 0.02em;
+	}
+	.name {
+		font-family: $font-family__josefin-sans;
+		font-size: 14px;
+		line-height: 1.1428571;
+		letter-spacing: 0.02em;
+		font-weight: 600;
+
+		/* Text */
+
+		color: #151875;
+	}
+	.price {
+		font-family: $font-family__lato;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.214285;
+
+		/* Text */
+
+		color: #151875;
+	}
+}
+
+//
+// Promotion
+// _______________________________
+
+.promotion {
+	text-align: center;
+
+	&-list {
+		.slider {
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-color: #f2f0ff;
+			background-position: center center;
+			position: relative;
+			& > div {
+				padding-top: 77px;
+				padding-bottom: 73px;
+			}
+			.content {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include translate(-50%, -50%);
+			}
+		}
+	}
+
+	picture {
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+
+	.title p {
+		color: #fb2e86;
+		font-family: $font-family__lato;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.75;
+		max-width: 224px;
+		margin: 0 auto 0 auto;
+
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	.name {
+		font-family: $font-family__josefin-sans;
+		font-weight: 700;
+		font-size: 33px;
+		line-height: 1.32;
+		margin-top: 13px;
+
+		text-align: center;
+		letter-spacing: 0.015em;
+	}
+	.des {
+		font-family: $font-family__lato;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.75;
+		/* or 175% */
+		margin-top: 13px;
+
+		text-align: center;
+
+		/* sub text color */
+
+		color: #8a8fb9;
+	}
+	.show-now {
+		font-family: $font-family__josefin-sans;
+		font-size: 17px;
+		line-height: 1.17647;
+		letter-spacing: 0.02em;
+		margin: 29px 0 0 0;
+
+		color: #ffffff;
+
+		background: #fb2e86;
+		border-radius: 2px;
+		box-sizing: border-box;
+		display: inline-block;
+		span {
+			padding: 16px 40px 17px 42px;
+			display: block;
+		}
+	}
+
+	.slick-dots {
+		bottom: 22px;
+		li {
+			width: fit-content;
+			height: fit-content;
+			margin: 0 8px;
+		}
+		button {
+			padding: 0;
+			width: 10px;
+			height: 9.89px;
+
+			border: 1px solid #fb2e86;
+			box-sizing: border-box;
+			@include transform(rotate(-45deg));
+			&:before {
+				content: none;
+			}
+		}
+		.slick-active {
+			button {
+				background: #fb2e86;
+			}
+		}
+	}
+}
+
+//
+// Trending Products
+// _______________________________
+
+.trending-products {
+	margin-bottom: 77px;
+	&-title {
+		margin-bottom: 40px;
+	}
+	&-list {
+		@include grid-layout(2, 30px, 40px);
+	}
+	.item {
+		display: block;
+		box-sizing: border-box;
+		padding: 11px 12px 33px 11px;
+
+		background-color: #fff;
+
+		filter: drop-shadow(0px 8px 40px rgba(49, 32, 138, 0.05));
+	}
+	.image {
+		border: 0;
+		font-size: 0;
+		img {
+			width: 100%;
+			display: block;
+		}
+	}
+	.bottom {
+		text-align: center;
+		padding-top: 15px;
+	}
+	.name {
+		font-family: $font-family__lato;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #151875;
+		margin-bottom: 8px;
+	}
+	.price {
+		font-family: $font-family__josefin-sans;
+		line-height: 1;
+		font-size: 14px;
+		color: #151875;
+		span {
+			&:last-child {
+				font-size: 12px;
+				color: rgba(21, 24, 117, 0.3);
+				margin-left: 12px;
+			}
+		}
+	}
+
+	.banner {
+		.show-now,
+		.view-collection {
+			position: relative;
+			box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+			min-height: 270px;
+			.inner {
+				position: absolute;
+				// right: 6;
+				// bottom: 2;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+
+				padding: 34px 6px 2px 25px;
+				box-sizing: border-box;
+			}
+			.image {
+				position: absolute;
+				right: 6px;
+				bottom: 2px;
+				max-height: 90%;
+			}
+			img {
+				height: auto;
+				width: auto;
+				max-width: 100%;
+			}
+			.content {
+				// margin: 34px 0 0 25px;
+			}
+			.sale {
+				font-family: $font-family__josefin-sans;
+
+				font-weight: 600;
+				font-size: 26px;
+				line-height: 1;
+				/* Text */
+				margin-bottom: 11px;
+
+				color: #151875;
+			}
+			.go-sale {
+				font-family: $font-family__lato;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 1.1875;
+				text-align: center;
+				text-decoration-line: underline;
+
+				color: #fb2e86;
+			}
+		}
+		.show-now {
+			background: #fff6fb;
+			margin-bottom: 40px;
+		}
+		.view-collection {
+			background: #eeeffb;
+			/* shadow */
+		}
+	}
+	.trending-item {
+		display: flex;
+		align-items: center;
+	}
+	.trending-name {
+		font-family: $font-family__josefin-sans;
+		font-size: 16px;
+		line-height: 1.1875;
+		font-weight: 600;
+		/* Text */
+
+		color: #151875;
 	}
 }

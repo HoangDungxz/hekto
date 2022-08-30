@@ -22,6 +22,7 @@
 // Style Guide
 // _______________________________
 
+// page-sortby
 @include responsive_min_768 {
 	.page-sortby {
 		.left {
@@ -75,6 +76,7 @@
 	}
 }
 
+// page-header
 @include responsive_min_768 {
 	.page-header {
 		min-height: 180px;
@@ -329,7 +331,7 @@
 }
 
 //
-// 	Featured Products
+// 	Leatest Products
 // _______________________________
 
 @include responsive_min_768 {
@@ -419,6 +421,175 @@
 	}
 }
 
+//
+// 	What Shopex Offer!
+// _______________________________
+
+@include responsive_min_768 {
+	.what-shopex-offer {
+		&-title {
+			margin-bottom: 47px;
+		}
+		.col {
+			margin-bottom: 62px;
+		}
+		.item {
+			padding-top: 61px;
+		}
+		.name {
+			margin-top: 24px;
+			font-size: 22px;
+		}
+		.des {
+			font-size: 16px;
+			line-height: 1.6;
+			padding: 19px 38px 37px 38px;
+		}
+	}
+}
+
+@include responsive_min_1024 {
+	.what-shopex-offer {
+		&-title {
+			margin-bottom: 65px;
+		}
+		&-list .col {
+			&:nth-child(2n) {
+				margin-right: 30px;
+			}
+			@include col(4, 30px);
+		}
+		.des {
+			padding: 19px 26px 45px 27px;
+		}
+	}
+}
+
+//
+// 	Unique Features
+// _______________________________
+
+@include responsive_min_768 {
+	.unique-features {
+		min-height: 969px;
+
+		.image {
+			padding: 16px 105px;
+			box-sizing: border-box;
+		}
+		.title {
+			margin-top: 21px;
+			text-align: left;
+			padding-right: 69px;
+		}
+		.list {
+			padding: 0 208px 0 31px;
+			margin-top: 15px;
+			margin-left: 2px;
+		}
+		.bottom {
+			margin-top: 50px;
+		}
+	}
+}
+@include responsive_min_1024 {
+	.unique-features {
+		min-height: 570px;
+		.wapper {
+			display: flex;
+			max-width: 1060px;
+			margin: 0 auto;
+		}
+		.content {
+			margin-top: 71px;
+			padding: 0;
+			@include translate(-10px, 0);
+		}
+		.title {
+			padding: 0;
+		}
+		.list {
+			padding: 0 0 0 24px;
+			li {
+				&:before {
+					left: -22px;
+				}
+			}
+		}
+		.image {
+			margin-top: 9px;
+			padding: 0;
+			min-width: 558px;
+		}
+		.bottom {
+			margin-left: 4px;
+		}
+	}
+}
+
+//
+// 	Promotion
+// _______________________________
+
+@include responsive_min_768 {
+	.promotion {
+		&-list {
+			.slider > div {
+				padding: 202px 0 236px 0;
+			}
+		}
+		.name {
+			font-size: 53px;
+			line-height: 1.32;
+
+			letter-spacing: 0.015em;
+
+			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+		.des {
+			padding: 0 89px;
+		}
+		.show-now {
+			margin: 23px 0 0 0;
+		}
+	}
+}
+
+@include responsive_min_1024 {
+	.promotion {
+		&-list {
+			// .slider > div {
+			// 	padding: calc((202 / 1920) * 100%) 15px
+			// 		calc((236 / 1920) * 100%) 15px;
+			// }
+			.slider > div {
+				padding: calc((202 / 1920) * 100%) 15px 015px;
+			}
+		}
+	}
+}
+
+//
+// Trending Products
+// _______________________________
+
+@include responsive_min_768 {
+	.trending-products {
+		&-title {
+			margin-bottom: 50px;
+		}
+	}
+}
+@include responsive_min_1024 {
+	.trending-products {
+		&-list {
+			.col:nth-child(2n) {
+				margin-right: 30px;
+			}
+			@include grid-layout(4, 30px, 40px);
+		}
+	}
+}
 //
 // Footer
 // _______________________________
