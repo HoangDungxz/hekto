@@ -14,15 +14,14 @@
 
 .header-content {
     &-left {
-        width: 50%;
-        display: flex;
+        display: none;
         a {
             font-family: $font-family__josefin-sans;
             text-decoration: none;
-            font-size: 16px;
-            line-height: 19px;
             color: #f1f1f1;
-            padding-right: 50px;
+            font-size: 13px;
+            line-height: 15px;
+            padding-right: 48px;
         }
     }
 
@@ -30,23 +29,24 @@
         color: #ffffff;
         position: relative;
         top: 4px;
-        padding-right: 11.33px;
+        padding-left: 12px;
     }
 
     &-right {
-        width: 50%;
         display: flex;
         justify-content: end;
         font-weight: 600;
+        width: 100%;
+        justify-content: space-between;
         .item {
             font-family: $font-family__josefin-sans;
-            font-size: 16px;
-            line-height: 19px;
             color: #f1f1f1;
             text-align: center;
-            padding-left: 20px;
+            padding-left: 0;
             position: relative;
             cursor: pointer;
+            font-size: 13px;
+			line-height: 15px;
         }
         iconify-icon {
             position: relative;
@@ -60,7 +60,6 @@
     &-laguage,
     &-money {
         top: 3px;
-
         .list-language,
         .list-money {
             position: absolute;
@@ -81,6 +80,10 @@
                 background: $color-purple;
             }
         }
+
+        .lang-default {
+            padding-left: 0;
+        }
     }
 }
 
@@ -90,7 +93,8 @@
     &:after {
         content: url("https://api.iconify.design/akar-icons/chevron-down.svg?color=white&width=16px&height=16px");
         position: absolute;
-        right: -4px;
+        right: -3px;
+        top: -1px;
     }
     &:hover {
         &:after {
@@ -111,16 +115,14 @@
 * Header Bottom
 */
 .header-bottom-content {
-    .header-contact {
-        display: none;
-    }
-
     .row {
         display: flex;
         padding: 20px 0;
     }
     .logo {
-        width: calc(100% / 12 * 2);
+        width: 30%;
+        order: 2;
+        text-align: center;
         h1 {
             margin: 0;
         }
@@ -138,15 +140,22 @@
     .navbar {
         width: calc(100% / 12 * 6);
         line-height: 42px;
-        .icon-menu,
-        .icon-menu-tablet {
+        width: 35%;
+        order: 1;
+        display: flex;
+        align-items: center;
+        .icon-menu {
             display: none;
+        }
+
+        .icon-menu-tablet {
+            display: flex;
         }
         .menu {
             align-items: center;
-            display: flex;
+            display: none;
             .item {
-                padding-right: 25px;
+                padding-right: 10px;
                 position: relative;
             }
             a {
@@ -158,7 +167,8 @@
             }
         }
         .menu-tablet {
-            display: none;
+            display: flex;
+            font-size: 13px;
         }
         .item-home {
             padding-right: 35px;
@@ -166,7 +176,7 @@
             &:after {
                 content: url("https://api.iconify.design/akar-icons/chevron-down.svg?color=%23fb2e86&width=16px&height=16px");
                 position: absolute;
-                right: 8px;
+                left: 45px;
                 top: 3px;
             }
             &:hover {
@@ -177,6 +187,11 @@
                     content: url("https://api.iconify.design/akar-icons/chevron-up.svg?color=%23fb2e86&width=16px&height=16px");
                 }
             }
+        }
+
+        .icon-menu-tablet {
+            display: block;
+            padding: 15px 15px 15px 0;
         }
 
         .sub-menu {
@@ -197,18 +212,58 @@
         }
     }
 
+    .item-tablet {
+        position: relative;
+        &:hover {
+            .sub-tablet {
+                display: block;
+            }
+        }
+        
+    }
+    .sub-tablet {
+        position: absolute;
+            background-color: #f1f1f1;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1000;
+            .menu-tab {
+                padding-left: 15px;
+                &:hover {
+                    background: $color-purple;
+                    a {
+                        color: #fb2e86;
+                    }
+                }
+            }
+    }
+
+    .header-contact {
+        width: 35%;
+        order: 2;
+        text-align: end;
+        font-size: 13px;
+        display: block;
+        a {
+            position: relative;
+            top: 5px;
+        }
+    }
+
     .search {
         width: calc(100% / 12 * 4);
         position: relative;
-        display: flex;
+        display: none;
         align-items: center;
         .search-input {
-            height: 34px;
+            height: 38px;
             width: 98%;
             top: 0;
             outline: none;
             border: 2px solid #e7e6ef;
-            min-width: 288px;
+            min-width: 260px;
+            box-sizing: border-box;
+            padding: 0 45px 0 15px;
         }
         .search-sbm {
             position: absolute;
@@ -223,7 +278,14 @@
 
 .header-bottom {
     .search-mobile {
-        display: none;
+        display: block;
+        width: 100%;
+        padding-bottom: 20px;
+        .search-sbm {
+            position: absolute;
+            top: 1px;
+            right: 0;
+        }
     }
 }
 /**
