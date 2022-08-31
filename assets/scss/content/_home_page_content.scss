@@ -2,8 +2,6 @@
 // Home page componet title
 // _______________________________
 .home-component-title {
-	// font-size: 42px;
-	// line-height: 1.6666;
 	font-size: 20px;
 	line-height: 20px;
 	font-weight: 700;
@@ -41,6 +39,116 @@
 		color: $color-off-blue;
 	}
 }
+
+//
+// Promotion
+// _______________________________
+
+.promotion {
+	text-align: center;
+
+	&-list {
+		.slider {
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-color: #f2f0ff;
+			background-position: center center;
+			position: relative;
+			min-height: 500px;
+			.content {
+				height: fit-content;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include translate(-50%, calc(-50% - 12px));
+			}
+		}
+	}
+	.slick-track {
+		display: flex;
+	}
+	.slick-track .slick-slide {
+		display: flex;
+		height: auto;
+	}
+	picture {
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+
+	.title p {
+		color: #fb2e86;
+		font-family: $font-family__lato;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.75;
+		max-width: 224px;
+		margin: 0 auto 0 auto;
+
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	.name {
+		font-family: $font-family__josefin-sans;
+		font-weight: 700;
+		font-size: 33px;
+		line-height: 1.32;
+		margin-top: 13px;
+
+		text-align: center;
+		letter-spacing: 0.015em;
+
+		margin-bottom: 14px;
+	}
+	.des {
+		font-family: $font-family__lato;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.75;
+		/* or 175% */
+		margin-top: 13px;
+
+		text-align: center;
+
+		/* sub text color */
+
+		color: #8a8fb9;
+	}
+
+	.button-shop-now {
+		margin-top: 27px;
+		padding: 17px 40px 13px 41px;
+	}
+	.slick-dots {
+		bottom: 37px;
+		li {
+			width: fit-content;
+			height: fit-content;
+			margin: 0 8px;
+		}
+		button {
+			padding: 0;
+			width: 10px;
+			height: 9.89px;
+
+			border: 1px solid #fb2e86;
+			box-sizing: border-box;
+			@include transform(rotate(-45deg));
+			&:before {
+				content: none;
+			}
+		}
+		.slick-active {
+			button {
+				background: #fb2e86;
+			}
+		}
+	}
+}
+
 //
 // Featured Products
 // _______________________________
@@ -490,130 +598,6 @@
 		/* Text */
 
 		color: #151875;
-	}
-}
-
-//
-// Promotion
-// _______________________________
-
-.promotion {
-	text-align: center;
-
-	&-list {
-		.slider {
-			background-size: 100%;
-			background-repeat: no-repeat;
-			background-color: #f2f0ff;
-			background-position: center center;
-			position: relative;
-			& > div {
-				padding-top: 77px;
-				padding-bottom: 73px;
-			}
-			.content {
-				height: 100%;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				@include translate(-50%, -50%);
-			}
-		}
-	}
-	.slick-track {
-		display: flex;
-	}
-	.slick-track .slick-slide {
-		display: flex;
-		height: auto;
-	}
-	picture {
-		width: 100%;
-		img {
-			width: 100%;
-		}
-	}
-
-	.title p {
-		color: #fb2e86;
-		font-family: $font-family__lato;
-		font-weight: 700;
-		font-size: 16px;
-		line-height: 1.75;
-		max-width: 224px;
-		margin: 0 auto 0 auto;
-
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
-	}
-	.name {
-		font-family: $font-family__josefin-sans;
-		font-weight: 700;
-		font-size: 33px;
-		line-height: 1.32;
-		margin-top: 13px;
-
-		text-align: center;
-		letter-spacing: 0.015em;
-	}
-	.des {
-		font-family: $font-family__lato;
-		font-weight: 700;
-		font-size: 16px;
-		line-height: 1.75;
-		/* or 175% */
-		margin-top: 13px;
-
-		text-align: center;
-
-		/* sub text color */
-
-		color: #8a8fb9;
-	}
-	// .show-now {
-	// 	font-family: $font-family__josefin-sans;
-	// 	font-size: 17px;
-	// 	line-height: 1.17647;
-	// 	letter-spacing: 0.02em;
-	// 	margin: 29px 0 0 0;
-
-	// 	color: #ffffff;
-
-	// 	background: #fb2e86;
-	// 	border-radius: 2px;
-	// 	box-sizing: border-box;
-	// 	display: inline-block;
-	// 	span {
-	// 		padding: 16px 40px 17px 42px;
-	// 		display: block;
-	// 	}
-	// }
-
-	.slick-dots {
-		bottom: 22px;
-		li {
-			width: fit-content;
-			height: fit-content;
-			margin: 0 8px;
-		}
-		button {
-			padding: 0;
-			width: 10px;
-			height: 9.89px;
-
-			border: 1px solid #fb2e86;
-			box-sizing: border-box;
-			@include transform(rotate(-45deg));
-			&:before {
-				content: none;
-			}
-		}
-		.slick-active {
-			button {
-				background: #fb2e86;
-			}
-		}
 	}
 }
 
