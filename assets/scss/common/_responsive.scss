@@ -748,7 +748,7 @@
 }
 
 //
-// Discount Item
+// top-categories
 // _______________________________
 
 @include responsive_768 {
@@ -771,6 +771,11 @@
 		}
 		.slick-dots {
 			bottom: -53px;
+		}
+		.view-shop {
+			top: unset;
+			bottom: 21px;
+			@include translate(-50%, 0);
 		}
 	}
 }
