@@ -25,7 +25,7 @@
 @include responsive_768() {
 	.header-content-left {
 		width: 50%;
-		display: flex;
+		@include flexbox;
 		a {
 			padding-right: 27px;
 		}
@@ -50,7 +50,7 @@
 		.search {
 			width: 40%;
 			order: 3;
-			display: flex;
+			@include flexbox;
 		}
 	}
 
@@ -102,7 +102,7 @@
 			width: calc(100% / 12 * 6);
 			order: 2;
 			.menu {
-				display: flex;
+				@include flexbox;
 				.item {
 					padding-right: 25px;
 				}
@@ -126,7 +126,7 @@
 @include responsive_768 {
 	.footer-top {
 		.bottom-content {
-			display: flex;
+			@include flexbox;
 		}
 		#accordion {
 			display: none;
@@ -173,7 +173,7 @@
 
 @include responsive_1024 {
 	.footer-content {
-		display: flex;
+		@include flexbox;
 		.info {
 			width: 37%;
 			box-sizing: border-box;
@@ -255,7 +255,7 @@
 
 @include responsive_1024 {
 	.page-sortby {
-		display: flex;
+		@include flexbox;
 		justify-content: space-between;
 		align-items: center;
 		.right {
@@ -293,322 +293,25 @@
 	}
 }
 
-<<<<<<< HEAD
-//
-// Header
-// _______________________________
+// details for tablet
 
-// header for tablet
+@include responsive_768 {
+}
+// details for tablet
+
+// details for desktop
+
 @include responsive_1024 {
-	.header-content-left {
-		a {
-			font-size: 13px;
-			line-height: 15px;
-			padding-right: 48px;
-		}
-	}
-}
-
-//     .header-right-laguage,
-//     .header-right-money {
-//         .laguage-item,
-//         .money-item {
-//             &:after {
-//                 right: -17px;
-//                 top: -1px;
-//             }
-//         }
-//     }
-
-//     .header-bottom {
-//         .search-mobile {
-//             display: none;
-//         }
-//     }
-
-//     .header-bottom-content {
-//         .header-contact {
-//             display: none;
-//         }
-
-//         .logo {
-//             width: 20%;
-//             order: 2;
-//         }
-
-//         .navbar {
-//             width: 40%;
-//             order: 1;
-//             .menu {
-//                 display: none;
-//             }
-//             .menu-tablet {
-//                 display: flex;
-//             }
-//             .item-home {
-//                 &::after {
-//                     left: 45px;
-//                     top: 3px;
-//                 }
-//             }
-//             .icon-menu-tablet {
-//                 display: block;
-//                 padding: 15px 15px 15px 0;
-//             }
-//         }
-//         .item-tablet {
-//             position: relative;
-//             &:hover {
-//                 .sub-tablet {
-//                     display: block;
-//                 }
-//             }
-
-//         }
-
-// 		.search {
-// 			width: 40%;
-// 			order: 3;
-// 		}
-// 	}
-//     .header-bottom-content {
-//         .sub-tablet {
-//             position: absolute;
-//             background-color: #f1f1f1;
-//             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-//             display: none;
-//             z-index: 1000;
-//             .menu-tab {
-//                 padding-left: 15px;
-//                 &:hover {
-//                     background: $color-purple;
-//                     a {
-//                         color: #fb2e86;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-/**
-* End header for tablet
-*/
-
-/**
-* Header for mobile
-*/
-// @include responsive_768 {
-//     .header-content-left {
-//         display: none;
-//     }
-
-//     .header-content-right {
-//         width: 100%;
-//         justify-content: space-between;
-
-//         .item {
-//             padding-right: 10px;
-//             padding-left: unset;
-//         }
-//     }
-
-//     .header-right-laguage {
-//         .lang {
-//             padding: 15px 0;
-//         }
-//     }
-
-//     .header-bottom-content {
-//         .search {
-//             display: none;
-//             .search-input {
-//                 min-width: unset;
-//             }
-//         }
-//         .search-mobile {
-//             display: block;
-//             width: 100%;
-//             .search-sbm {
-//                 position: absolute;
-//                 top: 1px;
-//                 right: 0;
-//             }
-//         }
-//         .logo {
-//             width: 30%;
-//             text-align: center;
-//         }
-//         .navbar {
-//             width: 35%;
-//             .menu .item{
-//                 padding-right: 10px;
-//             }
-//         }
-//         .header-contact {
-//             width: 35%;
-//             order: 2;
-//             text-align: end;
-//             font-size: 20px;
-//             display: block;
-//             a {
-//                 position: relative;
-//                 top: 5px;
-//             }
-//         }
-//     }
-// }
-/**
-* End header for mobile
-*/
-
-@include responsive_768 {
-	.page-sortby {
-		.header-right-laguage,
-		.header-right-money {
-			.laguage-item,
-			.money-item {
-				&:after {
-					right: -17px;
-					top: -1px;
-				}
-			}
-		}
-
-		.header-bottom {
-			.search-mobile {
-				display: none;
-			}
-		}
-
-		.header-bottom-content {
-			.header-contact {
-				display: none;
-			}
-
-			.logo {
-				width: 20%;
-				order: 2;
-			}
-
-			.navbar {
-				width: 40%;
-				order: 1;
-				.menu {
-					display: none;
-				}
-				.menu-tablet {
-					display: flex;
-				}
-				.item-home {
-					&::after {
-						left: 45px;
-						top: 3px;
-					}
-				}
-				.icon-menu-tablet {
-					display: block;
-					padding: 15px 15px 15px 0;
-				}
-			}
-			.item-tablet {
-				position: relative;
-				&:hover {
-					.sub-tablet {
-						display: block;
-					}
-				}
-			}
-
-			.search {
-				width: 40%;
-				order: 3;
-			}
-		}
-		.header-bottom-content {
-			.sub-tablet {
-				position: absolute;
-				background-color: #f1f1f1;
-				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-				display: none;
-				z-index: 1000;
-				.menu-tab {
-					padding-left: 15px;
-					&:hover {
-						background: $color-purple;
-						a {
-							color: #fb2e86;
-						}
-					}
-				}
+	.page-header-content {
+		text-align: unset;
+		.breadcrumb {
+			ul {
+				justify-content: unset;
 			}
 		}
 	}
 }
-// header for tablet
-
-// header for mobile
-@include responsive_768 {
-	.header-content-left {
-		display: none;
-	}
-
-	.header-content-right {
-		width: 100%;
-		justify-content: space-between;
-
-		.item {
-			padding-right: 10px;
-			padding-left: unset;
-		}
-	}
-
-	.header-right-laguage {
-		.lang {
-			padding: 15px 0;
-		}
-	}
-
-	.header-bottom-content {
-		.search {
-			display: none;
-			.search-input {
-				min-width: unset;
-			}
-		}
-		.search-mobile {
-			display: block;
-			width: 100%;
-			.search-sbm {
-				position: absolute;
-				top: 1px;
-				right: 0;
-			}
-		}
-		.logo {
-			width: 30%;
-			text-align: center;
-		}
-		.navbar {
-			width: 35%;
-			.menu .item {
-				padding-right: 10px;
-			}
-		}
-		.header-contact {
-			width: 35%;
-			order: 2;
-			text-align: end;
-			font-size: 20px;
-			display: block;
-			a {
-				position: relative;
-				top: 5px;
-			}
-		}
-	}
-}
-// header for mobile
-
+// details for desktop
 //
 // Home page componet title
 // _______________________________
@@ -751,7 +454,7 @@
 			width: fit-content;
 		}
 		.bottom {
-			display: flex;
+			@include flexbox;
 			justify-content: space-between;
 			align-items: center;
 			color: #151875;
@@ -840,11 +543,15 @@
 	.unique-features {
 		min-height: 570px;
 		.wapper {
-			display: flex;
+			@include flexbox;
 			max-width: 1060px;
 			margin: 0 auto;
 		}
 		.content {
+			max-width: calc(
+				(1060 - 558) / 1060 * 100%
+			); // 558 là độ rộng của ảnh
+
 			margin-top: 71px;
 			padding: 0;
 			@include translate(-10px, 0);
@@ -922,6 +629,20 @@
 		&-title {
 			margin-bottom: 50px;
 		}
+		.banner {
+			@include flexbox;
+			flex-wrap: wrap;
+			.show-now {
+				width: 100%;
+			}
+			.view-collection {
+				width: calc(432 / 738 * 100%);
+				margin-right: 27px;
+			}
+		}
+		.trending-detail {
+			margin-left: 9px;
+		}
 	}
 }
 @include responsive_1024 {
@@ -932,25 +653,160 @@
 			}
 			@include grid-layout(4, 30px, 40px);
 		}
-	}
-}
 
-// details for tablet
-
-@include responsive_768 {
-}
-// details for tablet
-
-// details for desktop
-
-@include responsive_1024 {
-	.page-header-content {
-		text-align: unset;
-		.breadcrumb {
-			ul {
-				justify-content: unset;
+		.banner {
+			.show-now,
+			.view-collection {
+				width: calc(420 / 1170 * 100%);
+				margin-right: 30px;
 			}
+			.view-collection {
+				margin-right: 31px;
+			}
+		}
+		.trending-detail {
+			margin-left: 10px;
+			margin-top: 5px;
 		}
 	}
 }
-// details for desktop
+
+//
+// Discount Item
+// _______________________________
+@include responsive_768 {
+	.discount-item {
+		.tabs-title {
+			justify-content: center;
+			margin: 40px 0 50px 0;
+			li:not(:last-child) {
+				margin-right: 30px;
+			}
+		}
+		.title {
+			font-size: 35px;
+		}
+		.name {
+			font-size: 21px;
+		}
+		.des {
+			@include translate(-3px, 0);
+			&-content {
+				margin-bottom: 19px;
+			}
+			&-list {
+				margin-bottom: 25px;
+				ul {
+					@include flexbox;
+					flex-wrap: wrap;
+				}
+				li {
+					min-width: 275.52px;
+				}
+			}
+		}
+		.button-shop-now {
+			padding: 18px 75px 17px 48px;
+		}
+	}
+}
+
+@include responsive_1024 {
+	.discount-item {
+		.tabs-title {
+			margin: 29px 0 106px 0;
+		}
+		.tabs-content {
+			& > div {
+				@include flexbox;
+				.image {
+					flex: 1; // chỉnh dộ rộng của ảnh không cho xuống dòng
+					@include order(2); // tạo mixin order
+					width: fit-content;
+				}
+				.detail {
+					@include order(1);
+					max-width: calc(
+						(1170 - 500) / 1170 * 100%
+					); // 500 là độ rộng của ảnh
+				}
+			}
+		}
+
+		.des {
+			&-list {
+				li {
+					min-width: 269.52px;
+				}
+			}
+		}
+
+		.button-shop-now {
+			padding: 20px 41px 17px 42px;
+		}
+	}
+}
+
+//
+// Discount Item
+// _______________________________
+
+@include responsive_768 {
+	.top-categories {
+		margin-bottom: 77px;
+		&-title {
+			margin-bottom: 47px;
+		}
+		&-list {
+			margin: 0 calc(-25px / 2);
+			.col {
+				padding: 0 calc(25px / 2);
+			}
+		}
+		.name {
+			margin-top: 27px;
+		}
+		.price {
+			margin-top: 11px;
+		}
+		.slick-dots {
+			bottom: -53px;
+		}
+	}
+}
+
+@include responsive_1024 {
+	.top-categories {
+		&-title {
+			margin-bottom: 66px;
+		}
+		&-list {
+			margin: 0 calc(-31.3333 / 2);
+			.col {
+				padding: 0 calc(31.3333 / 2);
+			}
+		}
+		.slick-dots {
+			bottom: -40px;
+		}
+	}
+}
+
+//
+//  Leatest Blog
+// _______________________________
+@include responsive_768 {
+	.leatest-blog {
+		&-title {
+			margin-bottom: 50px;
+		}
+	}
+}
+@include responsive_1024 {
+	.leatest-blog {
+		margin-bottom: 115px;
+		&-title {
+			margin-bottom: 90px;
+		}
+	}
+}

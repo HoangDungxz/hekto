@@ -37,6 +37,11 @@
 	@include css-prefix(display, flex);
 	flex-wrap: wrap;
 }
+
+// order
+@mixin order($val) {
+	@include css-prefix(order, $val);
+}
 // transform translate
 @mixin translate($x: 0, $y: 0) {
 	@include css-prefix(transform, translate($x, $y));
