@@ -548,6 +548,7 @@
 			margin: 0 auto;
 		}
 		.content {
+			flex: 1;
 			max-width: calc(
 				(1060 - 558) / 1060 * 100%
 			); // 558 là độ rộng của ảnh
