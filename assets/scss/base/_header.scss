@@ -34,11 +34,9 @@
 
     &-right {
         display: flex;
-        // justify-content: end;
         justify-content: space-between;
         font-weight: 600;
         width: 100%;
-        justify-content: space-between;
         .item {
             font-family: $font-family__josefin-sans;
             color: #f1f1f1;
@@ -59,9 +57,6 @@
 
 .header-right {
     &-laguage,
-
-
-    
     &-money {
         top: 3px;
         .list-language,
@@ -79,7 +74,10 @@
                 top: -1px;
             }
         }
-
+        .list-language.active,
+        .list-money.active {
+            display: block;
+        }
         .lang,
         .money {
             padding: 15px 15px;
@@ -104,14 +102,12 @@
         right: -3px;
         top: -1px;
     }
-    &:hover {
-        &:after {
-            content: url("https://api.iconify.design/akar-icons/chevron-up.svg?color=white&width=16px&height=16px");
-        }
-        .list-language,
-        .list-money {
-            display: block;
-        }
+}
+
+.laguage-item.active,
+.money-item.active {
+    &:after {
+        content: url("https://api.iconify.design/akar-icons/chevron-up.svg?color=white&width=16px&height=16px");
     }
 }
 /**
@@ -222,11 +218,6 @@
 
     .item-tablet {
         position: relative;
-        &:hover {
-            .sub-tablet {
-                display: block;
-            }
-        }
         
     }
     .sub-tablet {
@@ -244,6 +235,10 @@
                     }
                 }
             }
+    }
+
+    .sub-tablet.active {
+        display: block;
     }
 
     .header-contact {
