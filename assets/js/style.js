@@ -1,10 +1,3 @@
-// Accordion footer
-$( function() {
-    $("#accordion").accordion();
-    $('#ui-id-2, #ui-id-4, #ui-id-6').css('height', 'auto')
-});
-// Accordion footer
-
 // language, money toggle
 $('.laguage-item').on('click', function() {
     const matches = document.querySelectorAll("ul:not(.list-language)"); //get all class element ul except list-language
@@ -26,8 +19,18 @@ $('.item-tablet').on('click', function() {
     $('.sub-tablet').toggleClass('active');
 });
 
-// $('.money-item').on('click', function() {
-//     $('.laguage-item, .list-language').removeClass('active');
-//     $('.money-item, .list-money').toggleClass('active');
-// });
+$('.item-home').on('click', function() {
+    const matches = document.querySelectorAll("ul:not(.sub-menu)");
+    $(matches).removeClass('active');
+    $('.sub-menu').toggleClass('active');
+});
 // menu toggle
+
+// Accordion footer
+
+
+$( function() {
+    $("#accordion").accordion();
+    $('#ui-id-2, #ui-id-4, #ui-id-6').css('height', 'auto')
+});
+// Accordion footer
