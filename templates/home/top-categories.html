@@ -1,0 +1,88 @@
+<div class="top-categories">
+    <div class="container">
+        <div class="top-categories-title home-component-title">
+            <p>Top Categories</p>
+        </div>
+
+        <div class="top-categories-list">
+            <div class="col">
+                <div class="item">
+                    <div class="top">
+                        <div class="image"><img src="./assets/images/top_categories/1.png" alt="Top Categories"></div>
+                        <a href="#" class="view-shop">View Shop</a>
+                    </div>
+                    <div class="bottom">
+                        <div class="name">Mini LCW Chair</div>
+                        <div class="price">$56.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="item">
+                    <div class="top">
+                        <div class="image"><img src="./assets/images/top_categories/2.png" alt="Top Categories"></div>
+                        <a href="#" class="view-shop">View Shop</a>
+                    </div>
+                    <div class="bottom">
+                        <div class="name">Mini LCW Chair</div>
+                        <div class="price">$56.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="item">
+                    <div class="top">
+                        <div class="image"><img src="./assets/images/top_categories/3.png" alt="Top Categories"></div>
+                        <a href="#" class="view-shop">View Shop</a>
+                    </div>
+                    <div class="bottom">
+                        <div class="name">Mini LCW Chair</div>
+                        <div class="price">$56.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="item">
+                    <div class="top">
+                        <div class="image"><img src="./assets/images/top_categories/4.png" alt="Top Categories"></div>
+                        <a href="#" class="view-shop">View Shop</a>
+                    </div>
+                    <div class="bottom">
+                        <div class="name">Mini LCW Chair</div>
+                        <div class="price">$56.00</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.top-categories-list').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        // autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+        dots: true,
+        responsive: [{
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 2,
+                infinite: true
+            }
+
+        }, {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 4,
+                dots: true
+            }
+
+        }]
+    });
+</script>

@@ -5,6 +5,9 @@
 body {
 	font-family: $font-family__josefin-sans;
 }
+html {
+	height: 100%;
+}
 
 .container {
 	width: 1200px;
@@ -405,5 +408,28 @@ input:focus {
 			content: '.';
 			margin-right: 5px;
 		}
+	}
+}
+
+//
+// Button
+// _______________________________
+
+.button {
+	display: inline-block;
+	border: none;
+	background-color: #fb2e86;
+	border-radius: 2px;
+	color: #fff;
+	font-weight: 600;
+	font-family: $font-family__josefin-sans;
+	font-size: 17px;
+	line-height: 1.17647;
+	letter-spacing: 0.02em;
+	&-primary {
+		padding: 14px 34px 11px 24px;
+	}
+	&-shop-now {
+		padding: 17px 69px 17px 48px;
 	}
 }

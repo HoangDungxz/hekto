@@ -28,7 +28,6 @@
 @import './common/_normalize.scss';
 @import './common/_typography.scss';
 @import './common/_styleguide.scss';
-@import './common/_responsive.scss';
 
 @import './base/_header.scss';
 @import './base/_footer.scss';
@@ -36,8 +35,4 @@
 @import './content/_home_page_content.scss';
 @import './content/_product_details.scss';
 
-@import './common/responsive.scss';
-
-body {
-	height: 3000px;
-}
+@import './common/_responsive.scss';
