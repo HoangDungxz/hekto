@@ -1,3 +1,6 @@
+/**
+ * Header
+*/
 // language, money toggle
 $('.laguage-item').on('click', function() {
     const matches = document.querySelectorAll("ul:not(.list-language)"); //get all class element ul except list-language
@@ -26,11 +29,80 @@ $('.item-home').on('click', function() {
 });
 // menu toggle
 
-// Accordion footer
+/**
+ * End Header
+*/
 
 
+/**
+ * Main
+*/
+
+// promotion
+$('.promotion-list').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    dots: true,
+});
+// promotion
+
+//Featured Product
+$('.featured-products-list').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    // autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    dots: true,
+    responsive: [{
+        breakpoint: 640,
+        settings: {
+            slidesToShow: 2,
+            infinite: true
+        }
+
+    }, {
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 3,
+            dots: true
+        }
+
+    }]
+});
+//Featured Product
+
+// Leatest Products
+$(function () {
+    $("#leatest_products_tabs").tabs();
+});
+// Leatest Products
+
+// Discount item
+$(function () {
+    $("#discount_item_tabs").tabs();
+});
+// Discount item
+
+/**
+ * End Main
+*/
+
+
+/**
+ * Footer
+*/
+
+// Accordion
 $( function() {
     $("#accordion").accordion();
     $('#ui-id-2, #ui-id-4, #ui-id-6').css('height', 'auto')
 });
-// Accordion footer
+// Accordion
+
+/**
+ * End Footer
+*/
