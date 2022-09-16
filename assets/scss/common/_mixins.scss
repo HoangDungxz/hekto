@@ -104,3 +104,9 @@
 		@content;
 	}
 }
+
+@mixin responsive_1920() {
+	@media #{$res_1920} {
+		@content;
+	}
+}

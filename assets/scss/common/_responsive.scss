@@ -176,11 +176,6 @@
 // Promotion for tablet
 @include responsive_768 {
 	.promotion {
-		&-list {
-			.slider > div {
-				// padding: 202px 0 236px 0;
-			}
-		}
 		.slider {
 			.content {
 				@include translate(-50%, calc(-50% - 17px));
@@ -335,6 +330,10 @@
 
 // Leatest Products for tablet
 @include responsive_768 {
+	.home-component-title {
+		font-size: 32px;
+		line-height: 1;
+	}
 	.leatest-products {
 		.tabs-title {
 			margin: 38px 0 40px 0;
@@ -382,11 +381,13 @@
 @include responsive_1024 {
 	.leatest-products {
 		margin-top: 112px;
+		width: 100%;
 		.home-component-title {
 			padding-right: 10px;
 		}
 		.tabs-title {
-			margin: 16px -53px 0 0;
+			margin: 16px auto;
+			width: fit-content;
 			li {
 				&:nth-child(2) {
 					margin-right: 58px;
@@ -443,6 +444,14 @@
 	}
 }
 // End Leatest Products for desktop
+
+@include responsive_1920() {
+	.leatest-products {
+		.tabs-title {
+			margin-right: 265px;
+		}
+	}
+}
 
 /**
 * 	End Leatest Products
@@ -508,7 +517,7 @@
 // End What Shopex Offer for desktop
 
 /**
-* 	What Shopex Offer!
+* 	End What Shopex Offer!
 * _______________________________
 */
 
@@ -588,7 +597,7 @@
 // End Unique Features for desktop
 
 /**
-* 	Unique Features
+* 	End Unique Features
 * _______________________________
 */
 
@@ -656,15 +665,18 @@
 // End Trending Products for desktop
 
 /**
-* Trending Products
+* End Trending Products
 * _______________________________
 */
 
 
 
-//
-// Discount Item
-// _______________________________
+/**
+* Discount Item
+* _______________________________
+*/
+
+// Discount Item for tablet
 @include responsive_768 {
 	.discount-item {
 		.tabs-title {
@@ -701,11 +713,18 @@
 		}
 	}
 }
+// End Discount Item for tablet
 
+// Discount Item for desktop
 @include responsive_1024 {
 	.discount-item {
 		.tabs-title {
 			margin: 29px 0 106px 0;
+			li.ui-tabs-active:not(:last-child) {
+				&:before {
+					top: 70%;
+				}
+			}
 		}
 		.tabs-content {
 			& > div {
@@ -723,23 +742,208 @@
 				}
 			}
 		}
+		.image {
+			img {
+				padding-top: 7px;
+			}
+		}
+	
+		.title {
+			margin-top: 6px;
+		}
 
 		.des {
 			&-list {
+				margin-bottom: 27px;
 				li {
 					min-width: 269.52px;
 				}
 			}
+			&-content {
+				width: 525px;
+				margin-left: 3px;
+				margin-bottom: 20px;
+				margin-top: 22px;
+			}
 		}
 
 		.button-shop-now {
-			padding: 20px 41px 17px 42px;
+			padding: 14px 38px 17px 40px;
 		}
 	}
 }
-//
-// Discount Item
-// _______________________________
+// End Discount Item for desktop
+
+/**
+* End Discount Item
+* _______________________________
+*/
+
+
+
+/**
+* Top-categories
+* _______________________________
+*/
+
+// Top-categories for tablet
+@include responsive_768 {
+	.top-categories {
+		margin-bottom: 77px;
+		&-title {
+			margin-bottom: 47px;
+		}
+		&-list {
+			margin: 0 calc(-25px / 2);
+			.col {
+				padding: 0 calc(25px / 2);
+			}
+		}
+		.name {
+			margin-top: 27px;
+		}
+		.price {
+			margin-top: 11px;
+		}
+		.slick-dots {
+			bottom: -53px;
+		}
+		.view-shop {
+			top: unset;
+			bottom: 21px;
+			@include translate(-50%, 0);
+		}
+	}
+}
+// End Top-categories for tablet
+
+// Top-categories for desktop
+@include responsive_1024 {
+	.top-categories {
+		margin-top: 103px;
+		&-title {
+			margin-bottom: 66px;
+		}
+		&-list {
+			.item {
+				&:hover {
+					.top {
+						margin-top: -5px;
+					} 
+					.name {
+						margin-top: 27px;
+					}
+				}
+			}
+			margin: 0 calc(-31.3333 / 2);
+			.col {
+				padding: 0 calc(31.3333 / 2);
+			}
+			.bottom {
+				margin-left: -2px;
+			}
+		}
+		.slick-dots {
+			bottom: -49px;
+		}
+		.name {
+			margin-top: 20px;
+		}
+	}
+}
+// End Top-categories for desktop
+
+/**
+* End Top-categories
+* _______________________________
+*/
+
+
+
+/**
+* Leatest Update
+* _______________________________
+*/
+
+// Leatest Update for desktop
+@include responsive_1024 {
+	.leatest-update {
+		margin-top: 177px;
+		.content {
+			padding-top: 173px;
+		}
+		.title {
+			max-width: 600px;
+		}
+		.button-shop-now {
+			margin-top: 27px;
+    		padding: 17px 42px 15px 38px;
+		}
+	}
+}
+// End Leatest Update for desktop
+
+/**
+* End Leatest Update
+* _______________________________
+*/
+
+
+
+/**
+* Brands 
+* _______________________________
+*/
+
+// Brands for desktop
+@include responsive_1024 {
+	.brands {
+		margin-top: 94px;
+	}
+}
+// End Brands for desktop
+
+/**
+* End Brands
+* _______________________________
+*/
+
+
+
+/**
+*  Leatest Blog
+* _______________________________
+*/
+
+// Leatest Blog for tablet
+@include responsive_768 {
+	.leatest-blog {
+		&-title {
+			margin-bottom: 50px;
+		}
+	}
+}
+// Leatest Blog for tablet
+
+// Leatest Blog for desktop
+@include responsive_1024 {
+	.leatest-blog {
+		margin-bottom: 119px;
+		margin-top: 93px;
+		&-title {
+			margin-bottom: 90px;
+		}
+		.des {
+			max-width: 314px;
+		}
+	}
+}
+// End Leatest Blog for desktop
+
+/**
+*  End Leatest Blog
+* _______________________________
+*/
 
 
 
@@ -794,13 +998,7 @@
 // footer for desktop
 @include responsive_1024 {
 	.footer-top {
-		padding-top: 90px;
-		.container {
-			width: 100%;
-			max-width: unset;
-			padding: unset;
-			margin: unset;
-		}
+		padding-top: 88px;
 		.logo-footer {
 			padding-bottom: 31px;
 		}
@@ -813,17 +1011,18 @@
 		.search-footer {
 			max-width: 375px;
 		}
+		.bottom-content {
+			flex-wrap: unset;
+		}
 	}
 	.footer-content {
 		@include flexbox;
+		flex-wrap: unset;
 		.info {
-			width: 37%;
 			box-sizing: border-box;
 			text-align: start;
-			padding-left: 307px;
 		}
 		.bottom-content {
-			width: calc(100% / 100 * 63);
 			.categories,
 			.customers,
 			.pages {
@@ -832,7 +1031,7 @@
 				width: unset;
 			}
 			.categories {
-				padding: 0 48px 0 70px;
+				padding: 1px 50px 0 72px;
 			}
 			.customers {
 				padding: 0 45px;
@@ -859,12 +1058,29 @@
 }
 // end footer for desktop
 
+@include responsive_1920() {
+	.footer-content {
+		.info {
+			margin-left: -65px;
+		}
+	}
+}
+
+
 /**
 * 	End Footer
 * _______________________________
 */
 
 
+
+
+
+
+/**
+* 	Styleguide
+* _______________________________
+*/
 
 // page-sortby
 @include responsive_768 {
@@ -943,12 +1159,6 @@
 	}
 }
 
-// details for tablet
-
-@include responsive_768 {
-}
-// details for tablet
-
 // details for desktop
 
 @include responsive_1024 {
@@ -963,82 +1173,7 @@
 }
 // details for desktop
 
-//
-// Home page componet title
-// _______________________________
-
-@include responsive_768 {
-	.home-component-title {
-		font-size: 32px;
-		line-height: 1;
-	}
-}
-
-//
-// top-categories
-// _______________________________
-
-@include responsive_768 {
-	.top-categories {
-		margin-bottom: 77px;
-		&-title {
-			margin-bottom: 47px;
-		}
-		&-list {
-			margin: 0 calc(-25px / 2);
-			.col {
-				padding: 0 calc(25px / 2);
-			}
-		}
-		.name {
-			margin-top: 27px;
-		}
-		.price {
-			margin-top: 11px;
-		}
-		.slick-dots {
-			bottom: -53px;
-		}
-		.view-shop {
-			top: unset;
-			bottom: 21px;
-			@include translate(-50%, 0);
-		}
-	}
-}
-
-@include responsive_1024 {
-	.top-categories {
-		&-title {
-			margin-bottom: 66px;
-		}
-		&-list {
-			margin: 0 calc(-31.3333 / 2);
-			.col {
-				padding: 0 calc(31.3333 / 2);
-			}
-		}
-		.slick-dots {
-			bottom: -40px;
-		}
-	}
-}
-
-//
-//  Leatest Blog
-// _______________________________
-@include responsive_768 {
-	.leatest-blog {
-		&-title {
-			margin-bottom: 50px;
-		}
-	}
-}
-@include responsive_1024 {
-	.leatest-blog {
-		margin-bottom: 115px;
-		&-title {
-			margin-bottom: 90px;
-		}
-	}
-}
+/**
+* 	End Styleguide
+* _______________________________
+*/

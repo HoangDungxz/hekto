@@ -577,11 +577,12 @@
 	}
 
 	.add-to-cart {
+
 	}
 	.name {
 		font-family: $font-family__josefin-sans;
 		font-size: 14px;
-		line-height: 1.1428571;
+		line-height: 2;
 		letter-spacing: 0.02em;
 		font-weight: 600;
 
@@ -1035,11 +1036,6 @@
 	position: relative;
 
 	img {
-		animation-name: brands_run;
-		animation-duration: 10s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-
 		&:last-child {
 			position: absolute;
 			top: 0;

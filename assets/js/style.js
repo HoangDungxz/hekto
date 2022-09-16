@@ -55,6 +55,7 @@ $('.featured-products-list').slick({
     slidesToScroll: 1,
     // autoplay: true,
     autoplaySpeed: 2000,
+    variableWidth: false,
     arrows: false,
     dots: true,
     responsive: [{
@@ -86,6 +87,56 @@ $(function () {
     $("#discount_item_tabs").tabs();
 });
 // Discount item
+
+// top-categories
+$('.top-categories-list').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    // autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    dots: true,
+    responsive: [{
+        breakpoint: 769,
+        settings: {
+            slidesToShow: 2,
+            infinite: true
+        }
+
+    }, {
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 4,
+            dots: true
+        }
+
+    }]
+});
+// top-categories
+
+// leatest-blog
+$('.leatest-blog-list').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    // autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    dots: false,
+    responsive: [{
+        breakpoint: 640,
+        settings: {
+            slidesToShow: 1,
+        }
+
+    }, {
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 2,
+        }
+
+    }]
+});
+// leatest-blog
 
 /**
  * End Main
