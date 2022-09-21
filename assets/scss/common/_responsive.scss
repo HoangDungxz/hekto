@@ -24,6 +24,99 @@
 */
 
 // header for tablet
+@include responsive_375() {
+	.header-top-content {
+		padding: 12px 15px 15px;
+	}
+	.laguage-item:after {
+		right: 0px;
+		top: 0px;
+	}
+	.money-item:after {
+		right: -1px;
+		top: 0px;
+	}
+	.header-right-money {
+		.money {
+			margin-left: -24px;
+		}
+	}
+	.header-content-right {
+		.user {
+			position: relative;
+			left: -8px;
+			top: 1px;
+		}
+		iconify-icon {
+			left: -2px;
+		}
+		.wishlist {
+			left: 4px;
+			top: 3px;
+			iconify-icon {
+				left: 10px;
+			}
+		}
+		.cart {
+			left: 0px;
+			top: 4px;
+		}
+		.cart {
+			iconify-icon {
+				top: 0px;
+				left: 0px;
+			}
+		}
+	}
+	.header-bottom-content {
+		.row {
+			padding: 10px 0 0 0;
+			margin-bottom: -3px;
+		}
+		.navbar {
+			margin-top: -20px;
+			font-family: $font-family__josefin-sans;
+			iconify-icon {
+				font-size: 16px;
+			}
+			.icon-menu-tablet {
+				padding-right: 0;
+			}
+			.item-home {
+				top: 2px;
+			}
+			.item-home:after {
+				left: 35px;
+				top: 4px;
+			}
+		}
+		.header-content-icon {
+			top: 1px;
+			left: -1px;
+		}
+	}
+
+	.header-bottom {
+		.search-mobile { 
+			padding-bottom: 30px;
+			padding-top: 4px;
+			.search-sbm {
+				top: 4px;
+				right: 1px;
+				width: 54px;
+				height: 40px;
+				iconify-icon {
+					font-size: 30px;
+					position: relative;
+					top: 3px;
+				}
+			}
+		}
+	}
+}
+// end header for tablet
+
+// header for tablet
 @include responsive_768() {
 	.header-content-left {
 		width: 50%;
@@ -45,6 +138,9 @@
 	}
 
 	.header-bottom-content {
+		.row {
+			padding: 20px 0;
+		}
 		.header-contact {
 			display: none;
 		}
@@ -53,6 +149,29 @@
 			width: 40%;
 			order: 3;
 			@include flexbox;
+		}
+
+		.navbar {
+			margin-top: unset;
+			iconify-icon {
+				font-size: unset;
+			}
+			.icon-menu-tablet {
+				padding-right: unset;
+			}
+			.item-home {
+				top: unset;
+				font-family: $font-family__josefin-sans;
+				&:after {
+					left: 45px;
+					top: 1px;
+				}
+			}
+		}
+
+		.header-content-icon {
+			top: unset;
+			left: unset;
 		}
 	}
 
@@ -78,9 +197,12 @@
 			line-height: 32px;
 			padding-right: 49px;
 			letter-spacing: 0.2px;
+			position: relative;
+			top: 0px;
 		}
 		.header-content-icon {
 			padding-right: 5px;
+			top: 5px;
 		}
 	}
 
@@ -89,20 +211,29 @@
 		.item {
 			font-size: 16px;
 			line-height: 15px;
+			.laguage-item:after {
+				right: -2px;
+				top: 3px;
+			}
+			.money-item:after {
+				right: -3px;
+				top: 4px;
+			}
+
 		}
 		.cart {
 			font-size: 19px;
 			margin-right: -2px;
 			iconify-icon {
-				font-size: 23px;
-    			left: 2px;
-    			top: 4px;
+				font-size: 24px;
+				top: -1px;
+				left: 4px;
 			}
 		}
 		.wishlist {
-			margin-right: 9px;
 			font-size: 16px;
 			top: 4px;
+			left: 2px;
 			iconify-icon {
 				left: -1px;
 				top: 2px;
@@ -114,15 +245,19 @@
 			line-height: 27px;
 			letter-spacing: 0.2px;
 		}
+		.header-right-money {
+			position: relative;
+    		left: 20px;
+		}
 		.money.usd {
 			padding-left: 0px;
 			line-height: 27px;
-			margin-left: 5px;
 		}
+
 		.user {
-			margin-left: 4px;
     		letter-spacing: -0.2px;
-			top: 4px;
+    		top: 4px;
+    		left: 13px;
 		}
 		iconify-icon {
 			left: -3px;
@@ -131,20 +266,25 @@
 
 	.header-bottom-content {
 		.row {
-			padding: 19px 0;
+			padding-top: 19px;
+			padding-bottom: 22px;
 		}
 		.logo {
 			width: 15%;
 			order: 1;
 			text-align: left;
 			h1 {
-				margin-left: -4px;
+				margin-left: 0px;
     			margin-top: 1px;
 			}
 		}
 		.navbar {
 			width: 52%;
 			order: 2;
+			font-family: $font-family__lato;
+			position: relative;
+			left: 2px;
+			top: 0px;
 			.menu {
 				@include flexbox;
 				.item {
@@ -156,15 +296,14 @@
 				}
 				.item-home {
 					padding-left: 7px;
+					top: 1px;
+					&:after {
+						left: 49px;
+					}
 				}
 			}
 			.menu-tablet {
 				display: none;
-			}
-			.item-home {
-				&:after {
-					left: 49px;
-				}
 			}
 		}
 		.search {
@@ -176,8 +315,16 @@
 				top: 2px;
 			}
 			.search-input {
+				height: 39px;
+    			margin-left: 80px;
+				position: relative;
+				right: 9px;
+			}
+			.search-sbm {
+				width: 49px;
 				height: 40px;
-    			margin-left: 73px;
+				right: 1px;
+				top: 0px;
 			}
 		}
 	}

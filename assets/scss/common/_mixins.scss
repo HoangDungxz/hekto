@@ -89,6 +89,11 @@
 // Resposive
 // _______________________________
 
+@mixin responsive_375() {
+	@media #{$res_375_mobile} {
+		@content;
+	}
+}
 @mixin responsive_512() {
 	@media #{$res_512_mobile} {
 		@content;
