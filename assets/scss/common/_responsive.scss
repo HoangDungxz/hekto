@@ -23,7 +23,7 @@
 * _______________________________
 */
 
-// header for tablet
+// header for mobile
 @include responsive_375() {
 	.header-top-content {
 		padding: 12px 15px 15px;
@@ -114,7 +114,7 @@
 		}
 	}
 }
-// end header for tablet
+// end header for mobile
 
 // header for tablet
 @include responsive_768() {
@@ -1128,7 +1128,8 @@
 // Leatest Blog for desktop
 @include responsive_1024 {
 	.leatest-blog {
-		margin-bottom: 119px;
+		// margin-bottom: 119px;
+		margin-bottom: -64px;
 		margin-top: 93px;
 		&-title {
 			margin-bottom: 90px;
@@ -1152,11 +1153,80 @@
 * _______________________________
 */
 
+// footer for mobile
+@include responsive_375() {
+	.footer-top {
+		padding: 37px 0 43px 0;
+		.logo-footer {
+			padding-bottom: 18px;
+		}
+		.search-sbm {
+			padding: 10px 41px;
+			right: 2px;
+			top: 0px;
+		}
+		.contacts {
+			padding-top: 51px;
+			.contact-info {
+				position: relative;
+				left: 2px;
+			}
+		}
+		.categories {
+			padding-top: 29px;
+			padding-left: 1px;
+			.item {
+				&:nth-child(2) {
+					padding-bottom: 20px;
+				}
+				&:nth-child(3){
+					padding-bottom: 20px;
+					padding-left: 1px;
+				}
+			}
+		}
+		.title {
+			padding-bottom: 17px;
+			&:nth-child(n+2){
+				position: relative;
+    			// top: -38px;
+			}
+		}
+		.footer-content {
+			.list-categories {
+				height: 199px !important;
+			}
+		}
+	}
+	
+	.footer-bottom-content {
+		padding: 11px 15px;
+	}
+
+	.footer-bottom {
+		.media {
+			padding-top: 5px;
+			padding-bottom: 12px;
+			a {
+				&:nth-child(2) {
+					left: 1px;
+				}
+				&:nth-child(3) {
+					left: 6px;
+				}
+			}
+		}
+		
+	}
+}
+// end footer for mobile
+
 // footer for tablet
 @include responsive_768 {
 	.footer-top {
 		.bottom-content {
 			@include flexbox;
+			flex-wrap: unset;
 		}
 		#accordion {
 			display: none;
@@ -1198,15 +1268,37 @@
 // footer for desktop
 @include responsive_1024 {
 	.footer-top {
-		padding-top: 88px;
+		padding: 88px 0 79px 0;
+		// padding-top: 88px;
 		.logo-footer {
-			padding-bottom: 31px;
+			padding-bottom: 33px;
 		}
 		.title {
-			padding-bottom: 38px;
+			padding-bottom: 40px;
 		}
 		.contacts {
 			padding-top: 65px;
+			left: -5px;
+			position: relative;
+			.contact-info {
+				padding-bottom: 8px;
+			}
+			.item {
+				padding-bottom: 19px;
+			}
+		}
+		.customers {
+			.list-customers {
+				position: relative;
+    			left: -4px;
+			}
+			.item {
+				padding-bottom: 20px;
+			}
+		}
+		.address-website, .footer-top .contact-info {
+			letter-spacing: 0.1px;
+			margin-left: 1px;
 		}
 		.search-footer {
 			max-width: 375px;
@@ -1214,10 +1306,21 @@
 		.bottom-content {
 			flex-wrap: unset;
 		}
+		.search-input {
+			padding: 18px 140px 9px 20px;
+			left: -2px;
+			right: 0px;
+			top: -6px;
+			bottom: -38px;
+		}
+		.search-sbm {
+			top: -2px;
+		}
 	}
 	.footer-content {
 		@include flexbox;
 		flex-wrap: unset;
+		padding-top: 3px;
 		.info {
 			box-sizing: border-box;
 			text-align: start;
@@ -1231,23 +1334,32 @@
 				width: unset;
 			}
 			.categories {
-				padding: 1px 50px 0 72px;
+				padding: 1px 50px 0 67px;
+				.item {
+					padding-bottom: 20px;
+				}
 			}
 			.customers {
 				padding: 0 45px;
 			}
 			.pages {
 				padding-left: 45px;
+				.title {
+					padding-bottom: 41px;
+				}
+				.item {
+					padding-bottom: 20px;
+				}
 			}
 		}
 	}
 	.footer-bottom-content {
+		padding: 18px 15px;
 		.media {
 			width: 40%;
-			margin-left: -13px;
-			a {
-				padding-right: 3px;
-			}
+			left: -19px;
+			position: relative;
+			top: -6px;
 		}
 		.copyright {
 			width: 60%;
@@ -1261,7 +1373,7 @@
 @include responsive_1920() {
 	.footer-content {
 		.info {
-			margin-left: -65px;
+			margin-left: -68px;
 		}
 	}
 }

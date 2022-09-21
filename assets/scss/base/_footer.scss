@@ -106,8 +106,21 @@
             width: 100%;
             order: 1;
             a {
-                padding-right: 11px;
-                font-size: 20px;
+                font-size: 13px;
+                display: inline-block;
+                position: relative;
+                padding: 10px;
+                left: -4px;
+                text-align: center;
+                background: #151875;
+                border-radius: 100%;
+            }
+            iconify-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
             }
         }
     }
