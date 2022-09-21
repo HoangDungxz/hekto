@@ -119,8 +119,8 @@
 	}
 
 	.button-shop-now {
-		margin-top: 27px;
-		padding: 17px 40px 13px 41px;
+		margin-top: 26px;
+		padding: 17px 40px 13px 40px;
 	}
 	.slick-dots {
 		bottom: 37px;
@@ -200,7 +200,7 @@
 	}
 	.image {
 		position: relative;
-		padding-top: calc(236 / 270 * 100%);
+		padding-top: 239px;
 		background-color: #f6f7fb;
 		img {
 			position: absolute;
@@ -576,12 +576,10 @@
 		}
 	}
 
-	.add-to-cart {
-	}
 	.name {
 		font-family: $font-family__josefin-sans;
 		font-size: 14px;
-		line-height: 1.1428571;
+		line-height: 2;
 		letter-spacing: 0.02em;
 		font-weight: 600;
 
@@ -686,9 +684,6 @@
 				width: auto;
 				max-width: 100%;
 				display: block;
-			}
-			.content {
-				// margin: 34px 0 0 25px;
 			}
 			.sale {
 				font-family: $font-family__josefin-sans;
@@ -1035,11 +1030,6 @@
 	position: relative;
 
 	img {
-		animation-name: brands_run;
-		animation-duration: 10s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-
 		&:last-child {
 			position: absolute;
 			top: 0;

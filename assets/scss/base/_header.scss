@@ -98,8 +98,8 @@
     &:after {
         content: url("https://api.iconify.design/akar-icons/chevron-down.svg?color=white&width=16px&height=16px");
         position: absolute;
-        right: -3px;
-        top: -1px;
+        right: -2px;
+        top: 4px;
     }
 }
 
@@ -140,6 +140,7 @@
     }
 
     .navbar {
+        font-family: $font-family__lato;
         width: calc(100% / 12 * 6);
         line-height: 42px;
         width: 35%;
@@ -179,7 +180,7 @@
                 content: url("https://api.iconify.design/akar-icons/chevron-down.svg?color=%23fb2e86&width=16px&height=16px");
                 position: absolute;
                 left: 45px;
-                top: 3px;
+                top: 1px;
             }
             &:hover {
                 .sub-menu {
@@ -257,7 +258,7 @@
         display: none;
         align-items: center;
         .search-input {
-            height: 38px;
+            height: 41px;
             width: 98%;
             top: 0;
             outline: none;
@@ -269,8 +270,8 @@
         .search-sbm {
             position: absolute;
             width: 50px;
-            height: 38px;
-            right: 0px;
+            height: 41px;
+            right: -3px;
             background: #fb2e86;
             border: none;
         }
