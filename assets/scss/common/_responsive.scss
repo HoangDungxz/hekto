@@ -33,28 +33,30 @@
 		top: 0px;
 	}
 	.money-item:after {
-		right: -1px;
-		top: 0px;
+		right: -5px;
+    	top: 0px;
 	}
 	.header-right-money {
-		.money {
-			margin-left: -24px;
+		.money-default {
+			position: relative;
+			left: -10px;
+			top: 1px;
 		}
 	}
 	.header-content-right {
 		.user {
 			position: relative;
-			left: -8px;
+			left: -5px;
 			top: 1px;
 		}
 		iconify-icon {
-			left: -2px;
+			left: -3px;
 		}
 		.wishlist {
-			left: 4px;
+			left: 5px;
 			top: 3px;
 			iconify-icon {
-				left: 10px;
+				left: 12px;
 			}
 		}
 		.cart {
@@ -92,7 +94,7 @@
 		}
 		.header-content-icon {
 			top: 1px;
-			left: -1px;
+			left: 0px;
 		}
 	}
 
@@ -200,6 +202,9 @@
 			position: relative;
 			top: 0px;
 		}
+		.mail {
+			top: -1px;
+		}
 		.header-content-icon {
 			padding-right: 5px;
 			top: 5px;
@@ -209,15 +214,17 @@
 	.header-content-right {
 		width: 35%;
 		.item {
-			font-size: 16px;
-			line-height: 15px;
+			a {
+				font-size: 16px;
+				line-height: 15px;
+			}
 			.language-item:after {
 				right: -2px;
 				top: 3px;
 			}
 			.money-item:after {
-				right: -3px;
-				top: 4px;
+				right: -8px;
+    			top: -1px;
 			}
 
 		}
@@ -233,7 +240,7 @@
 		.wishlist {
 			font-size: 16px;
 			top: 4px;
-			left: 2px;
+			left: 0px;
 			iconify-icon {
 				left: -1px;
 				top: 2px;
@@ -248,6 +255,10 @@
 		.header-right-money {
 			position: relative;
     		left: 20px;
+			.money-item {
+				top: 5px;
+				left: -13px;
+			}
 		}
 		.money.usd {
 			padding-left: 0px;
@@ -257,7 +268,7 @@
 		.user {
     		letter-spacing: -0.2px;
     		top: 4px;
-    		left: 13px;
+    		left: 10px;
 		}
 		iconify-icon {
 			left: -3px;
@@ -315,10 +326,8 @@
 				top: 2px;
 			}
 			.search-input {
-				height: 39px;
-    			margin-left: 80px;
 				position: relative;
-				right: 9px;
+				left: 71px;
 			}
 			.search-sbm {
 				width: 49px;

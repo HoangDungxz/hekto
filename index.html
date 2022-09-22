@@ -20,11 +20,11 @@
                 <div class="container header-top-content">
                     <div class="row">
                         <div class="col header-content-left">
-                            <a href="mailto:mhhasanul@gmail.com">
+                            <a class="mail" href="mailto:mhhasanul@gmail.com">
                                 <iconify-icon class="header-content-icon" icon="uil:envelope-alt"></iconify-icon>
                                 mhhasanul@gmail.com
                             </a>
-                            <a href="tel:+1234567890">
+                            <a class="phone" href="tel:+1234567890">
                                 <iconify-icon class="header-content-icon" icon="bx:phone-call"></iconify-icon>
                                 (12345)67890
                             </a>
@@ -32,34 +32,34 @@
                         <div class="col header-content-right">
                             <div class="item header-right-language">
                                 <div class="language-item">
-                                    <span class="lang-default lang en">English</span>
+                                    <span class="lang-default lang en"><a href="#">English</a></span>
                                     <ul class="list-language">
-                                        <li class="lang en">English</li>
-                                        <li class="lang vi">Vietnamese</li>
-                                        <li class="lang ko">Korean</li>
-                                        <li class="lang fr">French</li>
+                                        <li class="lang en"><a href="#">English</a></li>
+                                        <li class="lang vi"><a href="#">Vietnamese</a></li>
+                                        <li class="lang ko"><a href="#">Korean</a></li>
+                                        <li class="lang fr"><a href="#">French</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="item header-right-money">
                                 <div class="money-item">
-                                    <span class="money usd">USD</span>
+                                    <span class="money-default usd"><a href="#">USD</a></span>
                                     <ul class="list-money">
-                                        <li class="money usd">USD</li>
-                                        <li class="money vnd">VND</li>
-                                        <li class="money won">WON</li>
-                                        <li class="money eur">EUR</li>
+                                        <li class="money usd"><a href="#">USD</a></li>
+                                        <li class="money vnd"><a href="#">VND</a></li>
+                                        <li class="money won"><a href="#">WON</a></li>
+                                        <li class="money eur"><a href="#">EUR</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="item user">
-                                Login <iconify-icon icon="carbon:user"></iconify-icon>
+                                <a href="#">Login <iconify-icon icon="carbon:user"></iconify-icon></a>
                             </div>
                             <div class="item wishlist">
-                                Wishlist <iconify-icon icon="uil:heart-alt"></iconify-icon>
+                                <a href="#">Wishlist <iconify-icon icon="uil:heart-alt"></iconify-icon></a>
                             </div>
                             <div class="item cart">
-                                <iconify-icon icon="fluent:cart-24-regular"></iconify-icon>
+                                <a href="#"><iconify-icon icon="fluent:cart-24-regular"></iconify-icon></a>
                             </div>
                         </div>
                     </div>
@@ -80,10 +80,10 @@
                             <ul class="menu">
                                 <li class="item item-home">Home
                                     <ul class="sub-menu">
-                                        <li class="sub-item"><a href="#">Pages1</a></li>
-                                        <li class="sub-item"><a href="#">Pages2</a></li>
-                                        <li class="sub-item"><a href="#">Pages3</a></li>
-                                        <li class="sub-item"><a href="#">Pages4</a></li>
+                                        <li class="sub-item"><a href="#">Page 1</a></li>
+                                        <li class="sub-item"><a href="#">Page 2</a></li>
+                                        <li class="sub-item"><a href="#">Page 3</a></li>
+                                        <li class="sub-item"><a href="#">Page 4</a></li>
                                     </ul>
                                 </li>
                                 <li class="item menu-lap"><a href="#">Pages</a></li>
@@ -109,10 +109,10 @@
                                 </li>
                                 <li class="item item-home">Home
                                     <ul class="sub-menu">
-                                        <li class="sub-item"><a href="#">Pages1</a></li>
-                                        <li class="sub-item"><a href="#">Pages2</a></li>
-                                        <li class="sub-item"><a href="#">Pages3</a></li>
-                                        <li class="sub-item"><a href="#">Pages4</a></li>
+                                        <li class="sub-item"><a href="#">Page 1</a></li>
+                                        <li class="sub-item"><a href="#">Page 2</a></li>
+                                        <li class="sub-item"><a href="#">Page 3</a></li>
+                                        <li class="sub-item"><a href="#">Page 4</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -126,25 +126,28 @@
                                     style="color: #fb2e86;"></iconify-icon>
                             </a>
                             <a href="tel:+1234567890">
-                                <iconify-icon class="header-content-icon" icon="carbon:phone-voice"
-                                    style="color: #fb2e86;"></iconify-icon>
+                                <iconify-icon class="header-content-icon" style="color: #fb2e86;" icon="bx:phone-call"></iconify-icon>
                             </a>
                         </div>
                         <!-- contact mobile -->
 
                         <div class="search">
-                            <input type="text" class="search-input">
-                            <button type="submit" class="search-sbm">
-                                <iconify-icon icon="eva:search-fill" style="color: white;"></iconify-icon>
-                            </button>
+                            <form action="#" method="get">
+                                <input type="text" class="search-input">
+                                <button type="text" class="search-sbm">
+                                    <iconify-icon icon="eva:search-fill" style="color: white;"></iconify-icon>
+                                </button>
+                            </form>
                         </div>
                     </div>
                     <!-- search mobile  -->
                     <div class="search search-mobile">
-                        <input type="text" class="search-input">
-                        <button type="submit" class="search-sbm">
-                            <iconify-icon icon="eva:search-fill" style="color: white;"></iconify-icon>
-                        </button>
+                        <form action="#" method="get">
+                            <input type="text" class="search-input">
+                            <button type="text" class="search-sbm">
+                                <iconify-icon icon="eva:search-fill" style="color: white;"></iconify-icon>
+                            </button>
+                        </form>
                     </div>
                     <!-- end search mobile  -->
                 </div>
@@ -1277,10 +1280,12 @@
                         <h2 class="logo-footer"><a href="#">Hekto</a></h2>
                         <!-- footer search  -->
                         <div class="search search-footer">
-                            <input type="text" class="search-input" placeholder="Enter Email Address">
-                            <button type="submit" class="search-sbm">
-                                Sign Up
-                            </button>
+                            <form action="#" method="post">
+                                <input type="text" class="search-input" placeholder="Enter Email Address">
+                                <button type="submit" class="search-sbm">
+                                    Sign Up
+                                </button>
+                            </form>
                         </div>
                         <!-- end footer search  -->
                         <div class="contacts">

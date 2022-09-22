@@ -2,10 +2,10 @@
  * Header
 */
 // language, money toggle
-$('.laguage-item').on('click', function() {
+$('.language-item').on('click', function() {
     const matches = document.querySelectorAll("ul:not(.list-language)"); //get all class element ul except list-language
     $(matches).removeClass('active');
-    $('.laguage-item, .list-language').toggleClass('active');
+    $('.language-item, .list-language').toggleClass('active');
 });
 
 $('.money-item').on('click', function() {

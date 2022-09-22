@@ -36,7 +36,8 @@
         justify-content: space-between;
         font-weight: 600;
         width: 100%;
-        .item {
+        .item,
+        a {
             font-family: $font-family__josefin-sans;
             color: #f1f1f1;
             text-align: center;
@@ -66,11 +67,14 @@
             z-index: 1;
             color: #333;
             top: 25px;
-            left: -5px;
+            left: -10px;
             display: none;
             &:after {
                 right: -3px;
                 top: -1px;
+            }
+            a {
+                color: #333;
             }
         }
         .list-language.active,
@@ -200,12 +204,17 @@
         .sub-menu {
             display: none;
             position: absolute;
-            background-color: #f1f1f1;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1000;
         }
         .sub-item {
-            padding: 0 15px;
+            padding: 0 10px;
+            padding: 0px 10px;
+            display: flex;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            background: #f1f1f1;
             &:hover {
                 background: $color-purple;
                 a {
@@ -258,12 +267,12 @@
         display: none;
         align-items: center;
         .search-input {
-            height: 41px;
-            width: 98%;
+            height: 40px;
+            width: 100%;
             top: 0;
             outline: none;
             border: 2px solid #e7e6ef;
-            min-width: 260px;
+            min-width: 300px;
             box-sizing: border-box;
             padding: 0 45px 0 15px;
         }
