@@ -28,7 +28,7 @@
 	.header-top-content {
 		padding: 12px 15px 15px;
 	}
-	.laguage-item:after {
+	.language-item:after {
 		right: 0px;
 		top: 0px;
 	}
@@ -211,7 +211,7 @@
 		.item {
 			font-size: 16px;
 			line-height: 15px;
-			.laguage-item:after {
+			.language-item:after {
 				right: -2px;
 				top: 3px;
 			}
@@ -343,6 +343,31 @@
 * _______________________________
 */
 
+// Promotion for mobile
+@include responsive_375() {
+	.promotion {
+		.content {
+			padding-top: 24px;
+			.des {
+				position: relative;
+				top: -1px;
+				letter-spacing: 0.2px;
+			}
+			.title {
+				position: relative;
+				left: 5px;
+			}
+		}
+		.button-shop-now {
+			margin-top: 28px;
+		}
+		.slick-dots {
+			bottom: 23px;
+		}
+	}
+}
+// Promotion for mobile
+
 // Promotion for tablet
 @include responsive_768 {
 	.promotion {
@@ -376,7 +401,7 @@
 	.promotion {
 		.content {
 			text-align: left;
-
+			padding-top: 2px;
 			& > div {
 				text-align: left;
 				max-width: 645px + 30px;
@@ -388,18 +413,21 @@
 				}
 			}
 			.title {
-				margin-left: 4px;
+				letter-spacing: 0.15px;
+				top: -2px;
+				left: 3px;
 			}
 			.des {
 				max-width: 570px;
-				letter-spacing: 0.2px;
+				top: 0px;
+    			letter-spacing: .15px;
 			}
 		}
 		.slick-dots {
 			bottom: 56px;
 		}
 		.button-shop-now {
-			margin-top: 27px;
+			margin-top: 26px;
 		}
 	}
 }
@@ -416,6 +444,63 @@
 * 	Featured Products
 * _______________________________
 */
+
+// Featured Products for mobile
+@include responsive_375() {
+	.featured-products {
+		padding-top: 47px;
+		.featured-products-list {
+			.slick-slide {
+				padding: 14px;
+				padding-top: 11px;
+				padding-left: 16px;
+				width: 159px;
+			}
+			.name, .code, .price {
+				position: relative;
+				top: 0px;
+				left: -3px;
+			}
+			.code {
+				top: -1px;
+			}
+			.price {
+				top: 1px;
+			}
+		}
+		.item {
+			&:hover{
+				.bottom {
+					position: relative;
+    				padding-bottom: 3px;
+				}
+				.name {
+					left: 1px;
+				}
+			}
+		}
+		.image {
+			padding-top: 140px;
+			img {
+				top: 52%;
+				left: 53%;
+			}
+		}
+		.slick-dots {
+			bottom: -32px;
+			left: 10px;
+		}
+		.view-detail {
+			bottom: 10px;
+			left: 73px;
+		}
+		.tool {
+			top: 14px;
+			left: 9px;
+		}
+	}
+}
+// Featured Products for mobile
 
 // Featured Products for tablet
 @include responsive_768 {
@@ -451,6 +536,7 @@
 		padding-top: 98px;
 		.featured-products-title {
 			padding-bottom: 5px;
+			font-size: 42px;
 		}
 		.tool ul {
 			margin-left: -1px;
@@ -506,6 +592,12 @@
 * 	Leatest Products
 * _______________________________
 */
+
+// ... for mobile
+@include responsive_375() {
+	
+}
+// ... for mobile
 
 // Leatest Products for tablet
 @include responsive_768 {

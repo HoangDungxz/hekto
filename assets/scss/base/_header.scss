@@ -55,7 +55,7 @@
 }
 
 .header-right {
-    &-laguage,
+    &-language,
     &-money {
         top: 3px;
         .list-language,
@@ -92,7 +92,7 @@
     }
 }
 
-.laguage-item,
+.language-item,
 .money-item {
     position: relative;
     &:after {
@@ -103,7 +103,7 @@
     }
 }
 
-.laguage-item.active,
+.language-item.active,
 .money-item.active {
     &:after {
         content: url("https://api.iconify.design/akar-icons/chevron-up.svg?color=white&width=16px&height=16px");
