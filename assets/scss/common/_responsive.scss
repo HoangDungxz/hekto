@@ -325,15 +325,20 @@
 				left: 2px;
 				top: 2px;
 			}
+			form {
+				position: absolute;
+				right: 0px;
+			}
 			.search-input {
-				position: relative;
-				left: 71px;
+				position: absolute;
+				top: -21px;
+				right: 14px;
 			}
 			.search-sbm {
-				width: 49px;
+				width: 50px;
 				height: 40px;
 				right: 1px;
-				top: 0px;
+				top: -21px;
 			}
 		}
 	}
@@ -1283,6 +1288,9 @@
 				&:nth-child(3){
 					padding-bottom: 20px;
 					padding-left: 1px;
+				}
+				&:nth-child(4) {
+					padding-bottom: 20px;
 				}
 			}
 		}
