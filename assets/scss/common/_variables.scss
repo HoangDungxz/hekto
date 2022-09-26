@@ -42,6 +42,7 @@ $font-family__lato: $font-family-name__lato, $font-family-sans-serif;
 // Resposive
 // _______________________________
 
+$res_375_mobile: 'only screen and (min-width: 375px)';
 $res_512: 'only screen and (max-width: 511px)';
 $res_512_mobile: 'only screen and (min-width: 511px)';
 $res_768: 'only screen and (max-width: 767px)';
