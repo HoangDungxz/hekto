@@ -965,6 +965,25 @@
 * _______________________________
 */
 
+// What Shopex Offer for mobile
+@include responsive_375 {
+	.what-shopex-offer {
+		padding-top: 35px;
+		.des {
+			line-height: 1.2;
+			padding-top: 6px;
+		}
+		.col {
+			&:nth-child(n+2) {
+				.des {
+					padding-top: 7px;
+				}
+			}
+		}
+	}
+}
+// End What Shopex Offer for mobile
+
 // What Shopex Offer for tablet
 @include responsive_768 {
 	.what-shopex-offer {
@@ -1463,7 +1482,7 @@
 		.logo-footer {
 			padding-bottom: 18px;
 		}
-		.search-sbm {
+		.newsletter-sbm {
 			padding: 10px 41px;
 			right: 2px;
 			top: 0px;
@@ -1606,20 +1625,20 @@
 			letter-spacing: 0.1px;
 			margin-left: 1px;
 		}
-		.search-footer {
+		.newsletter-footer {
 			max-width: 375px;
 		}
 		.bottom-content {
 			flex-wrap: unset;
 		}
-		.search-input {
+		.newsletter-input {
 			padding: 18px 140px 9px 20px;
 			left: -2px;
 			right: 0px;
 			top: -6px;
 			bottom: -38px;
 		}
-		.search-sbm {
+		.newsletter-sbm {
 			top: -2px;
 		}
 	}
