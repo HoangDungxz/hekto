@@ -135,10 +135,6 @@
 		width: 50%;
 	}
 
-	.header-content-right {
-		width: 50%;
-	}
-
 	.header-bottom-content {
 		.row {
 			padding: 20px 0;
@@ -151,6 +147,7 @@
 			width: 40%;
 			order: 3;
 			@include flexbox;
+			justify-content: end;
 		}
 
 		.navbar {
@@ -285,7 +282,7 @@
 			order: 1;
 			text-align: left;
 			h1 {
-				margin-left: 0px;
+				margin-left: -3px;
     			margin-top: 1px;
 			}
 		}
@@ -294,7 +291,7 @@
 			order: 2;
 			font-family: $font-family__lato;
 			position: relative;
-			left: 2px;
+			left: 0px;
 			top: 0px;
 			.menu {
 				@include flexbox;
@@ -310,6 +307,7 @@
 					top: 1px;
 					&:after {
 						left: 49px;
+						top: 2px;
 					}
 				}
 			}
@@ -323,7 +321,7 @@
 				font-size: 27px;
 				position: relative;
 				left: 2px;
-				top: 2px;
+				top: 4px;
 			}
 			form {
 				position: absolute;
@@ -337,7 +335,7 @@
 			.search-sbm {
 				width: 50px;
 				height: 40px;
-				right: 1px;
+				right: -2px;
 				top: -21px;
 			}
 		}
@@ -361,7 +359,7 @@
 @include responsive_375() {
 	.promotion {
 		.content {
-			padding-top: 24px;
+			padding-top: 26px;
 			.des {
 				position: relative;
 				top: -1px;
@@ -427,21 +425,21 @@
 				}
 			}
 			.title {
-				letter-spacing: 0.15px;
+				letter-spacing: 0.05px;
 				top: -2px;
 				left: 3px;
 			}
 			.des {
 				max-width: 570px;
-				top: 0px;
-    			letter-spacing: .15px;
+				top: -1px;
+    			letter-spacing: .16px;
 			}
 		}
 		.slick-dots {
 			bottom: 56px;
 		}
 		.button-shop-now {
-			margin-top: 26px;
+			margin-top: 25px;
 		}
 	}
 }
@@ -472,17 +470,20 @@
 			}
 			.name, .code, .price {
 				position: relative;
-				top: 0px;
+				top: 2px;
 				left: -3px;
 			}
 			.code {
-				top: -1px;
+				top: 0px;
 			}
 			.price {
 				top: 1px;
 			}
 		}
 		.item {
+			.bottom {
+				padding-bottom: 4px;
+			}
 			&:hover{
 				.bottom {
 					position: relative;
@@ -509,8 +510,12 @@
 			left: 73px;
 		}
 		.tool {
-			top: 14px;
+			top: 16px;
 			left: 9px;
+		}
+		.color {
+			position: relative;
+			left: -2px;
 		}
 	}
 }
@@ -521,6 +526,13 @@
 	.featured-products {
 		&-title {
 			margin-bottom: 36px;
+		}
+		.image {
+			padding-top: 239px;
+			img {
+				top: 48%;
+				left: 50%;
+			}
 		}
 		.view-detail {
 			@include translate(-50%, 0);
@@ -547,10 +559,16 @@
 // Featured Products for destop
 @include responsive_1024 {
 	.featured-products {
-		padding-top: 98px;
+		padding-top: 99px;
 		.featured-products-title {
-			padding-bottom: 5px;
-			font-size: 42px;
+			padding-bottom: 14px;
+    		font-size: 32px;
+		}
+		.featured-products-list {
+			.name {
+				top: -6px;
+				left: -1px;
+			}
 		}
 		.tool ul {
 			margin-left: -1px;
@@ -565,11 +583,49 @@
 			bottom: 11px;
 			top: 201px;
 		}
+		.item {
+			.bottom {
+				padding-bottom: 0px;
+			}
+			&:hover {
+				margin-bottom: -5px;
+				.bottom {
+					padding-bottom: 5px;
+					top: -7px;
+				}
+				.name {
+					left: -2px;
+					top: 1px;
+				}
+				.color {
+					padding-top: 12px;
+				}
+				.code {
+					top: 1px;
+					left: -1px;
+				}
+				.price {
+					top: 1px;
+					left: -3px;
+					padding: 8px 0 14px 0;
+				}
+				.view-detail {
+					margin-left: 67px;
+					bottom: 17px;
+					top: 194px;
+				}
+				.tool ul {
+					margin-top: -6px;
+				}
+			}
+		}
 		.name {
 			padding-top: 15px;
+			top: -6px;
+    		left: -1px;
 		}
 		.color {
-			padding-top: 12px;
+			padding-top: 6px;
 			@include translate(2px, 0);
 			span {
 				margin: 0 2.5px;
@@ -578,19 +634,21 @@
 		.code {
 			@include translate(8px, 0);
 			padding-top: 10px;
-			margin-left: -4px;
+			margin-left: -1px;
 		}
 		.price {
-			padding: 9px 0 17px 0;
+			padding: 8px 0 20px 0;
 			@include translate(4px, 0);
-			margin-left: -6px;
+			margin-left: -1px;
 		}
 		.slick-dots {
 			bottom: -43px;
+			left: 1px;
 			li.slick-active button {
 				margin-left: 19px;
 			}
 		}
+
 	}
 }
 // End Featured Products for destop
@@ -607,11 +665,63 @@
 * _______________________________
 */
 
-// ... for mobile
+// Leatest Products for mobile
 @include responsive_375() {
-	
+	.leatest-products {
+		margin-top: 107px;
+		.tabs-title li {
+			&:nth-child(1) {
+				position: relative;
+				left: 1px;
+			}
+		}
+		.product-list {
+			.col {
+				margin-bottom: 46px;
+				.bottom {
+					position: relative;
+					top: 6px;
+					&:nth-child(3n) {
+						top: 5px;
+					}
+					.name {
+						&::before {
+							bottom: 4px;
+						}
+					}
+				}
+				.price {
+					position: relative;
+					top: 2px;
+					span:nth-child(2) {
+						position: relative;
+						left: -2px;
+						top: -2px;
+					}
+				}
+
+				&:nth-child(5) {
+					.name {
+						top: -2px;
+					}
+					.price {
+						top: 0px;
+					}
+				}
+			}
+		}
+		.tool {
+			top: 16px;
+			right: 10.5px;
+			li {
+				&:last-child {
+					margin-top: 15px;
+				}
+			}
+		}
+	}
 }
-// ... for mobile
+// End Leatest Products for mobile
 
 // Leatest Products for tablet
 @include responsive_768 {
@@ -668,21 +778,98 @@
 		margin-top: 113px;
 		width: 100%;
 		.home-component-title {
-			padding-right: 10px;
+			font-size: 32px;
+			position: relative;
+			top: -1px;
+			left: -6px;
 		}
 		.tabs-title {
-			margin: 16px auto;
+			margin: 5px auto;
 			width: fit-content;
 			li {
 				&:nth-child(1) {
-					margin-right: 59px;
+					margin-right: 58px;
 				}
 				&:nth-child(2) {
 					margin-right: 58px;
 				}
+				&:nth-child(3) {
+					left: 1px;
+				}
 			}
 		}
 		.product-list {
+			.col {
+				.price {
+					top: 2px;
+					span:nth-child(2) {
+						left: 1px;
+						top: 1px;
+					}
+				}
+				.bottom {
+					position: relative;
+					top: -3px;
+					.name {
+						top: 3px;
+					}
+				}
+				&:nth-child(2) {
+					.bottom {
+						bottom: 0px;
+						left: -2px;		
+					}
+					.price {
+						position: relative;
+						left: 7px;
+					}
+					
+				}
+				&:nth-child(3) {
+					.bottom {
+						bottom: 1px;
+						left: 1px;		
+					}
+					.name {
+						top: 2px;
+					}
+					.price {
+						position: relative;
+						left: 0px;
+					}
+				}
+				&:nth-child(4) {
+					.bottom {
+						top: -3px;	
+					}
+					.name {
+						top: 1px;
+					}
+					.price {
+						top: 1px;
+					}
+				}
+				&:nth-child(5) {
+					.bottom {
+						top: -2px;
+						left: -2px;
+					}
+					.name {
+						top: 1px;
+					}
+				}
+				&:nth-child(6) {
+					.bottom {
+						top: 1px;
+					}
+					.name {
+						top: 1px;
+					}
+					.price {
+						top: 1px;
+					}
+				}
+			}
 			.col:nth-child(2n) {
 				margin-right: 45px;
 			}
@@ -693,7 +880,10 @@
 				margin-top: 75px;
 			}
 			@include grid-layout(3, 45px, 40px);
-			margin: 60px -3px 0 -6px;
+			margin: 73px -3px 0 -6px;
+			.col {
+				margin-bottom: 43px;
+			}
 		}
 
 		.item {
@@ -701,21 +891,21 @@
 				&:before {
 					width: 100px;
 					height: 56px;
-					top: 24px;
+					top: 21px;
 					left: 17px;
 				}
 			}
 			.top {
 				max-width: 360px;
 				img {
-					margin-top: -2px;
-					margin-left: -1px;
+					margin-top: -4px;
+					margin-left: -4px;
 				}
 			}
 		}
 		.tool {
-			bottom: 35px;
-			left: 17px;
+			bottom: 39px;
+			left: 16px;
 			top: unset;
 			height: fit-content;
 			width: fit-content;
@@ -734,15 +924,14 @@
 			align-items: center;
 			color: #151875;
 			flex-wrap: wrap;
-			// margin: 4px 0 76px 0;
-			margin-top: 4px;
+			margin-top: 1px;
 		}
 		.price {
 			width: fit-content;
 			margin: 9px 19px 7px 0;
 		}
 		.image img {
-			width: 369px;
+			max-width: 369px;
 		}
 	}
 }
@@ -751,7 +940,15 @@
 @include responsive_1920() {
 	.leatest-products {
 		.tabs-title {
-			margin-right: 265px;
+			margin-right: 259px;
+			&:nth-child(n+1) {		
+				position: relative;
+				left: -6px;
+				top: 10px;		
+			}
+		}
+		.image img {
+			width: 369px;
 		}
 	}
 }
@@ -796,7 +993,7 @@
 // What Shopex Offer for desktop
 @include responsive_1024 {
 	.what-shopex-offer {
-		padding-top: 8px;
+		padding-top: 9px;
 		&-title {
 			margin-bottom: 65px;
 		}
@@ -863,7 +1060,7 @@
 @include responsive_1024 {
 	.unique-features {
 		min-height: 580px;
-		margin: 60px 0 131px;
+		margin: 70px 0 129px;
 		.wapper {
 			@include flexbox;
 			max-width: 1060px;
